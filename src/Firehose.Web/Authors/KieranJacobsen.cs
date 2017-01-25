@@ -28,8 +28,7 @@ namespace Firehose.Web.Authors
 
         public bool Filter(SyndicationItem item)
         {
-            return item.Title.Text.ToLowerInvariant().Contains("code")
-                   || item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("code"));
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("code"));
         }
 
         public GeoPosition Position => new GeoPosition(43.8938256, 18.3129519);
