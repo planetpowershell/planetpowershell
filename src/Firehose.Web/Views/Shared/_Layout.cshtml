@@ -4,13 +4,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>Planet Xamarin: Community Blog Feed</title>
+    <title>Planet powershell: Community Blog Feed</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/Content/plugins/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/plugins/bootstrap/css/bootstrap.planetxamarin.min.css" />
+    <link rel="stylesheet" href="~/Content/plugins/bootstrap/css/bootstrap.planetpowershell.min.css" />
     <link rel="stylesheet" href="~/Content/css/site.css" />
     <link rel="stylesheet" href="~/Content/plugins/animate.css" />
-    <link rel="alternate" type="application/rss+xml" title="Planet Xamarin" href="https://www.planetxamarin.com@((Url.UrlFor<FeedController>(c => c.Index(null))))" />
+    <link rel="alternate" type="application/rss+xml" title="Planet powershell" href="https://www.planetpowershell.com@((Url.UrlFor<FeedController>(c => c.Index(null))))" />
     <link rel="apple-touch-icon" sizes="57x57" href="~/content/img/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="~/content/img/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="~/content/img/icons/apple-icon-72x72.png">
@@ -39,7 +39,7 @@
             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-90554801-1', 'auto');
+        ga('create', 'UA-90833171-1', 'auto');
         ga('send', 'pageview');
     </script>
 </head>
@@ -53,7 +53,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="@Url.Content("~")">
-                    <div class="navbar-brand-title">Planet Xamarin</div>
+                    <div class="navbar-brand-title">Planet powershell</div>
                 </a>
             </div>
             <div class="navbar-collapse navbar-right collapse">
@@ -62,8 +62,8 @@
                     <li>@Html.ActionLink("Authors", "Index", "Authors")</li>
                     <li>@Html.ActionLink("Preview", "Index", "Preview")</li>
                     <li><a href="@Url.Action("Index", "Feed")"><i class="fa fa-rss" aria-hidden="true"></i> <span id="rssText">RSS Feed</span></a></li>
-                    <li><a href="https://twitter.com/PlanetXamarin"><i class="fa fa-twitter" aria-hidden="true"></i> <span id="twitterText">Twitter</span></a></li>
-                    <li><a href="https://www.facebook.com/planetxamarin/"><i class="fa fa-facebook" aria-hidden="true"></i> <span id="facebookText">Facebook</span></a></li>
+                    <li><a href="https://twitter.com/Planetpowershell"><i class="fa fa-twitter" aria-hidden="true"></i> <span id="twitterText">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/planetpowershell/"><i class="fa fa-facebook" aria-hidden="true"></i> <span id="facebookText">Facebook</span></a></li>
                 </ul>
             </div>
         </div>
