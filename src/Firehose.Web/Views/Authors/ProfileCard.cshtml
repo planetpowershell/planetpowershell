@@ -16,39 +16,15 @@
             @if (!string.IsNullOrWhiteSpace(Model.ShortBioOrTagLine))
             {
 
-                if (Model is IWorkAtXamarinOrMicrosoft)
+                if (Model is IWorkAtMicrosoft)
                 {
                     <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine at Microsoft</text>
                 }
                 else
                 {
-                    if (Model is IAmAXamarinMVP || Model is IAmAMicrosoftMVP)
+                    if (Model is IAmAMicrosoftMVP)
                     {
-                        <text>@Model.FirstName @Model.LastName is</text>
-
-                        var output = string.Empty;
-                        var xamarinMvpModel = Model as IAmAXamarinMVP;
-                        if (xamarinMvpModel != null)
-                        {
-                            output += "a Xamarin";
-                        }
-                        if (Model is IAmAXamarinMVP && Model is IAmAMicrosoftMVP)
-                        {
-                            output += " and Microsoft";
-                        }
-                        else
-                        {
-                            var microsoftMvpModel = Model as IAmAMicrosoftMVP;
-                            if (microsoftMvpModel != null)
-                            {
-                                output += "a Microsoft";
-                            }
-                        }
-
-                        output += " MVP ";
-                        <text>@Html.Raw(output)</text>
-
-                        <text>who @Model.ShortBioOrTagLine</text>
+                        <text>@Model.FirstName @Model.LastName is a Microsoft MVP who @Model.ShortBioOrTagLine</text>
                     }
                     else
                     {
