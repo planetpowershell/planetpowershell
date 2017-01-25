@@ -1,11 +1,11 @@
 ﻿[
   {
-    "outputFile": "Content/bootstrap.planetxamarin.css",
-    "inputFile": "Content/bootstrap.planetxamarin.less"
+    "outputFile": "Content/bootstrap.planetpowershell.css",
+    "inputFile": "Content/bootstrap.planetpowershell.less"
   },
   {
-    "outputFile": "Content/plugins/bootstrap/css/bootstrap.planetxamarin.css",
-    "inputFile": "Content/plugins/bootstrap/css/bootstrap.planetxamarin.less"
+    "outputFile": "Content/plugins/bootstrap/css/bootstrap.planetpowershell.css",
+    "inputFile": "Content/plugins/bootstrap/css/bootstrap.planetpowershell.less"
   },
   {
     "outputFile": "Content/css/site.css",
