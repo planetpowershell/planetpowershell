@@ -103,7 +103,7 @@ A big step for mankind! Last thing that remains is submit a Pull Request to us a
 
 Don't forget to incorporate the Featured on Planet PowerShell badge on your blog and link back to us!
 
-![Featured on Planet PowerShell Badge](https://www.planetpowershell.com/Content/img/powershell-featured-badge.png)
+![Featured on Planet PowerShell Badge](https://www.planetpowershell.com/Content/img/planetpowershell-featured-badge.png)
 
 Enjoy all of our great content! 
 
