@@ -28,7 +28,7 @@ namespace Firehose.Web.Authors
 
         public bool Filter(SyndicationItem item)
         {
-            return item.category.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
         }
 
         public GeoPosition Position => new GeoPosition(-37.816667, 144.966667);
