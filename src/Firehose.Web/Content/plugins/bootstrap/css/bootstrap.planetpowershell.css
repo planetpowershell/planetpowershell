@@ -22,7 +22,7 @@ hr {
   margin: 40px 0;
 }
 .navbar-inverse {
-  background-color: #b455b6;
+  background-color: #012456;
   border: none;
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -68,7 +68,7 @@ hr {
   margin: 0 -15px;
 }
 .navbar-inverse .navbar-collapse ul li {
-  background-color: #b455b6;
+  background-color: #012456;
   border-bottom: 1px solid #9f57a0;
   padding: 0 20px;
 }
@@ -77,7 +77,7 @@ hr {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #b455b6;
+  border-color: #012456;
 }
 .nav > li > a {
   padding: 10px 0;
