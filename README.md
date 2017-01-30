@@ -1,4 +1,4 @@
-# C:\> Get-Greeting 'Welcome to PlanetPowerShell.com' [![Build status](https://ci.appveyor.com/api/projects/status/u2rw5yhq0638shf1?svg=true)](https://ci.appveyor.com/project/PlanetPowershell/planetpowershell)
+# C:\\> Get-Greeting 'Welcome to PlanetPowerShell.com' [![Build status](https://ci.appveyor.com/api/projects/status/u2rw5yhq0638shf1?svg=true)](https://ci.appveyor.com/project/PlanetPowershell/planetpowershell)
 
 Welcome!
 
@@ -6,7 +6,7 @@ The goal of PlanetPowerShell is to provide an aggregated feed of PowerShell comm
 
 This site couldn't have been made without the help of Readify and the Planet Xamarin team (who I have blatantly stolen the content from, yay Open Source!). For more information see the Acknowledgements.
 
-# C:\> Get-Help 'Adding yourself as an author'
+# C:\\> Get-Help 'Adding yourself as an author'
 
 ## Guidlines for submission
 - I have a valid blog & RSS URL
@@ -97,7 +97,7 @@ public class BruceWayne : IAmACommunityMember, IFilterMyBlogPosts
 }
 ```
 
-# A small step for an author...
+## A small step for an author...
 
 A big step for mankind! Last thing that remains is submit a Pull Request to us and whenever it gets merged: hooray! You're an author now!
 
@@ -109,7 +109,7 @@ Enjoy all of our great content!
 
 Of course you are more than welcome to submit other features and bugfixes as well.
 
-# Acknowledgements
+#C:\\> Get-Acknowledgements
 * Thanks to Readify for open sourcing their employee blog aggregation platform, which Planet Xamarin forked. Looking for your next challenge? [Readify is hiring](https://join.readify.net/?source=StaffReferral&campaign=kieran.jacobsen) and offers relocation services for developers from abroad.
 * Big thanks to [Planet Xamarin](https://planetxamarin.com), they really did a lot of the hard work in getting this setup.
 * Thanks to [our awesome contributors](https://github.com/planetpowershell/planetpowershell/graphs/contributors) and our [community of authors](https://github.com/planetpowershell/planetpowershell/tree/master/src/Firehose.Web/Authors) who make this all possible.
