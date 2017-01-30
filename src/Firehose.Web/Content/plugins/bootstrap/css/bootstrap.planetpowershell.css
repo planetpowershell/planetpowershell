@@ -32,7 +32,7 @@ hr {
   background-color: transparent;
 }
 .navbar-inverse .navbar-header {
-  border-bottom: 1px solid #9f57a0;
+  border-bottom: 1px solid #2671BF;
 }
 .navbar-inverse .navbar-header .navbar-brand {
   background: url(../../../img/planetpowershell-device.png) no-repeat 30px 50%;
@@ -69,7 +69,7 @@ hr {
 }
 .navbar-inverse .navbar-collapse ul li {
   background-color: #2671BF;
-  border-bottom: 1px solid #9f57a0;
+  border-bottom: 1px solid #2671BF;
   padding: 0 20px;
 }
 .navbar-inverse .navbar-collapse ul li.active {
@@ -83,11 +83,11 @@ hr {
   padding: 10px 0;
 }
 .btn-primary {
-  background-color: #9f57a0;
+  background-color: #2671BF;
   border-radius: 0;
   border: 0;
   padding: 10px 15px;
 }
 .btn-primary:hover {
-  background-color: #855386;
+  background-color: #2671BF;
 }
