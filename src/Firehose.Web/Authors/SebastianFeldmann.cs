@@ -15,6 +15,9 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Bremen, Germany";
         public string EmailAddress => "sebastian@feldmann.io";
         public string TwitterHandle => "sebfieldman";
+        public string GravatarHash => "";
+        public string GitHubHandle => "";
+        public GeoPosition Position => new GeoPosition(53.073635, 8.806422);
 
         public Uri WebSite => new Uri("http://blog.feldmann.io/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://blog.feldmann.io/feed/"); } }
