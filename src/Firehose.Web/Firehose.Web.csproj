@@ -259,6 +259,7 @@
 	<!-- Include your authors here -->
     <Compile Include="Authors\KieranJacobsen.cs" />
     <Compile Include="Authors\SebastianFeldmann.cs" />
+    <Compile Include="Authors\NicholasMGetchell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
