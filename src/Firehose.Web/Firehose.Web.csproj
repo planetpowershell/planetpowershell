@@ -258,6 +258,7 @@
     <Compile Include="ViewModels\PreviewViewModel.cs" />
 	<!-- Include your authors here -->
     <Compile Include="Authors\KieranJacobsen.cs" />
+    <Compile Include="Authors\seebus.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
