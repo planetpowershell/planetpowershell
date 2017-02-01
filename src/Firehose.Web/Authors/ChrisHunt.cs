@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
 
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://www.automatedops.com/tags/powershell/index.xml"); }
+            get { yield return new Uri("https://www.automatedops.com/index.xml"); }
         }
 
         public string GitHubHandle => "cdhunt";
