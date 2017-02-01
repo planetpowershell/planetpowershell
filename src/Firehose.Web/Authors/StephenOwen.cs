@@ -22,3 +22,4 @@ public class StephenOwen : IAmAMicrosoftMVP, IFilterMyBlogPosts
         DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2015, 1, 1);
         public string GravatarHash => "3dd39b0d646f3b959b741eb0196c4c21";
     }
+}
