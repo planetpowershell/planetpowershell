@@ -253,7 +253,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\IAmABlogger.cs" />
-                        <Compile Include="Infrastructure\IFilterMyBlogPosts.cs" />
+    <Compile Include="Infrastructure\IFilterMyBlogPosts.cs" />
     <Compile Include="Infrastructure\Md5HashingExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PreviewViewModel.cs" />
@@ -265,6 +265,7 @@
     <Compile Include="Authors\MathieuBuisson.cs" />
     <Compile Include="Authors\WarrenFrame.cs" />
     <compile Include="Authors\JeffHicks.cs" />
+    <Compile Include="Authors\QuintenSteenhuis.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
