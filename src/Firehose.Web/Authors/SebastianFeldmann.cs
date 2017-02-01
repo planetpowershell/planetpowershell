@@ -11,12 +11,12 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Sebastian";
         public string LastName => "Feldmann";
-        public string ShortBioOrTagLine => "sysadmin";
+        public string ShortBioOrTagLine => "dad, musician, sysadmin";
         public string StateOrRegion => "Bremen, Germany";
         public string EmailAddress => "sebastian@feldmann.io";
         public string TwitterHandle => "sebfieldman";
         public string GravatarHash => "";
-        public string GitHubHandle => "";
+        public string GitHubHandle => "seebus";
         public GeoPosition Position => new GeoPosition(53.073635, 8.806422);
 
         public Uri WebSite => new Uri("http://blog.feldmann.io/");
