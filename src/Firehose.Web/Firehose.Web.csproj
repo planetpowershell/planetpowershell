@@ -259,6 +259,7 @@
 	<!-- Include your authors here -->
     <Compile Include="Authors\KieranJacobsen.cs" />
     <Compile Include="Authors\SebastianFeldmann.cs" />
+    <Compile Include="Authors\FrancisSetash.cs" />
     <Compile Include="Authors\NicholasMGetchell.cs" />
     <Compile Include="Authors\MathieuBuisson.cs" />
   </ItemGroup>
