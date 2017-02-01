@@ -238,6 +238,7 @@
     <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Authors\DougFinke.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
@@ -256,13 +257,16 @@
     <Compile Include="Infrastructure\Md5HashingExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PreviewViewModel.cs" />
-	<!-- Include your authors here -->
+    <!-- Include your authors here -->
     <Compile Include="Authors\KieranJacobsen.cs" />
     <Compile Include="Authors\SebastianFeldmann.cs" />
     <Compile Include="Authors\FrancisSetash.cs" />
     <Compile Include="Authors\NicholasMGetchell.cs" />
     <Compile Include="Authors\MathieuBuisson.cs" />
     <Compile Include="Authors\StephenOwen.cs" />
+    <Compile Include="Authors\WarrenFrame.cs" />
+    <compile Include="Authors\JeffHicks.cs" />
+    <Compile Include="Authors\QuintenSteenhuis.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -328,4 +332,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-</Project>
+</Project>   

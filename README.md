@@ -2,7 +2,7 @@
 
 Welcome!
 
-The goal of PlanetPowerShell is to provide an aggregated feed of PowerShell community content. If you write about PowerShell, then jump in and add your blog to the feed. The only thing we wask is that you do not violate the community [code of conduct] ()
+The goal of PlanetPowerShell is to provide an aggregated feed of PowerShell community content. If you write about PowerShell, then jump in and add your blog to the feed. The only thing we wask is that you do not violate the community [code of conduct](https://github.com/planetpowershell/planetpowershell/blob/master/CODE_OF_CONDUCT.md)
 
 This site couldn't have been made without the help of Readify and the Planet Xamarin team (who I have blatantly stolen the content from, yay Open Source!). For more information see the Acknowledgements.
 
