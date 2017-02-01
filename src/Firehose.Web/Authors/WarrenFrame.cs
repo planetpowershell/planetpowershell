@@ -18,6 +18,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "ramblingcookiemonster";
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(42.3391000, -71.1206200);
+        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2016, 1, 1);
 
         public Uri WebSite => new Uri("http://ramblingcookiemonster.github.io/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed"); } }
