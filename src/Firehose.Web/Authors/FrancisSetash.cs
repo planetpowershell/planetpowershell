@@ -7,25 +7,30 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class FrancisSetash : IAmACommunityMember
+    public class FrancisSetash : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "Francis";
         public string LastName => "Setash";
-        public string ShortBioOrTagLine => "i-py.com";
+        public string ShortBioOrTagLine => "Infrastructure and DevOps Engineer. Lots of working with Chef, and PowerShell DSC";
         public string StateOrRegion => "Arnold, MD";
-        public string EmailAddress => "Francis@i-py.com";
+        public string EmailAddress => "francis@i-py.com";
         public string TwitterHandle => "";
         public string GravatarHash => "";
-        public string GitHubHandle => "walked";
-        public GeoPosition Position => new GeoPosition(39.0589050,-76.4910090);
 
         public Uri WebSite => new Uri("https://i-py.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://i-py.com/feed.xml"); } }
-    }
-    
-    public bool Filter(SyndicationItem item)
-    {
-      return item.Title.Text.ToLowerInvariant().Contains("powershell");
+
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://i-py.com/feed.xml"); }
+        }
+
+        public string GitHubHandle => "walked";
+
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Title.Text.ToLowerInvariant().Contains("powershell");
+        }
+
+        public GeoPosition Position => new GeoPosition(39.0589050,-76.49100906);
     }
 }
-
