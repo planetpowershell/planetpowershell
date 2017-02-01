@@ -21,6 +21,6 @@ namespace Firehose.Web.Authors
         DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2016, 1, 1);
 
         public Uri WebSite => new Uri("http://ramblingcookiemonster.github.io/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed.xml"); } }
     }
 }
