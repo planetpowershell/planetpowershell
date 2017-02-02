@@ -11,7 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Doug";
         public string LastName => "Finke";
-        public string ShortBioOrTagLine => "Microsoft PowerShell MVP, Author: Windows PowerShell for Developers http://goo.gl/D3gsQ , consultant, speaker, father";
+        public string ShortBioOrTagLine => "is the Author of 'Windows PowerShell for Developers', speaker and PowerShell trainer";
         public string StateOrRegion => "New York City, United States";
         public string EmailAddress => "finked@hotmail.com";
         public string TwitterHandle => "dfinke";
@@ -33,6 +33,6 @@ namespace Firehose.Web.Authors
 
         public GeoPosition Position => new GeoPosition(40.7526970, -73.9749950);
         
-        //DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2008, 4, 1);
+        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2008, 4, 1);
     }
 }

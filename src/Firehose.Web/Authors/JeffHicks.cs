@@ -1,0 +1,38 @@
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Web;
+using Firehose.Web.Infrastructure;
+
+namespace Firehose.Web.Authors
+{
+    public class JeffHicks : IFilterMyBlogPosts, IAmAMicrosoftMVP
+    {
+        public string FirstName => "Jeff";
+        public string LastName => "Hicks";
+        public string ShortBioOrTagLine => "Microsoft PowerShell MVP,Teacher,Author,Sensei";
+        public string StateOrRegion => "New York, United States";
+        public string EmailAddress => "jhicks@jdhitsolutions.com";
+        public string TwitterHandle => "jhicks";
+        public string GravatarHash => "1393cfe66dace329de043b14544985db ";
+
+        public Uri WebSite => new Uri("http://blog.jdhitsolutions.com/");
+
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("http://jdhitsolutions.com/blog/feed"); }
+        }
+
+        public string GitHubHandle => "jdhitsolutions";
+
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+        }
+
+        public GeoPosition Position => new GeoPosition(43.035234,-76.13928);
+        
+        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2007 , 7, 1);
+    }
+}

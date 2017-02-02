@@ -265,6 +265,8 @@
     <Compile Include="Authors\MathieuBuisson.cs" />
     <Compile Include="Authors\WarrenFrame.cs" />
     <Compile Include="Authors\MarkWragg.cs" />
+    <compile Include="Authors\JeffHicks.cs" />
+    <Compile Include="Authors\QuintenSteenhuis.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
