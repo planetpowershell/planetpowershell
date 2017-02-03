@@ -78,23 +78,23 @@ Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
 Planet PowerShell is all about PowerShell content. To ensure that the feed only contains relevant content you can implement the `IFilterMyBlogPosts` interface on your author class.
 
 ``` csharp
-public class BruceWayne : IAmACommunityMember, IFilterMyBlogPosts
-{
-    // ... Author properties from the above class, removed for brevity
-
-    public bool Filter(SyndicationItem item)
+    public class BruceWayne : IAmACommunityMember, IFilterMyBlogPosts
     {
-        // Here you filter out the given item by the criteria you want, i.e.
-        // this filters out posts that do not have PowerShell in the title
-        return item.Title.Text.ToLowerInvariant().Contains("powershell");
-        
-        // This filters out only the posts that have the "PowerShell" category
-        return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
-        
-        // Of course you can make the checks as complicated as you want and combine some stuff
-        return item.Title.Text.ToLowerInvariant().Contains("powershell") && item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+        // ... Author properties from the above class, removed for brevity
+
+        public bool Filter(SyndicationItem item)
+        {
+            // Here you filter out the given item by the criteria you want, i.e.
+            // this filters out posts that do not have PowerShell in the title
+            return item.Title.Text.ToLowerInvariant().Contains("powershell");
+            
+            // This filters out only the posts that have the "PowerShell" category
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            
+            // Of course you can make the checks as complicated as you want and combine some stuff
+            return item.Title.Text.ToLowerInvariant().Contains("powershell") && item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+        }
     }
-}
 ```
 
 ## A small step for an author...
