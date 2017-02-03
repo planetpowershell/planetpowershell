@@ -16,6 +16,7 @@ public class StephenOwen : IAmAMicrosoftMVP, IFilterMyBlogPosts
         public string EmailAddress => "Stephen@foxdeploy.com";
         public string TwitterHandle => "FoxDeploy";
         public string GitHubHandle => "1RedOne";
+        public GeoPosition Position => new GeoPosition(33.862100, -84.687900);
         
         public Uri WebSite => new Uri("http://www.FoxDeploy.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://foxdeploy.com/tag/powershell/feed/"); } }
