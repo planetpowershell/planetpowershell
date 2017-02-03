@@ -36,6 +36,7 @@ The result should look something like this:
         public string TwitterHandle => "batman";
         public string GravatarHash => "42abc1337def";
         public string GitHubHandle => "batman";
+        public GeoPosition Position => new GeoPosition(47.643417, -122.126083);
 
         public Uri WebSite => new Uri("https://planetpowershell.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://planetpowershell.com/rss"); } }
@@ -67,6 +68,7 @@ Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
         public string TwitterHandle => "theboss";
         public string GravatarHash => "42abc1337def";
         public string GitHubHandle => "theboss";
+        public GeoPosition Position => new GeoPosition(47.643417, -122.126083);
 
         public Uri WebSite => new Uri("http://www.awesomesite.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://www.awesomesite.com/feed/"); } }
