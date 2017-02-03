@@ -48,10 +48,12 @@ A few things:
 - The `FirstName` and `LastName` property should resemble that same name
 - `ShortBioOrTagLine` property can be whatever you like. If you can't think of anything choose: 'software engineer' or 'software engineer at Microsoft'
 - `StateOrRegion` will be your geographical location, i.e.: Holland, New York, etc.
-- `EmailAddress` and `TwitterHandle` should be pretty clear, `TwitterHandle` without the leading @
+- `EmailAddress`, `TwitterHandle` and `GitHubHandle` should be pretty clear, `TwitterHandle` without the leading @
 - The `Website` property can be your global website or whatever you want people to look at
+- `Position` is your latitude and longitude, this allows you to be placed on the map on the Authors page
 - And finally with `FeedUris` you can supply one or more URIs which resemble your blogs. Your blogs should be provided in RSS (Atom) format and of course be about PowerShell. 
 - If you do not want your e-mailaddress publicly available but you _do_ want to show your Gravatar go to https://en.gravatar.com/site/check/ and get your hash! If you don't fill the hash, you will be viewed as a silhouette.
+- When you are a Microsoft MVP check out the `IAmAMicrosoftMVP` interfaces, see below for a small sample.
 
 If you also do some blogging about other stuff, no worries! You're fine! Just have a look at the next section on how to filter out your PowerShell specific posts.
 
