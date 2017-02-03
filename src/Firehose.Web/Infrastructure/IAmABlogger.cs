@@ -38,6 +38,5 @@ namespace Firehose.Web.Infrastructure
 
     public interface IAmAMicrosoftMVP : IAmACommunityMember
     {
-        DateTime FirstAwarded { get; }
     }
 }
