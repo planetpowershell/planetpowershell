@@ -265,6 +265,7 @@
     <Compile Include="Authors\MathieuBuisson.cs" />
     <Compile Include="Authors\StephenOwen.cs" />
     <Compile Include="Authors\WarrenFrame.cs" />
+    <Compile Include="Authors\ThomasRayner.cs" />
     <Compile Include="Authors\MarkWragg.cs" />
     <compile Include="Authors\JeffHicks.cs" />
     <Compile Include="Authors\QuintenSteenhuis.cs" />
