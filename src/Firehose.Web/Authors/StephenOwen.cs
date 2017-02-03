@@ -20,7 +20,6 @@ public class StephenOwen : IAmAMicrosoftMVP, IFilterMyBlogPosts
         public Uri WebSite => new Uri("http://www.FoxDeploy.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://foxdeploy.com/tag/powershell/feed/"); } }
 
-        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2015, 1, 1);
         public string GravatarHash => "3dd39b0d646f3b959b741eb0196c4c21";
     }
 }
