@@ -16,6 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "thmsrynr@outlook.com";
         public string TwitterHandle => "MrThomasRayner";
         public string GitHubHandle => "ThmsRynr";
+        public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(53.5443890, -113.4909270);
 
         public Uri WebSite => new Uri("http://workingsysadmin.com");
