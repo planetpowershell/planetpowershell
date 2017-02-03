@@ -26,19 +26,20 @@ You can even do this via the GitHub editor, just don't forget to _add the class 
 The result should look something like this:
 
 ``` csharp
-public class BruceWayne : IAmACommunityMember
-{
-    public string FirstName => "Bruce";
-    public string LastName => "Wayne";
-    public string ShortBioOrTagLine => "potentially batman";
-    public string StateOrRegion => "Gotham";
-    public string EmailAddress => "rescueme@planetpowershell.com";
-    public string TwitterHandle => "batman";
-    public string GravatarHash => "42abc1337def";
+    public class BruceWayne : IAmACommunityMember
+    {
+        public string FirstName => "Bruce";
+        public string LastName => "Wayne";
+        public string ShortBioOrTagLine => "potentially batman";
+        public string StateOrRegion => "Gotham";
+        public string EmailAddress => "rescueme@planetpowershell.com";
+        public string TwitterHandle => "batman";
+        public string GravatarHash => "42abc1337def";
+        public string GitHubHandle => "batman";
 
-    public Uri WebSite => new Uri("https://planetpowershell.com/");
-    public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://planetpowershell.com/rss"); } }
-}
+        public Uri WebSite => new Uri("https://planetpowershell.com/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://planetpowershell.com/rss"); } }
+    }
 ```
 
 A few things: 
@@ -56,7 +57,7 @@ If you also do some blogging about other stuff, no worries! You're fine! Just ha
 ###Special note for Microsoft MVPs
 Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
 ``` csharp
-public class MVPGuy : IAmAMicrosoftMVP
+    public class MVPGuy : IAmAMicrosoftMVP
     {
         public string FirstName => "Awesome";
         public string LastName => "Sauce";
@@ -64,12 +65,11 @@ public class MVPGuy : IAmAMicrosoftMVP
         public string StateOrRegion => "127.0.0.1";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "theboss";
+        public string GravatarHash => "42abc1337def";
+        public string GitHubHandle => "theboss";
 
         public Uri WebSite => new Uri("http://www.awesomesite.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://www.awesomesite.com/feed/"); } }
-
-        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2016, 4, 1);
-        public string GravatarHash => "";
     }
 ```
 
