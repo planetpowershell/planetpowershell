@@ -19,6 +19,6 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(60.4698789, 5.3307659);
 
         public Uri WebSite => new Uri("http://asaconsultant.blogspot.no");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://asaconsultant.blogspot.com/feeds/posts/default?alt=rss"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://asaconsultant.blogspot.com/feeds/posts/default/-/Powershell"); } }
     }
 }
