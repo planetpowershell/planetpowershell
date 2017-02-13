@@ -1,4 +1,13 @@
-public class GrahamBeer : IAmACommunityMember
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Web;
+using Firehose.Web.Infrastructure;
+
+namespace Firehose.Web.Authors
+{
+    public class GrahamBeer : IAmACommunityMember
     {
         public string FirstName => "Graham";
         public string LastName => "Beer";
@@ -11,5 +20,14 @@ public class GrahamBeer : IAmACommunityMember
         public GeoPosition Position => new GeoPosition(47.643417, -122.126083);
 
         public Uri WebSite => new Uri("https://graham-beer.github.io/#blog");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://graham-beer.github.io/feed.xml"); } }
+
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://graham-beer.github.io/feed.xml"); }
+        }
+
+        public string GitHubHandle => "Graham-Beer";
+
+        public GeoPosition Position => new GeoPosition(39.0913089, -77.5440391);
     }
+}
