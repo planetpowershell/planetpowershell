@@ -27,6 +27,11 @@ namespace Firehose.Web.Authors
         }
 
         public string GitHubHandle => "Graham-Beer";
+        
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+        }
 
         public GeoPosition Position => new GeoPosition(39.0913089, -77.5440391);
     }
