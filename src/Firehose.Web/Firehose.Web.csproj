@@ -239,6 +239,7 @@
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Authors\DougFinke.cs" />
+    <Compile Include="Authors\ToreGroneng.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
@@ -265,10 +266,15 @@
     <Compile Include="Authors\MathieuBuisson.cs" />
     <Compile Include="Authors\StephenOwen.cs" />
     <Compile Include="Authors\WarrenFrame.cs" />
+    <Compile Include="Authors\ThomasRayner.cs" />
     <Compile Include="Authors\MarkWragg.cs" />
     <compile Include="Authors\JeffHicks.cs" />
     <Compile Include="Authors\QuintenSteenhuis.cs" />
     <compile Include="Authors\DavidOBrien.cs" />
+    <compile Include="Authors\GlennSarti.cs" />
+    <compile Include="Authors\SvenVanRijen.cs" />
+    <compile Include="Authors\RobSewell.cs" />
+    <compile Include="Authors\MikeFRobbins.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
