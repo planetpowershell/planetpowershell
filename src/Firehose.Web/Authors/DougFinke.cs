@@ -17,7 +17,7 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "dfinke";
         public string GravatarHash => "94c48c63e7e63f5e713f7f7a5cdbcac0";
 
-        public Uri WebSite => new Uri("https://dfinke.github.io/");
+        public Uri WebSite => new Uri("https://dfinke.github.io/#blog");
 
         public IEnumerable<Uri> FeedUris
         {
