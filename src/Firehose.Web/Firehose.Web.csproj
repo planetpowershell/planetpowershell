@@ -281,6 +281,7 @@
     <compile Include="Authors\MukeshShende.cs" />
     <compile Include="Authors\ToreGroneng.cs" />
     <compile Include="Authors\JaapBrasser.cs" />
+    <compile Include="Authors\AdamBertram.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
