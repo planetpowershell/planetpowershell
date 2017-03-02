@@ -275,6 +275,7 @@
     <compile Include="Authors\SvenVanRijen.cs" />
     <compile Include="Authors\RobSewell.cs" />
     <compile Include="Authors\MikeFRobbins.cs" />
+    <compile Include="Authors\JaapBrasser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
