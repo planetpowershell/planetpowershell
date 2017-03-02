@@ -273,6 +273,7 @@
     <compile Include="Authors\SvenVanRijen.cs" />
     <compile Include="Authors\RobSewell.cs" />
     <compile Include="Authors\MikeFRobbins.cs" />
+    <compile Include="Authors\MattMcNabb.cs" />
     <compile Include="Authors\ChrisHunt.cs" />
     <compile Include="Authors\DougFinke.cs" />
     <compile Include="Authors\JanEgilRing.cs" />
