@@ -238,8 +238,6 @@
     <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Authors\DougFinke.cs" />
-    <Compile Include="Authors\ToreGroneng.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
