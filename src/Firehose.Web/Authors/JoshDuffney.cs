@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "duffney@outlook.com";
         public string TwitterHandle => "joshduffney";
         public string GitHubHandle => "duffney";
-        public string GravatarHash => "";
+        public string GravatarHash => "32a29258aa2649e9ee6167eb12e70bf5";
         public GeoPosition Position => new GeoPosition(41.2524, 95.9980);
 
         public Uri WebSite => new Uri("http://duffney.io/");
