@@ -305,7 +305,7 @@
     <Content Include="Views\Authors\Map.cshtml" />
     <Content Include="Views\Shared\_ContainerLayout.cshtml" />
     <Content Include="Views\Authors\List.cshtml" />
-    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
