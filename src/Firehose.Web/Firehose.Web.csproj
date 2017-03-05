@@ -74,6 +74,7 @@
     <Reference Include="MvcNavigationHelpers">
       <HintPath>..\packages\MvcNavigationHelpers.0.0.0.5\lib\net45\MvcNavigationHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData">
       <Private>True</Private>
@@ -137,6 +138,7 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
     <Content Include="Content\img\card-background.png" />
+    <Content Include="Content\img\deathstar_monkey.jpg" />
     <Content Include="Content\img\icons\android-icon-144x144.png" />
     <Content Include="Content\img\icons\android-icon-192x192.png" />
     <Content Include="Content\img\icons\android-icon-36x36.png" />
@@ -240,6 +242,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -274,7 +277,7 @@
     <compile Include="Authors\SvenVanRijen.cs" />
     <compile Include="Authors\RobSewell.cs" />
     <compile Include="Authors\MikeFRobbins.cs" />
-    <compile Include="Authors\MattMcNabb.cs" />
+    <!-- <compile Include="Authors\MattMcNabb.cs" /> Removed until we can resolve issues #52 -->
     <compile Include="Authors\ChrisHunt.cs" />
     <compile Include="Authors\DougFinke.cs" />
     <compile Include="Authors\JanEgilRing.cs" />
@@ -303,6 +306,7 @@
     <Content Include="Views\Authors\Map.cshtml" />
     <Content Include="Views\Shared\_ContainerLayout.cshtml" />
     <Content Include="Views\Authors\List.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
