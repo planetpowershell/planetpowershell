@@ -273,6 +273,7 @@
     <Compile Include="Authors\QuintenSteenhuis.cs" />
     <compile Include="Authors\DavidOBrien.cs" />
     <compile Include="Authors\GlennSarti.cs" />
+    <Compile Include="Authors\GrahamBeer.cs" />
     <compile Include="Authors\SvenVanRijen.cs" />
     <compile Include="Authors\RobSewell.cs" />
     <compile Include="Authors\MikeFRobbins.cs" />
