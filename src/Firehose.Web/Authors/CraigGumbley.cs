@@ -18,8 +18,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "ad535ae27561b4df47261f2cebeed368";
         public GeoPosition Position => new GeoPosition(52.2823160, -1.5849270);
 
-        public Uri WebSite => new Uri("https://helloitscraig.co.uk/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://helloitscraig.co.uk/feed/"); } }
+        public Uri WebSite => new Uri("https://www.helloitscraig.co.uk/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.helloitscraig.co.uk/feed/"); } }
 
         public bool Filter(SyndicationItem item)
         {
