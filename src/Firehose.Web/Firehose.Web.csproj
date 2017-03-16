@@ -278,6 +278,7 @@
     <compile Include="Authors\SvenVanRijen.cs" />
     <compile Include="Authors\RobSewell.cs" />
     <compile Include="Authors\MikeFRobbins.cs" />
+    <Compile Include="Authors\DavidHall.cs" />
     <!-- <compile Include="Authors\MattMcNabb.cs" /> Removed until we can resolve issues #52 -->
     <compile Include="Authors\ChrisHunt.cs" />
     <compile Include="Authors\DougFinke.cs" />
@@ -293,7 +294,6 @@
     <Compile Include="Authors\BrandonPadgett.cs" />
     <Compile Include="Authors\AndreasBittner.cs" />
     <Compile Include="Authors\JonathanMedd.cs" />
-    <Compile Include="Authors\BrianBunke.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
