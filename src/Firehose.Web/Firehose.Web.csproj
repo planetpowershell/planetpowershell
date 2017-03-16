@@ -292,6 +292,7 @@
     <Compile Include="Authors\JoshKing.cs" />
     <Compile Include="Authors\BrandonPadgett.cs" />
     <Compile Include="Authors\AndreasBittner.cs" />
+    <Compile Include="Authors\JonathanMedd.cs" />
     <Compile Include="Authors\BrianBunke.cs" />
   </ItemGroup>
   <ItemGroup>
