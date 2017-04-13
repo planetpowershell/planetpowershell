@@ -74,6 +74,7 @@
     <Reference Include="MvcNavigationHelpers">
       <HintPath>..\packages\MvcNavigationHelpers.0.0.0.5\lib\net45\MvcNavigationHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData">
       <Private>True</Private>
@@ -137,6 +138,7 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
     <Content Include="Content\img\card-background.png" />
+    <Content Include="Content\img\deathstar_monkey.jpg" />
     <Content Include="Content\img\icons\android-icon-144x144.png" />
     <Content Include="Content\img\icons\android-icon-192x192.png" />
     <Content Include="Content\img\icons\android-icon-36x36.png" />
@@ -238,9 +240,10 @@
     <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Authors\DougFinke.cs" />
+    <Compile Include="Authors\CraigGumbley.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -263,9 +266,35 @@
     <Compile Include="Authors\FrancisSetash.cs" />
     <Compile Include="Authors\NicholasMGetchell.cs" />
     <Compile Include="Authors\MathieuBuisson.cs" />
+    <Compile Include="Authors\StephenOwen.cs" />
     <Compile Include="Authors\WarrenFrame.cs" />
+    <Compile Include="Authors\ThomasRayner.cs" />
+    <Compile Include="Authors\MarkWragg.cs" />
     <compile Include="Authors\JeffHicks.cs" />
     <Compile Include="Authors\QuintenSteenhuis.cs" />
+    <compile Include="Authors\DavidOBrien.cs" />
+    <compile Include="Authors\GlennSarti.cs" />
+    <Compile Include="Authors\GrahamBeer.cs" />
+    <compile Include="Authors\SvenVanRijen.cs" />
+    <compile Include="Authors\RobSewell.cs" />
+    <compile Include="Authors\MikeFRobbins.cs" />
+    <Compile Include="Authors\DavidHall.cs" />
+    <!-- <compile Include="Authors\MattMcNabb.cs" /> Removed until we can resolve issues #52 -->
+    <compile Include="Authors\ChrisHunt.cs" />
+    <compile Include="Authors\DougFinke.cs" />
+    <compile Include="Authors\JanEgilRing.cs" />
+    <compile Include="Authors\KevinMarquette.cs" />
+    <compile Include="Authors\MukeshShende.cs" />
+    <compile Include="Authors\ToreGroneng.cs" />
+    <compile Include="Authors\JaapBrasser.cs" />
+    <Compile Include="Authors\JoshDuffney.cs" />
+    <compile Include="Authors\AdamBertram.cs" />
+    <Compile Include="Authors\RyanMilne.cs" />
+    <Compile Include="Authors\JoshKing.cs" />
+    <Compile Include="Authors\BrandonPadgett.cs" />
+    <Compile Include="Authors\AndreasBittner.cs" />
+    <Compile Include="Authors\JonathanMedd.cs" />
+    <Compile Include="Authors\PrateekSingh.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -284,6 +313,7 @@
     <Content Include="Views\Authors\Map.cshtml" />
     <Content Include="Views\Shared\_ContainerLayout.cshtml" />
     <Content Include="Views\Authors\List.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -331,4 +361,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-</Project>   
+</Project>
