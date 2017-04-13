@@ -32,7 +32,5 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(43.035234,-76.13928);
-        
-        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2007 , 7, 1);
     }
 }

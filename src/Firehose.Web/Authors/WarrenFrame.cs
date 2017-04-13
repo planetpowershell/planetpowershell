@@ -13,14 +13,13 @@ namespace Firehose.Web.Authors
         public string LastName => "Frame";
         public string ShortBioOrTagLine => ":Infrastructure Engineer with a penchant for PowerShell, science, cooking, information security, family, cookies, and the Oxford comma.";
         public string StateOrRegion => "Boston Area, USA";
-        public string EmailAddress => "warren.frame+pps@gmail.com";
+        public string EmailAddress => "warren.frame@gmail.com";
         public string TwitterHandle => "pscookiemonster";
         public string GitHubHandle => "ramblingcookiemonster";
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(42.3391000, -71.1206200);
-        DateTime IAmAMicrosoftMVP.FirstAwarded => new DateTime(2016, 1, 1);
 
         public Uri WebSite => new Uri("http://ramblingcookiemonster.github.io/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed.xml"); } }
     }
 }
