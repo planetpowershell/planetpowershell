@@ -295,6 +295,7 @@
     <Compile Include="Authors\AndreasBittner.cs" />
     <Compile Include="Authors\JonathanMedd.cs" />
     <Compile Include="Authors\PrateekSingh.cs" />
+    <Compile Include="Authors\MikeShepard.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
