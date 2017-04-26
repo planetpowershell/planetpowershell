@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "SQLvariant";
         public string GitHubHandle => "SQLvariant";
         public string GravatarHash => "";
-        public GeoPosition Position => new GeoPosition(, );
+        public GeoPosition Position => new GeoPosition(34.058389, -84.286303);
         public Uri WebSite => new Uri("http://SQLvariant.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://feeds.feedburner.com/Sqlvariations"); } }
         public bool Filter(SyndicationItem item)
