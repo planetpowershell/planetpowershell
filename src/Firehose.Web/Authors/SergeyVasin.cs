@@ -17,7 +17,7 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "vsseth";
         public string GravatarHash => "3baf621c02b71b2333643f4e69791dbd";
         public string GitHubHandle => "sethvs";
-        public GeoPosition Position => new GeoPosition(56.630930, 47.890918);
+        public GeoPosition Position => new GeoPosition(56.63093, 47.89091);
         public Uri WebSite => new Uri("https://sergeyvasin.net");
         
         public IEnumerable<Uri> FeedUris
