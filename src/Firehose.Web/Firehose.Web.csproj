@@ -241,6 +241,7 @@
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Authors\CraigGumbley.cs" />
+    <Compile Include="Authors\DavidChristian.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -279,7 +280,7 @@
     <compile Include="Authors\RobSewell.cs" />
     <compile Include="Authors\MikeFRobbins.cs" />
     <Compile Include="Authors\DavidHall.cs" />
-    <!-- <compile Include="Authors\MattMcNabb.cs" /> Removed until we can resolve issues #52 -->
+    <compile Include="Authors\MattMcNabb.cs" />
     <compile Include="Authors\ChrisHunt.cs" />
     <compile Include="Authors\DougFinke.cs" />
     <compile Include="Authors\JanEgilRing.cs" />
