@@ -299,6 +299,7 @@
     <Compile Include="Authors\MikeShepard.cs" />
     <Compile Include="Authors\BrianBunke.cs" />
     <Compile Include="Authors\BoeProx.cs" />
+    <Compile Include="Authors\SergeyVasin.cs" />
     <Compile Include="Authors\AaronNelson.cs" />
   </ItemGroup>
   <ItemGroup>
