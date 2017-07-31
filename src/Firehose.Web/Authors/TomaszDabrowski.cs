@@ -7,11 +7,11 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class MateuszCzerniawski : IAmACommunityMember
+    public class TomaszDabrowski : IAmACommunityMember
     {
         public string FirstName => "Tomasz";
         public string LastName => "Dabrowski";
-        public string ShortBioOrTagLine => "IT Pro for 12 year. PowerShell and WinOps enthusiast.";
+        public string ShortBioOrTagLine => "IT pro with 12 years of experience. PowerShell and WinOps enthusiast. Polish PowerShell User Group co-founder. Search.Learn.Automate.Share";
         public string StateOrRegion => "Wroclaw, Poland";
         public string EmailAddress => "dombros@gmail.com";
         public string TwitterHandle => "Dom_Bros";
