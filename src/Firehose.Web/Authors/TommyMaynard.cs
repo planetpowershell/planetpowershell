@@ -15,8 +15,8 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "tommy@tommymaynard.com";
         public string TwitterHandle => "thetommymaynard";
         public string GitHubHandle => "tommymaynard";
-        public string GravatarHash => "e809f9f3d1f46f219c3a28b2fd7dbf83";
-        public GeoPosition Position => new GeoPosition(32.2217, 110.9265);
+        public string GravatarHash => "dea0a101353757985987705b513cc540";
+        public GeoPosition Position => new GeoPosition(32.2217, -110.9265);
 
         public Uri WebSite => new Uri("http://tommymaynard.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://tommymaynard.com/feed/"); } }
