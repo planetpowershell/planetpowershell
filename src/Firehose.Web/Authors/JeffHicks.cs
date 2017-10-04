@@ -11,10 +11,10 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jeff";
         public string LastName => "Hicks";
-        public string ShortBioOrTagLine => "Microsoft PowerShell MVP,Teacher,Author,Sensei";
+        public string ShortBioOrTagLine => "Cloud and Datacenter MVP,Teacher,Author,Sensei";
         public string StateOrRegion => "New York, United States";
         public string EmailAddress => "jhicks@jdhitsolutions.com";
-        public string TwitterHandle => "jhicks";
+        public string TwitterHandle => "jeffhicks";
         public string GravatarHash => "1393cfe66dace329de043b14544985db ";
 
         public Uri WebSite => new Uri("http://blog.jdhitsolutions.com/");
@@ -29,6 +29,7 @@ namespace Firehose.Web.Authors
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            
         }
 
         public GeoPosition Position => new GeoPosition(43.035234,-76.13928);

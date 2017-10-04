@@ -19,9 +19,11 @@ This site couldn't have been made without the help of Readify and the Planet Xam
 - Your blog may be removed at any time if any of these are broken.
 
 ## How to add yourself
-Addin yourself as an author is easy! All you need to do is fork this project, add yourself to the [author folder] as your very own class. You need to ensure that you implement the `IAmACommunityMember` interface.
+Adding yourself as an author is easy! All you need to do is fork this project, and add a file to the `src\Firehose.Web\Authors\` folder.
 
-You can even do this via the GitHub editor, just don't forget to _add the class to the .csproj_ file. If you have never done anything like this, there are plenty of people that can help!
+The author file is a C# class that implements the `IAmACommunityMember` interface. It doesn't matter if you don't know C# though: just follow the many examples already there.
+
+You can even do this via the GitHub editor. If you have never done anything like this, there are plenty of people that can help!
 
 The result should look something like this:
 
@@ -43,7 +45,8 @@ The result should look something like this:
     }
 ```
 
-A few things: 
+A few things:
+- Don't worry about touching the `.csproj` file; it'll pick up the author file from the folder automatically
 - Name the class after your first and lastname with CamelCase
 - The `FirstName` and `LastName` property should resemble that same name
 - `ShortBioOrTagLine` property can be whatever you like. If you can't think of anything choose: 'software engineer' or 'software engineer at Microsoft'
@@ -57,7 +60,7 @@ A few things:
 
 If you also do some blogging about other stuff, no worries! You're fine! Just have a look at the next section on how to filter out your PowerShell specific posts.
 
-###Special note for Microsoft MVPs
+### Special note for Microsoft MVPs
 Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
 ``` csharp
     public class MVPGuy : IAmAMicrosoftMVP
