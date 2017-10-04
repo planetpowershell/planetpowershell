@@ -7,11 +7,11 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class SvenVanRijen : IAmACommunityMember
+    public class SvenVanRijen : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "Sven";
         public string LastName => "van Rijen";
-        public string ShortBioOrTagLine => "Senior Engineer, mainly working on Infrastructure as Code and Azure.";
+        public string ShortBioOrTagLine => "Senior Engineer, mainly working on (client) OS Deployment and Management.";
         public string StateOrRegion => "Wageningen, The Netherlands";
         public string EmailAddress => "sven@svenvanrijen.nl";
         public string TwitterHandle => "svenvanrijen";
@@ -21,5 +21,13 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("http://www.svenvanrijen.nl");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://www.svenvanrijen.nl/feed.xml"); } }
+
+        public bool Filter(SyndicationItem item)
+        {
+
+            // This filters out only the posts that have the "PowerShell" category
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+
+        }
     }
 }
