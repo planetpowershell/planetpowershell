@@ -10,7 +10,7 @@ namespace Firehose.Web.Authors
     public class AdamBertram : IAmAMicrosoftMVP
     {
         public string FirstName => "Adam";
-        public string LastName => "Bertram`";
+        public string LastName => "Bertram";
         public string ShortBioOrTagLine => "Automation Engineer, writer, trainer, Microsoft MVP, fiercely independent, laid back guy that loves sharing.";
         public string StateOrRegion => "Evansville, IN";
         public string EmailAddress => string.Empty;
