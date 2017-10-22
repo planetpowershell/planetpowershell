@@ -19,8 +19,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "fafdbc410c9adf8c4d2235d37470859a";
         public GeoPosition Position => new GeoPosition(-39.4928, 176.9120);
 
-        public Uri WebSite => new Uri("http://king.geek.nz/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://king.geek.nz/feed.xml"); } }
+        public Uri WebSite => new Uri("https://king.geek.nz/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://king.geek.nz/feed.xml"); } }
 		
         public bool Filter(SyndicationItem item)
         {
