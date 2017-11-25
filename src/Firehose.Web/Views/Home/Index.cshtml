@@ -55,11 +55,4 @@
 </p>
 <img class="featuredbadge" src="~/Content/img/planetpowershell-featured-badge.png" alt="Featured on Planet PowerShell badge" />
 
-<hr />
-<h1>PowerShell Podcasts, Shows, Newsletters & Open-source Software</h1>
-<p>
-    @foreach (var member in Model.Where(m => m is IAmAPodcast || m is IAmANewsletter || m is IAmAPowerShellModule).ToArray())
-    {
-        Html.RenderPartial("PodcastCard", member);
-    }
-</p>
+
