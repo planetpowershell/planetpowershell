@@ -12,7 +12,7 @@ namespace Firehose.Web.Authors
         public string FirstName => "Stephanos";
         public string LastName => "Constantinou";
         public string ShortBioOrTagLine => "Senior System Administrator. I am using PowerShell a lot to perform day to day tasks and automate procedures.";
-        public string StateOrRegion => "Limassol";
+        public string StateOrRegion => "Limassol,Cyprus";
         public string EmailAddress => "stephanos@sconstantinou.com";
         public string TwitterHandle => "SCPowerShell";
         public string GravatarHash => "04de5e0523cf48e9493c11905fd5999f";
