@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -240,7 +241,6 @@
     <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Authors\CraigGumbley.cs" />
     <Compile Include="AutofacModules\FeedsModule.cs" />
     <Compile Include="AutofacModules\WebModule.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -260,41 +260,7 @@
     <Compile Include="Infrastructure\Md5HashingExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PreviewViewModel.cs" />
-    <!-- Include your authors here -->
-    <Compile Include="Authors\KieranJacobsen.cs" />
-    <Compile Include="Authors\SebastianFeldmann.cs" />
-    <Compile Include="Authors\FrancisSetash.cs" />
-    <Compile Include="Authors\NicholasMGetchell.cs" />
-    <Compile Include="Authors\MathieuBuisson.cs" />
-    <Compile Include="Authors\StephenOwen.cs" />
-    <Compile Include="Authors\WarrenFrame.cs" />
-    <Compile Include="Authors\ThomasRayner.cs" />
-    <Compile Include="Authors\MarkWragg.cs" />
-    <compile Include="Authors\JeffHicks.cs" />
-    <Compile Include="Authors\QuintenSteenhuis.cs" />
-    <compile Include="Authors\DavidOBrien.cs" />
-    <compile Include="Authors\GlennSarti.cs" />
-    <Compile Include="Authors\GrahamBeer.cs" />
-    <compile Include="Authors\SvenVanRijen.cs" />
-    <compile Include="Authors\RobSewell.cs" />
-    <compile Include="Authors\MikeFRobbins.cs" />
-    <Compile Include="Authors\DavidHall.cs" />
-    <!-- <compile Include="Authors\MattMcNabb.cs" /> Removed until we can resolve issues #52 -->
-    <compile Include="Authors\ChrisHunt.cs" />
-    <compile Include="Authors\DougFinke.cs" />
-    <compile Include="Authors\JanEgilRing.cs" />
-    <compile Include="Authors\KevinMarquette.cs" />
-    <compile Include="Authors\MukeshShende.cs" />
-    <compile Include="Authors\ToreGroneng.cs" />
-    <compile Include="Authors\JaapBrasser.cs" />
-    <Compile Include="Authors\JoshDuffney.cs" />
-    <compile Include="Authors\AdamBertram.cs" />
-    <Compile Include="Authors\RyanMilne.cs" />
-    <Compile Include="Authors\JoshKing.cs" />
-    <Compile Include="Authors\BrandonPadgett.cs" />
-    <Compile Include="Authors\AndreasBittner.cs" />
-    <Compile Include="Authors\JonathanMedd.cs" />
-    <Compile Include="Authors\PrateekSingh.cs" />
+    <Compile Include="Authors\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -314,6 +280,7 @@
     <Content Include="Views\Shared\_ContainerLayout.cshtml" />
     <Content Include="Views\Authors\List.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\PodcastCard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
