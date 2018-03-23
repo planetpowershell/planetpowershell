@@ -11,7 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Nicholas";
         public string LastName => "Dille";
-        public string ShortBioOrTagLine => "is a Microsoft MVP and Docker Captain.";
+        public string ShortBioOrTagLine => "and Docker Captain. He is focused on Infrastructure-as-Code, Containers, PowerShell and Cross-Platform";
         public string StateOrRegion => "Freiburg, Germany";
         public string EmailAddress => "nicholas@dille.name";
         public string TwitterHandle => "nicholasdille";
