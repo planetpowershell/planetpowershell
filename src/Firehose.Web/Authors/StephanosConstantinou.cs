@@ -21,5 +21,10 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://www.sconstantinou.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.sconstantinou.com/feed/"); } }
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell scripts"));
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell tutorials"));
+        }
     }
 }
