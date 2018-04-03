@@ -17,11 +17,11 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "SinghPrateik";
         public string GravatarHash => "2b2f100e9097063a5777a26820a58fc7";
 
-        public Uri WebSite => new Uri("https://geekeefy.wordpress.com/");
+        public Uri WebSite => new Uri("https://ridicurious.com/");
 
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://geekeefy.wordpress.com/feed/"); }
+            get { yield return new Uri("https://ridicurious.com/feed/"); }
         }
 
         public string GitHubHandle => "prateekkumarsingh";
