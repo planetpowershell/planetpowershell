@@ -23,8 +23,7 @@ namespace Firehose.Web.Authors
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.sconstantinou.com/feed/"); } }
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell scripts"));
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell tutorials"));
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Contains("powershell"));
         }
     }
 }
