@@ -16,6 +16,9 @@ using BlogMonster;
 using BlogMonster.Infrastructure;
 using BlogMonster.Infrastructure.SyndicationFeedSources.Remote;
 using ThirdDrawer.Extensions.CollectionExtensionMethods;
+using Firehose.Web.Extensions;
+using System.Globalization;
+using System.Collections.Generic;
 
 namespace Firehose.Web.Infrastructure
 {
@@ -37,16 +40,26 @@ namespace Firehose.Web.Infrastructure
             HttpClient.Timeout = TimeSpan.FromMinutes(1);
         }
 
-        public SyndicationFeed Feed => _combinedFeedSource.Value.Value.Feed;
+        public SyndicationFeed Feed => GetFeed(null);
+
+        public SyndicationFeed GetFeed(string language)
+        {
+            var groupedFeeds = _combinedFeedSource.Value.Value;
+
+            if (string.IsNullOrEmpty(language) || !groupedFeeds.ContainsKey(language))
+            {
+                language = "mixed";
+                return GetCombinedFeed(language, groupedFeeds.Values.SelectMany(f => f)).Feed;
+            }
+
+            return GetCombinedFeed(language, groupedFeeds[language]).Feed;
+        }
 
         public IAmACommunityMember[] Bloggers { get; }
 
-        private ISyndicationFeedSource LoadFeeds()
+        private ISyndicationFeedSource GetCombinedFeed(string language, IEnumerable<ISyndicationFeedSource> feeds)
         {
-            var feedTasks = Bloggers.SelectMany(b => b.FeedUris, TryLoadFeedAsync);
-            var feedSources = Task.WhenAll(feedTasks).GetAwaiter().GetResult().NotNull().ToArray();
-
-            return BlogMonsterBuilder.FromOtherFeedSources(feedSources.First(), feedSources.Skip(1).ToArray())
+            return BlogMonsterBuilder.FromOtherFeedSources(feeds.First(), feeds.Skip(1).ToArray())
                 .WithRssSettings(
                     new RssFeedSettings(ConfigurationManager.AppSettings["BaseUrl"],
                         ConfigurationManager.AppSettings["RssFeedTitle"],
@@ -55,10 +68,19 @@ namespace Firehose.Web.Infrastructure
                         ConfigurationManager.AppSettings["SyndicationPersonName"],
                         ConfigurationManager.AppSettings["BaseUrl"]),
                         ConfigurationManager.AppSettings["RssFeedImageUrl"],
-                        "en-US",
+                        language,
                         "The copyright for each post is retained by its author.",
                         new Uri(ConfigurationManager.AppSettings["BaseUrl"])))
                 .Grr();
+        }
+
+        private Dictionary<string, IEnumerable<ISyndicationFeedSource>> LoadFeeds()
+        {
+            var feedTasks = Bloggers.DistinctByCollection(b => b.FeedUris).SelectMany(b => b.FeedUris, TryLoadFeedAsync);
+            var feedSources = Task.WhenAll(feedTasks).GetAwaiter().GetResult().NotNull();
+            var groupedFeeds = feedSources.GroupBy(feed => feed.Feed.Language).ToDictionary(g => g.Key, g => g.AsEnumerable());
+
+            return groupedFeeds;
         }
 
         private async Task<ISyndicationFeedSource> TryLoadFeedAsync(IAmACommunityMember tamarin, Uri uri)
@@ -69,11 +91,12 @@ namespace Firehose.Web.Infrastructure
 
                 var filter = iFilterMyBlogPosts != null
                     ? (Func<SyndicationItem, bool>)iFilterMyBlogPosts.Filter
-                    : (si => true);
+                    : (si => si.ApplyDefaultFilter());
 
                 var feedSource = new DummyRemoteSyndicationFeedSource();
 
                 var feed = await FetchAsync(uri, filter).ConfigureAwait(false);
+                feed.Language = CultureInfo.CreateSpecificCulture(tamarin.FeedLanguageCode).Name;
                 feedSource.Feed = feed;
 
                 return feedSource;
@@ -84,6 +107,21 @@ namespace Firehose.Web.Infrastructure
 
                 // Not my problem if your feed asplodes but we at least won't crash the app for all the other nice people :)
                 return null;
+            }
+        }
+
+        private static bool WrappedFilter(SyndicationItem item, Func<SyndicationItem, bool> filterFunc)
+        {
+            try
+            {
+                return filterFunc(item);
+            }
+            catch (NullReferenceException)
+            {
+                // the authors' filter is derped
+                // try some sane defaults
+
+                return item.ApplyDefaultFilter();
             }
         }
 
@@ -101,7 +139,8 @@ namespace Firehose.Web.Infrastructure
                     {
                         var feed = SyndicationFeed.Load(xmlReader);
                         var filteredItems = feed.Items
-                            .Where(filter)
+                            .Where(item => WrappedFilter(item, filter))
+                            .Where(item => item.LastUpdatedTime.UtcDateTime <= DateTimeOffset.UtcNow && item.PublishDate.UtcDateTime <= DateTimeOffset.UtcNow)
                             .ToArray();
 
                         var itemsField = feed.GetType().GetField("items", BindingFlags.Instance | BindingFlags.NonPublic);

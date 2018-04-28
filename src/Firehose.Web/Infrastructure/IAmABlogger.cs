@@ -30,6 +30,10 @@ namespace Firehose.Web.Infrastructure
         string GravatarHash { get; }
         IEnumerable<Uri> FeedUris { get; }
         GeoPosition Position { get; }
+
+        // In ISO 639-1, lowercase, 2 letters
+        // https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+        string FeedLanguageCode { get; }
     }
 
     public interface IWorkAtMicrosoft : IAmACommunityMember
@@ -45,10 +49,6 @@ namespace Firehose.Web.Infrastructure
     }
     
     public interface IAmANewsletter : IAmACommunityMember
-    {
-    }
-
-    public interface IAmAPowerShellModule : IAmACommunityMember
     {
     }
 }
