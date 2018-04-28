@@ -35,7 +35,7 @@ namespace Firehose.Web.Infrastructure
 
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
 
-            HttpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("PlanetXamarin", $"{GetType().Assembly.GetName().Version}"));
+            HttpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("PlanetPowerShell", $"{GetType().Assembly.GetName().Version}"));
             HttpClient.Timeout = TimeSpan.FromMinutes(1);
         }
 

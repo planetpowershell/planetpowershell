@@ -7,15 +7,15 @@ namespace Firehose.Web.Extensions
     {
         public static bool ApplyDefaultFilter(this SyndicationItem item)
         {
-            var hasXamarinCategory = false;
+            var hasPowerShellCategory = false;
 
             if (item.Categories.Count > 0)
-                hasXamarinCategory = item.Categories.Any(category =>
-                    category.Name.ToLowerInvariant().Contains("xamarin"));
+                hasPowerShellCategory = item.Categories.Any(category =>
+                    category.Name.ToLowerInvariant().Contains("powershell"));
 
-            var hasXamarinTitle = item.Title?.Text.ToLowerInvariant().Contains("xamarin") ?? false;
+            var hasPowerShellTitle = item.Title?.Text.ToLowerInvariant().Contains("powershell") ?? false;
 
-            return hasXamarinTitle || hasXamarinCategory;
+            return hasPowerShellTitle || hasPowerShellCategory;
         }
     }
 }
