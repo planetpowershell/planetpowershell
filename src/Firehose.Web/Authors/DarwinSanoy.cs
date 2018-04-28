@@ -23,5 +23,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("http://cloudywindows.io/tags/powershell/index.xml"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }

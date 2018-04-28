@@ -20,5 +20,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("http://asaconsultant.blogspot.no");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://asaconsultant.blogspot.com/feeds/posts/default/-/Powershell"); } }
+        public string FeedLanguageCode => "en";
     }
 }

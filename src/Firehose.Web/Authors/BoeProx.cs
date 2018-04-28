@@ -23,5 +23,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("http://www.learn-powershell.net/feed/"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }

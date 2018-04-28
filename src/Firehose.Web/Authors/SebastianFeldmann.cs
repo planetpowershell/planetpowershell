@@ -21,5 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("http://blog.feldmann.io/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://blog.feldmann.io/feed/"); } }
+        public string FeedLanguageCode => "en";
     }
 }

@@ -21,5 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://arconnetblog.wordpress.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://arconnetblog.wordpress.com/feed/"); } }
+        public string FeedLanguageCode => "en";
     }
 }

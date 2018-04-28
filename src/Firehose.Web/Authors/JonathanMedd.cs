@@ -21,5 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("http://www.jonathanmedd.net");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://feeds.feedburner.com/JonathanMeddsBlogPowerShell"); } }
+        public string FeedLanguageCode => "en";
     }
 }

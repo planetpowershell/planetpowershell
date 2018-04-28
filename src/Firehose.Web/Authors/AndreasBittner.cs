@@ -19,6 +19,6 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(49.4833, 10.7167);
         public Uri WebSite => new Uri("http://joinpowershell.de/de/new/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://joinpowershell.de/de/feed/"); } }
-        
+        public string FeedLanguageCode => "en";
     }
 }

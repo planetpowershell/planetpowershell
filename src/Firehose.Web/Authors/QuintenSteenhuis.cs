@@ -22,10 +22,11 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("http://nonprofittechy.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://nonprofittechy.com/feed/"); } }
 
-	public bool Filter(SyndicationItem item)
-	{
-		return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
-	}
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+        }
+        public string FeedLanguageCode => "en";
 
     }
 }

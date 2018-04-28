@@ -32,5 +32,6 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(40.462445, 74.6744);
+        public string FeedLanguageCode => "en";
     }
 }
