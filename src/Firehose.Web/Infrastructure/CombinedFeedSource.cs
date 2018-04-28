@@ -25,16 +25,15 @@ namespace Firehose.Web.Infrastructure
     public class CombinedFeedSource
     {
         private static readonly HttpClient HttpClient = new HttpClient();
-        private readonly Lazy<Cached<ISyndicationFeedSource>> _combinedFeedSource;
+        private readonly Lazy<Cached<Dictionary<string, IEnumerable<ISyndicationFeedSource>>>> _combinedFeedSource;
 
         public CombinedFeedSource(IAmACommunityMember[] bloggers)
         {
             Bloggers = bloggers;
-            var cached = new Cached<ISyndicationFeedSource>(TimeSpan.FromHours(1), new SystemClock(), LoadFeeds);
-            _combinedFeedSource = new Lazy<Cached<ISyndicationFeedSource>>(() => cached, LazyThreadSafetyMode.PublicationOnly);
+            var cached = new Cached<Dictionary<string, IEnumerable<ISyndicationFeedSource>>>(TimeSpan.FromHours(1), new SystemClock(), LoadFeeds);
+            _combinedFeedSource = new Lazy<Cached<Dictionary<string, IEnumerable<ISyndicationFeedSource>>>>(() => cached, LazyThreadSafetyMode.PublicationOnly);
 
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 |
-                                                              SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
 
             HttpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("PlanetXamarin", $"{GetType().Assembly.GetName().Version}"));
             HttpClient.Timeout = TimeSpan.FromMinutes(1);
