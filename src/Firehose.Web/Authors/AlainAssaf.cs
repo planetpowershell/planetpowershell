@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Alain";
         public string ShortBioOrTagLine => "Citrix Specialist at SECU - Citrix Technology Advocate - Feedspot Top 50 PowerShell Blogs on the web";
         public string StateOrRegion => "North Carolina, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "alainassaf";
         public string GitHubHandle => "alainassaf";
         public string GravatarHash => "55e3ac1ac8ca9129cc9e138a158b07bb";

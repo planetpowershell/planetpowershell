@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Shende";
         public string ShortBioOrTagLine => "Technologist & Trainer";
         public string StateOrRegion => "Hyderabad";
-        public string EmailAddress => "shendemukesh@hotmail.com";
         public string TwitterHandle => "mukeshshende";
         public string GravatarHash => "f3b1949e781cf05f10946a2a6e111353";
         public string GitHubHandle => "mukeshshende";

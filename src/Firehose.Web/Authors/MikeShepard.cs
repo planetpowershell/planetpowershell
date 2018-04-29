@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Shepard";
         public string ShortBioOrTagLine => "Solutions architect for a software company, using PowerShell since 2007.";
         public string StateOrRegion => "Missouri,USA";
-        public string EmailAddress => "mshepard70@gmail.com";
         public string TwitterHandle => "MikeShepard70";
         public string GitHubHandle => "MikeShepard";
         public string GravatarHash => "45bc55fe65c938b0c65c20101dd73b6c";

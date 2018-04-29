@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Beer";
         public string ShortBioOrTagLine => "System Engineer, PowerShell, WinOps and SCCM who is a huge automation fan!";
         public string StateOrRegion => "Southampton, UK";
-        public string EmailAddress => "Graham.Beer@DTLK.co.uk";
         public string TwitterHandle => "GKBeer";
         public string GitHubHandle => "Graham-Beer";
         public string GravatarHash => "159bdc93f5c3783799b4d298d6d87dde";

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "O'Brien";
         public string ShortBioOrTagLine => "is a Microsoft MVP, DevOps Consultant/Engineer, do AWS and a lot of Cloud.";
         public string StateOrRegion => "Melbourne, Australia";
-        public string EmailAddress => "me@david-obrien.net";
         public string TwitterHandle => "david_obrien";
         public string GravatarHash => "c93bbf72255d38bab70895eb7c0b3f99";
 

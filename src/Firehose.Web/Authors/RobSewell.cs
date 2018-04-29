@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Sewell";
         public string ShortBioOrTagLine => "is a PowerShell Bearded Fella and SQL Server DBA ";
         public string StateOrRegion => "Somerset, UK";
-        public string EmailAddress => "";
         public string TwitterHandle => "sqldbawithbeard";
         public string GravatarHash => "bdbac4b4103fc16a37e87bd02945219f";
 

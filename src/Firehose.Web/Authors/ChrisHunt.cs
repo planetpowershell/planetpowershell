@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Hunt";
         public string ShortBioOrTagLine => "Windows Platform Engineer. Co-organizer of Norther Virginia PowerShell User Group. I ❤️ data & testing.";
         public string StateOrRegion => "Northern Virginia, United States";
-        public string EmailAddress => "cdhunt@gmail.com";
         public string TwitterHandle => "logicaldiagram";
         public string GravatarHash => "d5d9ccbefb9ee62169d1543d5634d0fd";
 

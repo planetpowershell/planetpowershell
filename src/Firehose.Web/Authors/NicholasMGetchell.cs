@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Getchell";
         public string ShortBioOrTagLine => "Analyst";
         public string StateOrRegion => "Boston, MA";
-        public string EmailAddress => "nicholas@getchell.org";
         public string TwitterHandle => "getch3028";
         public string GravatarHash => "1ebff516aa68c1b3bc786bd291b8fca1";
         public string GitHubHandle => "ngetchell";

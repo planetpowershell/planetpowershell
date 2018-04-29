@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Padgett";
         public string ShortBioOrTagLine => "Proud Father and Microsoft MVP";
         public string StateOrRegion => "Murfreesboro, Tennessee";
-        public string EmailAddress => "contact@brandonpadgett.com";
         public string TwitterHandle => "BrandonPadgett";
         public string GitHubHandle => "gerane";
         public string GravatarHash => "b692ff1f3cec3583cafbf3fbba5cbadf";

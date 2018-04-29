@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Medd";
         public string ShortBioOrTagLine => "Microsoft MVP - Cloud & Datacenter Management";
         public string StateOrRegion => "United Kingdom";
-        public string EmailAddress => "jon_medd@hotmail.com";
         public string TwitterHandle => "jonathanmedd";
         public string GitHubHandle => "jonathanmedd";
         public string GravatarHash => "1b01887ac956ccd429a4209ade5cdb68";

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Setash";
         public string ShortBioOrTagLine => "Infrastructure and DevOps Engineer. Lots of working with Chef, and PowerShell DSC";
         public string StateOrRegion => "Arnold, MD";
-        public string EmailAddress => "francis@i-py.com";
         public string TwitterHandle => "";
         public string GravatarHash => "";
 

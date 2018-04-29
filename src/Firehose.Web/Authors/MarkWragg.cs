@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
 		public string LastName => "Wragg";
 		public string ShortBioOrTagLine => "Operations Manager interested in all things Windows, Powershell, AWS, Azure, Chef etc.";
 		public string StateOrRegion => "Hook, England";
-		public string EmailAddress => "mark@wragg.io";
 		public string GitHubHandle => "markwragg";
         	public string TwitterHandle => "markwragg";
 		public string GravatarHash => "e8e1b8d0e98f84b10a03f9430334b02f";

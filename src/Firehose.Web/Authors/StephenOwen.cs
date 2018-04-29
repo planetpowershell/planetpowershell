@@ -13,7 +13,6 @@ public class StephenOwen : IAmAMicrosoftMVP
         public string LastName => "Owen";
         public string ShortBioOrTagLine => "FoxDeploy.SubjectMatter = writes about PowerShell";
         public string StateOrRegion => "Atlanta";
-        public string EmailAddress => "Stephen@foxdeploy.com";
         public string TwitterHandle => "FoxDeploy";
         public string GitHubHandle => "1RedOne";
         public GeoPosition Position => new GeoPosition(33.862100, -84.687900);

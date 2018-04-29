@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "King";
         public string ShortBioOrTagLine => "Geek, Father, Walking Helpdesk";
         public string StateOrRegion => "Hawke's Bay, NZ";
-        public string EmailAddress => "joshua@king.geek.nz";
         public string TwitterHandle => "WindosNZ";
         public string GitHubHandle => "Windos";
         public string GravatarHash => "fafdbc410c9adf8c4d2235d37470859a";

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Brasser";
         public string ShortBioOrTagLine => "Blogging about anything shiny and automation related, pretending to know PowerShell";
         public string StateOrRegion => "Amsterdam, Netherlands";
-        public string EmailAddress => string.Empty;
         public string TwitterHandle => "jaap_brasser";
         public string GravatarHash => "dc8d4d1ec3179e966ccdd959aa16d11c";
         public string GitHubHandle => "jaapbrasser";

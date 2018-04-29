@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Hall";
         public string ShortBioOrTagLine => "Microsoft PowerShell Enthusiast. Founder of SignalWarrant.com";
         public string StateOrRegion => "Georgia, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "signalwarrant";
         public string GitHubHandle => "signalwarrant";
         public string GravatarHash => "afd7acd25c1511435fd85cdeda29aa43";

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Hicks";
         public string ShortBioOrTagLine => "Cloud and Datacenter MVP,Teacher,Author,Sensei";
         public string StateOrRegion => "New York, United States";
-        public string EmailAddress => "jhicks@jdhitsolutions.com";
         public string TwitterHandle => "jeffhicks";
         public string GravatarHash => "1393cfe66dace329de043b14544985db ";
 

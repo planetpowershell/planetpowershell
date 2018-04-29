@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Finke";
         public string ShortBioOrTagLine => "is the Author of 'Windows PowerShell for Developers', speaker and PowerShell trainer";
         public string StateOrRegion => "New York City, United States";
-        public string EmailAddress => "finked@hotmail.com";
         public string TwitterHandle => "dfinke";
         public string GravatarHash => "94c48c63e7e63f5e713f7f7a5cdbcac0";
 

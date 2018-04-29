@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Robbins";
         public string ShortBioOrTagLine => "Microsoft PowerShell MVP and SAPIEN Technologies MVP. Leader & Co-founder of MSPSUG";
         public string StateOrRegion => "Mississippi, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "mikefrobbins";
         public string GitHubHandle => "mikefrobbins";
         public string GravatarHash => "e809f9f3d1f46f219c3a28b2fd7dbf83";

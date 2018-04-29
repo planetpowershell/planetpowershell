@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Ring";
         public string ShortBioOrTagLine => "Microsoft MVP - Cloud & Datacenter Management";
         public string StateOrRegion => "Norway";
-        public string EmailAddress => "jan.egil.ring@outlook.com";
         public string TwitterHandle => "JanEgilRing";
         public string GitHubHandle => "janegilring";
         public string GravatarHash => "ed08d635415486b87539a6e5a81982b7";

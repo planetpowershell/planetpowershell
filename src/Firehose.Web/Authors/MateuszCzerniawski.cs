@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Czerniawski";
         public string ShortBioOrTagLine => "PowerShell Enthusiast, WinOps and HyperV";
         public string StateOrRegion => "Wroclaw, Poland";
-        public string EmailAddress => "mczerniawski@arcon.net.pl";
         public string TwitterHandle => "arcontar";
         public string GitHubHandle => "mczerniawski";
         public string GravatarHash => "f0e6c49009d0a9fb3c1453c2cfd9334a";

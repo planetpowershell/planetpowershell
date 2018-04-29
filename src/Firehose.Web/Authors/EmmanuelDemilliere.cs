@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Demilliere";
         public string ShortBioOrTagLine => "PowerShell MVP focused on AD & Office 365";
         public string StateOrRegion => "France";
-        public string EmailAddress => "edemilliere@itfordummies.net";
         public string TwitterHandle => "edemilliere";
         public string GitHubHandle => "edemilliere";
         public string GravatarHash => "";

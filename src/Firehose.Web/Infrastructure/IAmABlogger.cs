@@ -22,7 +22,6 @@ namespace Firehose.Web.Infrastructure
         string FirstName { get; }
         string LastName { get; }
         string StateOrRegion { get; }
-        string EmailAddress { get; }
         string ShortBioOrTagLine { get; }
         Uri WebSite { get; }
         string TwitterHandle { get; }

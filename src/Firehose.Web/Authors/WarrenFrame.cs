@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Frame";
         public string ShortBioOrTagLine => ":Infrastructure Engineer with a penchant for PowerShell, science, cooking, information security, family, cookies, and the Oxford comma.";
         public string StateOrRegion => "Boston Area, USA";
-        public string EmailAddress => "warren.frame@gmail.com";
         public string TwitterHandle => "pscookiemonster";
         public string GitHubHandle => "ramblingcookiemonster";
         public string GravatarHash => "";

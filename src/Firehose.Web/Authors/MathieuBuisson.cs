@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Buisson";
         public string ShortBioOrTagLine => "Senior DevOps Engineer. Working on Dev, Ops and everything in between";
         public string StateOrRegion => "Dublin, Ireland";
-        public string EmailAddress => "";
         public string TwitterHandle => "TheShellNut";
         public string GravatarHash => "25061653796d5c748192c68e2eb6bde8";
 

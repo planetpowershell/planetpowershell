@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Neihaus";
         public string ShortBioOrTagLine => "AWS Cloud Architect";
         public string StateOrRegion => "Boston, MA, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "yobyot";
         public string GitHubHandle => "yobyot";
         public string GravatarHash => "84df1a56afda0ae7b7b10e7b8cf5972e";

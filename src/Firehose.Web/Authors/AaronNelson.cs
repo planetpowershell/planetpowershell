@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Nelson";
         public string ShortBioOrTagLine => "Microsoft SQL Server (Data Platform) MVP and leader of the PowerShell Virtual Group of PASS";
         public string StateOrRegion => "Georgia, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "SQLvariant";
         public string GitHubHandle => "SQLvariant";
         public string GravatarHash => "2b18aa0a254cd01e09918c4b24274e21";

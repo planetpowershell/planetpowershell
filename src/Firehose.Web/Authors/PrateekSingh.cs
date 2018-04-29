@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Singh";
         public string ShortBioOrTagLine => "Infrastructure Developer, Automation engineer and PowerShell Blogger";
         public string StateOrRegion => "New Delhi, India";
-        public string EmailAddress => "prateeksingh1590@gmail.com";
         public string TwitterHandle => "SinghPrateik";
         public string GravatarHash => "2b2f100e9097063a5777a26820a58fc7";
 

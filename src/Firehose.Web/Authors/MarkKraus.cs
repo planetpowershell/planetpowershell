@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Kraus";
         public string ShortBioOrTagLine => "IT Solutions Architect, PowerShell enthusiast";
         public string StateOrRegion => "Dallas/Fort Worth, Texas, USA";
-        public string EmailAddress => "Get-PowerShellBlog@markekraus.com";
         public string TwitterHandle => "markekraus";
         public string GitHubHandle => "markekraus";
         public string GravatarHash => "ddd9a3f6a4c31ea3c3a214b5f0912c36";

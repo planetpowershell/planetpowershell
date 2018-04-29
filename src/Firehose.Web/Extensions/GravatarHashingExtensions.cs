@@ -11,9 +11,6 @@ namespace Firehose.Web.Extensions
             const int size = 200;
             var hash = member.GravatarHash;
 
-            if (string.IsNullOrWhiteSpace(hash))
-                hash = member.EmailAddress.Trim().ToLowerInvariant().ToMd5Hash().ToLowerInvariant();
-
             var defaultImage = HttpUtility.UrlEncode(ConfigurationManager.AppSettings["DefaultGravatarImage"]);
             return $"//www.gravatar.com/avatar/{hash}.jpg?s={size}&d={defaultImage}";
         }

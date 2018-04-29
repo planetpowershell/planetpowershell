@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Silva";
         public string ShortBioOrTagLine => "SQL Server DBA and PowerShell MVP who loves to automate any process that needs to be done more than a couple of times.";
         public string StateOrRegion => "Sintra, Portugal";
-        public string EmailAddress => string.Empty;
         public string TwitterHandle => "claudioessilva";
         public string GravatarHash => "c01100dc9b797cc424e48ca9c5ecb76f";
         public string GitHubHandle => "claudioessilva";

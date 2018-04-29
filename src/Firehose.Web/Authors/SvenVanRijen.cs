@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "van Rijen";
         public string ShortBioOrTagLine => "Senior Engineer, mainly working on (client) OS Deployment and Management.";
         public string StateOrRegion => "Wageningen, The Netherlands";
-        public string EmailAddress => "sven@svenvanrijen.nl";
         public string TwitterHandle => "svenvanrijen";
         public string GitHubHandle => "svenvanrijen";
         public string GravatarHash => "b7735274c4f28b3e241a39fa61cb1d91";

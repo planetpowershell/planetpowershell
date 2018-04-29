@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Duffney";
         public string ShortBioOrTagLine => ":DevOps Engineer,Pluralsight Author,Speaker,Blogger,PowerShell Advocate";
         public string StateOrRegion => "Omaha, USA";
-        public string EmailAddress => "duffney@outlook.com";
         public string TwitterHandle => "joshduffney";
         public string GitHubHandle => "duffney";
         public string GravatarHash => "32a29258aa2649e9ee6167eb12e70bf5";

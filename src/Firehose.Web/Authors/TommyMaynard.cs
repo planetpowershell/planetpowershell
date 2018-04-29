@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Maynard";
         public string ShortBioOrTagLine => "Information Technology Professional (PowerShell Enthusiast)";
         public string StateOrRegion => "Arizona, USA";
-        public string EmailAddress => "tommy@tommymaynard.com";
         public string TwitterHandle => "thetommymaynard";
         public string GitHubHandle => "tommymaynard";
         public string GravatarHash => "dea0a101353757985987705b513cc540";

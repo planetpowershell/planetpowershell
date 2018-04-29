@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Gumbley";
         public string ShortBioOrTagLine => "Automation and Orchestration enthusiast";
         public string StateOrRegion => "Warwickshire, United Kingdom";
-        public string EmailAddress => "";
         public string TwitterHandle => "_chelnak";
         public string GitHubHandle => "chelnak";
         public string GravatarHash => "ad535ae27561b4df47261f2cebeed368";

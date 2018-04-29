@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Jarosz";
         public string ShortBioOrTagLine => "My IT adventures with a doze of homour";
         public string StateOrRegion => "Wroclaw, Poland";
-        public string EmailAddress => "pawel.jarosz@gmail.com";
         public string TwitterHandle => "PaweJarosz4";
         public string GitHubHandle => "zaicnupagadi";
         public string GravatarHash => "618ea542b42ec5910fa41f5454055811";

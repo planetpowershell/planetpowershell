@@ -13,7 +13,6 @@ public class MattMcNabb : IAmACommunityMember
         public string LastName => "McNabb";
         public string ShortBioOrTagLine => "Systems Engineer and PowerShell enthusiast; erratic blogger";
         public string StateOrRegion => "Ohio";
-        public string EmailAddress => "mmcnabb@outlook.com";
         public string TwitterHandle => "mcnabbmh";
         public string GitHubHandle => "mattmcnabb";
         public GeoPosition Position => new GeoPosition(39.403986, -84.406761);

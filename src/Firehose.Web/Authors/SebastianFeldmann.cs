@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Feldmann";
         public string ShortBioOrTagLine => "dad, musician, sysadmin";
         public string StateOrRegion => "Bremen, Germany";
-        public string EmailAddress => "sebastian@feldmann.io";
         public string TwitterHandle => "sebfieldman";
         public string GravatarHash => "";
         public string GitHubHandle => "seebus";

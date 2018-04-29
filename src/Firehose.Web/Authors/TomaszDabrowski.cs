@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Dabrowski";
         public string ShortBioOrTagLine => "IT pro with 12 years of experience. PowerShell and WinOps enthusiast. Polish PowerShell User Group co-founder. Search.Learn.Automate.Share";
         public string StateOrRegion => "Wroclaw, Poland";
-        public string EmailAddress => "dombros@gmail.com";
         public string TwitterHandle => "Dom_Bros";
         public string GitHubHandle => "dombros";
         public string GravatarHash => "aab345407bf784ea4e40334d3ab51eab";

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Sarti";
         public string ShortBioOrTagLine => "is a Windows Software and Infrastructure Developer for Puppet.";
         public string StateOrRegion => "Portland OR, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "glennsarti";
         public string GravatarHash => "aac3dafaab7a7c2063d2526ba5936305";
 

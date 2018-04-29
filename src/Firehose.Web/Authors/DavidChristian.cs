@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Christian";
         public string ShortBioOrTagLine => "Father, DevOps Engineer, Musician, Dude";
         public string StateOrRegion => "Orange County, CA";
-        public string EmailAddress => "dchristian3188@gmail.com";
         public string TwitterHandle => "dchristian3188";
         public string GitHubHandle => "dchristian3188";
         public string GravatarHash => "835bce5d3f5fbfbad3ac5ec42a6abad2";

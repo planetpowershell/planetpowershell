@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Marquette";
         public string ShortBioOrTagLine => "Sr. DevOps Engineer. Powershell all the things!";
         public string StateOrRegion => "Orange County, USA";
-        public string EmailAddress => "kevmar@gmail.com";
         public string TwitterHandle => "kevinmarquette";
         public string GitHubHandle => "kevinmarquette";
         public string GravatarHash => "d7d29e9573b5da44d9886df24fcc6142";

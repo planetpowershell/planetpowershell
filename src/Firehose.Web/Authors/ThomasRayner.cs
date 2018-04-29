@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Rayner";
         public string ShortBioOrTagLine => "Microsoft MVP - Cloud & Datacenter Management";
         public string StateOrRegion => "Canada";
-        public string EmailAddress => "thmsrynr@outlook.com";
         public string TwitterHandle => "MrThomasRayner";
         public string GitHubHandle => "ThmsRynr";
         public string GravatarHash => "";

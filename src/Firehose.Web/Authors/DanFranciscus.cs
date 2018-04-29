@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Franciscus";
         public string ShortBioOrTagLine => "Sysadmin, PowerShell and Chocolatey evangelist, Blogger";
         public string StateOrRegion => "Belle Mead, New Jersey";
-        public string EmailAddress => "dfranciscus@gmail.com";
         public string TwitterHandle => "dan_franciscus";
         public string GravatarHash => "c99c2eda81dc29f5b8adaf625e4db414";
 

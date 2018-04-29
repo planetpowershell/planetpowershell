@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Bittner";
         public string ShortBioOrTagLine => "DevOp and MCSE Server 2012R2";
         public string StateOrRegion => "Saxony, Germany";
-        public string EmailAddress => "";
         public string TwitterHandle => "Andreas_Bittner";
         public string GitHubHandle => "bobruhny";
         public string GravatarHash => "9e94e1e9014ad138df3f5281f814d755";

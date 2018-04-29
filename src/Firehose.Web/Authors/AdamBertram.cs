@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Bertram";
         public string ShortBioOrTagLine => "Automation Engineer, writer, trainer, Microsoft MVP, fiercely independent, laid back guy that loves sharing.";
         public string StateOrRegion => "Evansville, IN";
-        public string EmailAddress => string.Empty;
         public string TwitterHandle => "adbertram";
         public string GravatarHash => "f21b5adac336b3678098de870efcf994";
         public string GitHubHandle => "adbertram";

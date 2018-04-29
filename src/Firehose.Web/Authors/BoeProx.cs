@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Prox";
         public string ShortBioOrTagLine => "SQL DBA, Windows Admin, Security wannabe, who loves PowerShell";
         public string StateOrRegion => "Bellevue, NE";
-        public string EmailAddress => "boeprox@gmail.com";
         public string TwitterHandle => "proxb";
         public string GravatarHash => "3bde2094c84fb81661c04ed87f8336b7";
         public string GitHubHandle => "boeprox";

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Dille";
         public string ShortBioOrTagLine => "and Docker Captain. He is focused on Infrastructure-as-Code, Containers, PowerShell and Cross-Platform";
         public string StateOrRegion => "Freiburg, Germany";
-        public string EmailAddress => "nicholas@dille.name";
         public string TwitterHandle => "nicholasdille";
         public string GravatarHash => "3abbda431b19f55e29a1494b1fb3b859";
 

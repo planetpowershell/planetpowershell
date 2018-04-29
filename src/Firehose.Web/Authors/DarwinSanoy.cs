@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Sanoy";
         public string ShortBioOrTagLine => "Cloudifying Windows Everyday";
         public string StateOrRegion => "Phoenixville, PA";
-        public string EmailAddress => string.Empty;
         public string TwitterHandle => "DarwinTheorizes";
         public string GravatarHash => "566be8d4a7b78dc25ab07bd61a48116b";
         public string GitHubHandle => "DarwinJS";
