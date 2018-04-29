@@ -28,33 +28,34 @@ You can even do this via the GitHub editor. If you have never done anything like
 The result should look something like this:
 
 ``` csharp
-    public class BruceWayne : IAmACommunityMember
-    {
-        public string FirstName => "Bruce";
-        public string LastName => "Wayne";
-        public string ShortBioOrTagLine => "potentially batman";
-        public string StateOrRegion => "Gotham";
-        public string EmailAddress => "rescueme@planetpowershell.com";
-        public string TwitterHandle => "batman";
-        public string GravatarHash => "42abc1337def";
-        public string GitHubHandle => "batman";
-        public GeoPosition Position => new GeoPosition(47.643417, -122.126083);
-
-        public Uri WebSite => new Uri("https://planetpowershell.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://planetpowershell.com/rss"); } }
-    }
+public class BruceWayne : IAmACommunityMember
+{
+    public string FirstName => "Bruce";
+    public string LastName => "Wayne";
+    public string ShortBioOrTagLine => "potentially batman";
+    public string StateOrRegion => "Gotham";
+    public string EmailAddress => "rescueme@planetpowershell.com";
+    public string TwitterHandle => "planetpshell";
+    public string GravatarHash => "42abc1337def";
+    public string GitHubHandle => "planetpowershell";
+    public GeoPosition Position => new GeoPosition(47.643417, -122.126083);
+    public Uri WebSite => new Uri("https://planetpowershell.com/");
+    public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://planetpowershell/rss"); } }
+    public FeedLanguageCode => "en";
+}
 ```
 
 A few things:
 - Don't worry about touching the `.csproj` file; it'll pick up the author file from the folder automatically
 - Name the class after your first and lastname with CamelCase
 - The `FirstName` and `LastName` property should resemble that same name
-- `ShortBioOrTagLine` property can be whatever you like. If you can't think of anything choose: 'software engineer' or 'software engineer at Microsoft'
+- `ShortBioOrTagLine` property can be whatever you like. If you can't think of anything choose: 'software engineer' or 'software engineer at Microsoft'. Please keep it short, like a 140 character tweet.
 - `StateOrRegion` will be your geographical location, i.e.: Holland, New York, etc.
 - `EmailAddress`, `TwitterHandle` and `GitHubHandle` should be pretty clear, `TwitterHandle` without the leading @
-- The `Website` property can be your global website or whatever you want people to look at
 - `Position` is your latitude and longitude, this allows you to be placed on the map on the Authors page
-- And finally with `FeedUris` you can supply one or more URIs which resemble your blogs. Your blogs should be provided in RSS (Atom) format and of course be about PowerShell. 
+- The `Website` property can be your global website or whatever you want people to look at
+- With `FeedUris` you can supply one or more URIs which resemble your blogs. Your blogs should be provided in RSS (Atom) format and of course be about Xamarin.
+- And finally `FeedLanguageCode` specifies in what lanuage the majority of your content will be. This is used to be able to apply filters to the feed. This language code should be in [ISO 639-1 format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 - If you do not want your e-mailaddress publicly available but you _do_ want to show your Gravatar go to https://en.gravatar.com/site/check/ and get your hash! If you don't fill the hash, you will be viewed as a silhouette.
 - When you are a Microsoft MVP check out the `IAmAMicrosoftMVP` interfaces, see below for a small sample.
 
@@ -109,6 +110,7 @@ Planet PowerShell is all about PowerShell content. To ensure that the feed only 
 A big step for mankind! Last thing that remains is submit a Pull Request to us and whenever it gets merged: hooray! You're an author now!
 
 Don't forget to incorporate the Featured on Planet PowerShell badge on your blog and link back to us!
+
 
 ![Featured on Planet PowerShell Badge](https://www.planetpowershell.com/Content/img/planetpowershell-featured-badge.png)
 

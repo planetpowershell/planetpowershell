@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Firehose.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Finke";
         public string ShortBioOrTagLine => "is the Author of 'Windows PowerShell for Developers', speaker and PowerShell trainer";
         public string StateOrRegion => "New York City, United States";
-        public string EmailAddress => "finked@hotmail.com";
         public string TwitterHandle => "dfinke";
         public string GravatarHash => "94c48c63e7e63f5e713f7f7a5cdbcac0";
 
@@ -32,5 +31,6 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(40.7526970, -73.9749950);
+        public string FeedLanguageCode => "en";
     }
 }

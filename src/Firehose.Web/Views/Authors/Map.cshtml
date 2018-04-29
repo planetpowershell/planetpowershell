@@ -1,4 +1,6 @@
 ﻿@using Firehose.Web.Infrastructure
+@using Firehose.Web.Extensions 
+ 
 @model Firehose.Web.Infrastructure.IAmACommunityMember[]
 
 <div id="authorMap"></div>
@@ -32,11 +34,9 @@
             var id = Html.Raw(Json.Encode(member.GetType().Name));
             var name = Html.Raw(Json.Encode(member.FirstName + " " + member.LastName));
 
-            IHtmlString gravatar = Html.Raw(Json.Encode(member.EmailAddress.Trim().ToLowerInvariant().ToMd5Hash().ToLowerInvariant()));
-
             if (!string.IsNullOrWhiteSpace(member.GravatarHash))
             {
-                gravatar = Html.Raw(Json.Encode(member.GravatarHash));
+                IHtmlString gravatar = Html.Raw(Json.Encode(member.GravatarHash));
             }
 
             @:var marker = getMarker(@id, @Json.Encode(@member.Position.Lat), @Json.Encode(member.Position.Lng), @name, @gravatar);

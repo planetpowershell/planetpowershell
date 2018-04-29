@@ -1,7 +1,8 @@
-﻿using System.Configuration;
+﻿using Firehose.Web.Infrastructure;
+using System.Configuration;
 using System.Web;
 
-namespace Firehose.Web.Infrastructure
+namespace Firehose.Web.Extensions
 {
     public static class GravatarHashingExtensions
     {
@@ -9,9 +10,6 @@ namespace Firehose.Web.Infrastructure
         {
             const int size = 200;
             var hash = member.GravatarHash;
-
-            if (string.IsNullOrWhiteSpace(hash))
-                hash = member.EmailAddress.Trim().ToLowerInvariant().ToMd5Hash().ToLowerInvariant();
 
             var defaultImage = HttpUtility.UrlEncode(ConfigurationManager.AppSettings["DefaultGravatarImage"]);
             return $"//www.gravatar.com/avatar/{hash}.jpg?s={size}&d={defaultImage}";

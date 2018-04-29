@@ -1,9 +1,9 @@
+using Firehose.Web.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Franciscus";
         public string ShortBioOrTagLine => "Sysadmin, PowerShell and Chocolatey evangelist, Blogger";
         public string StateOrRegion => "Belle Mead, New Jersey";
-        public string EmailAddress => "dfranciscus@gmail.com";
         public string TwitterHandle => "dan_franciscus";
         public string GravatarHash => "c99c2eda81dc29f5b8adaf625e4db414";
 
@@ -32,5 +31,6 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(40.462445, 74.6744);
+        public string FeedLanguageCode => "en";
     }
 }

@@ -1,9 +1,9 @@
+using Firehose.Web.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Constantinou";
         public string ShortBioOrTagLine => "Senior System Administrator. I am using PowerShell a lot to perform day to day tasks and automate procedures.";
         public string StateOrRegion => "Limassol,Cyprus";
-        public string EmailAddress => "stephanos@sconstantinou.com";
         public string TwitterHandle => "SCPowerShell";
         public string GravatarHash => "04de5e0523cf48e9493c11905fd5999f";
         public string GitHubHandle => "SConstantinou";
@@ -25,5 +24,6 @@ namespace Firehose.Web.Authors
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Contains("powershell"));
         }
+        public string FeedLanguageCode => "en";
     }
 }

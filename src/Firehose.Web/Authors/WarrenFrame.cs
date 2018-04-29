@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Firehose.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
-
 namespace Firehose.Web.Authors
 {
     public class WarrenFrame : IAmAMicrosoftMVP
@@ -13,13 +12,13 @@ namespace Firehose.Web.Authors
         public string LastName => "Frame";
         public string ShortBioOrTagLine => ":Infrastructure Engineer with a penchant for PowerShell, science, cooking, information security, family, cookies, and the Oxford comma.";
         public string StateOrRegion => "Boston Area, USA";
-        public string EmailAddress => "warren.frame@gmail.com";
         public string TwitterHandle => "pscookiemonster";
         public string GitHubHandle => "ramblingcookiemonster";
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(42.3391000, -71.1206200);
 
-        public Uri WebSite => new Uri("http://ramblingcookiemonster.github.io/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed.xml"); } }
+        public Uri WebSite => new Uri("https://ramblingcookiemonster.github.io/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://ramblingcookiemonster.github.io/feed.xml"); } }
+        public string FeedLanguageCode => "en";
     }
 }
