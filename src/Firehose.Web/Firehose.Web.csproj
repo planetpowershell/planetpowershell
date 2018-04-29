@@ -215,7 +215,8 @@
     <Compile Include="Extensions\Md5HashingExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PreviewViewModel.cs" />
-    <Compile Include="Authors\KieranJacobsen.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Authors\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
