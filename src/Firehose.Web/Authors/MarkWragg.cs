@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
 		public GeoPosition Position => new GeoPosition(51.2809060,-0.9630430);
 
 		public Uri WebSite => new Uri("https://wragg.io/");
-		public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://wragg.io/tag/powershell/rss"); } }
+		public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://wragg.io/tag/powershell/rss"); } }
 		public string FeedLanguageCode => "en";
 	}
 }

@@ -18,8 +18,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(42.3391000, -71.1206200);
 
-        public Uri WebSite => new Uri("http://ramblingcookiemonster.github.io/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://ramblingcookiemonster.github.io/feed.xml"); } }
+        public Uri WebSite => new Uri("https://ramblingcookiemonster.github.io/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://ramblingcookiemonster.github.io/feed.xml"); } }
         public string FeedLanguageCode => "en";
     }
 }

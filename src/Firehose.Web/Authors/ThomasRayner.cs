@@ -19,8 +19,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(53.5443890, -113.4909270);
 
-        public Uri WebSite => new Uri("http://workingsysadmin.com");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://workingsysadmin.com/feed/"); } }
+        public Uri WebSite => new Uri("https://workingsysadmin.com");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://workingsysadmin.com/feed/"); } }
         public string FeedLanguageCode => "en";
     }
 

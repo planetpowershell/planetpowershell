@@ -17,11 +17,11 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "jeffhicks";
         public string GravatarHash => "1393cfe66dace329de043b14544985db ";
 
-        public Uri WebSite => new Uri("http://blog.jdhitsolutions.com/");
+        public Uri WebSite => new Uri("https://blog.jdhitsolutions.com/");
 
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("http://jdhitsolutions.com/blog/feed"); }
+            get { yield return new Uri("https://jdhitsolutions.com/blog/feed"); }
         }
 
         public string GitHubHandle => "jdhitsolutions";

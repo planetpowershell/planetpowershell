@@ -19,8 +19,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "1b01887ac956ccd429a4209ade5cdb68";
         public GeoPosition Position => new GeoPosition(50.8245565, -1.2148624);
 
-        public Uri WebSite => new Uri("http://www.jonathanmedd.net");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://feeds.feedburner.com/JonathanMeddsBlogPowerShell"); } }
+        public Uri WebSite => new Uri("https://www.jonathanmedd.net");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://feeds.feedburner.com/JonathanMeddsBlogPowerShell"); } }
         public string FeedLanguageCode => "en";
     }
 }

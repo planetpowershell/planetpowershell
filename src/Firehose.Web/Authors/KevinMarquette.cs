@@ -20,7 +20,7 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(33.6800000,-117.7900000);
 
         public Uri WebSite => new Uri("https://kevinmarquette.github.io");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://kevinmarquette.github.io/feed.xml"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://kevinmarquette.github.io/feed.xml"); } }
         public string FeedLanguageCode => "en";
     }
 }
