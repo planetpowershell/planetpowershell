@@ -18,7 +18,7 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
         public GeoPosition Position => new GeoPosition(33.6469, -117.6861);
 
         public Uri WebSite => new Uri("https://blog.mattbobke.com");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://blog.mattbobke.com/feed"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://blog.mattbobke.com/feed/atom/"); } }
 
         public bool Filter(SyndicationItem item)
         {
