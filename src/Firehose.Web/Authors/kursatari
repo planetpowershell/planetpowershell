@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Web;
+using Firehose.Web.Infrastructure;
+
+namespace Firehose.Web.Authors
+{
+  public class BruceWayne : IAmACommunityMember
+    {
+        public string FirstName => "Kursat";
+        public string LastName => "ARI";
+        public string ShortBioOrTagLine => "Powershell Turkey";
+        public string StateOrRegion => "Turkey";
+        public string EmailAddress => "kursatari@hotmail.com";
+        public string TwitterHandle => "kursatari";
+        public string GravatarHash => "9ff176f11cece3aeff9191c5b394ec59";
+        public string GitHubHandle => "kursatari";
+        public GeoPosition Position => new GeoPosition(41.0082380, 28.9783590);
+
+        public Uri WebSite => new Uri("https://planetpowershell.com/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://planetpowershell.com/rss"); } }
+    }  
+}
