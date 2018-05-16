@@ -11,5 +11,5 @@ public class MikeKanakos : IAmACommunityMember
         public GeoPosition Position => new GeoPosition(35.7327, 78.8503);
 
         public Uri WebSite => new Uri("https://www.networkadm.in/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://networkadm.in/rss/"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.networkadm.in/rss/"); } }
     }
