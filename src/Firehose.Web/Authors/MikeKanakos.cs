@@ -1,4 +1,13 @@
-public class MikeKanakos : IAmACommunityMember
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Web;
+using Firehose.Web.Infrastructure;
+
+namespace Firehose.Web.Authors
+{
+    public class MikeKanakos : IAmACommunityMember
     {
         public string FirstName => "Mike";
         public string LastName => "Kanakos";
@@ -13,3 +22,4 @@ public class MikeKanakos : IAmACommunityMember
         public Uri WebSite => new Uri("https://www.networkadm.in/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.networkadm.in/rss/"); } }
     }
+}
