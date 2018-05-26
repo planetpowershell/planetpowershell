@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class JoshKing : IAmACommunityMember, IFilterMyBlogPosts
+    public class JoshKing : IAmACommunityMember
     {
         public string FirstName => "Josh";
         public string LastName => "King";
@@ -20,11 +20,6 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(-39.4928, 176.9120);
 
         public Uri WebSite => new Uri("https://king.geek.nz/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://king.geek.nz/feed.xml"); } }
-		
-        public bool Filter(SyndicationItem item)
-        {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
-        }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://king.geek.nz/tag/powershell/rss/"); } }
     }
 }
