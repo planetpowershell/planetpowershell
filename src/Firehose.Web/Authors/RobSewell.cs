@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Firehose.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Sewell";
         public string ShortBioOrTagLine => "is a PowerShell Bearded Fella and SQL Server DBA ";
         public string StateOrRegion => "Somerset, UK";
-        public string EmailAddress => "";
         public string TwitterHandle => "sqldbawithbeard";
         public string GravatarHash => "bdbac4b4103fc16a37e87bd02945219f";
 
@@ -32,5 +31,6 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(50.952495, -3.267374);
+        public string FeedLanguageCode => "en";
     }
 }

@@ -1,9 +1,9 @@
+using Firehose.Web.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
 namespace Firehose.Web.Authors
 {
     public class AlainAssaf : IAmACommunityMember, IFilterMyBlogPosts
@@ -12,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Alain";
         public string ShortBioOrTagLine => "Citrix Specialist at SECU - Citrix Technology Advocate - Feedspot Top 50 PowerShell Blogs on the web";
         public string StateOrRegion => "North Carolina, USA";
-        public string EmailAddress => "";
         public string TwitterHandle => "alainassaf";
         public string GitHubHandle => "alainassaf";
         public string GravatarHash => "55e3ac1ac8ca9129cc9e138a158b07bb";
@@ -25,6 +24,6 @@ namespace Firehose.Web.Authors
             // this filters out posts that do not have PowerShell in the title
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
-     
+        public string FeedLanguageCode => "en";
     }
 }

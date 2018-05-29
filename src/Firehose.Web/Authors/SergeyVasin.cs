@@ -1,9 +1,9 @@
+using Firehose.Web.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Vasin";
         public string ShortBioOrTagLine => "IT Pro, Microsoft Trainer, Cisco Instructor, PowerShell UserGroup Lead";
         public string StateOrRegion => "Yoshkar-Ola, Russia";
-        public string EmailAddress => "seth.vs@gmail.com";
         public string TwitterHandle => "vsseth";
         public string GravatarHash => "3baf621c02b71b2333643f4e69791dbd";
         public string GitHubHandle => "sethvs";
@@ -33,5 +32,6 @@ namespace Firehose.Web.Authors
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+        public string FeedLanguageCode => "ru";
     }
 }

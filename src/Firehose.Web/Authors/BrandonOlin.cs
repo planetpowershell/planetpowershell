@@ -1,10 +1,9 @@
+using Firehose.Web.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
-using Firehose.Web.Infrastructure;
-
 namespace Firehose.Web.Authors
 {
     public class BrandonOlin : IFilterMyBlogPosts, IAmACommunityMember
@@ -13,7 +12,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Olin";
         public string ShortBioOrTagLine => "Cloud Architect and veteran Systems Engineer with a penchant for PowerShell, DevOps processes, and open-source software.";
         public string StateOrRegion => "Portland, Oregon";
-        public string EmailAddress => "brandon@devblackops.io";
         public string TwitterHandle => "devblackops";
         public string GitHubHandle => "devblackops";
         public string GravatarHash => "07f265f8f921b6876ce9ea65902f0480";
@@ -27,6 +25,7 @@ namespace Firehose.Web.Authors
         {
             return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
         }
+        public string FeedLanguageCode => "en";
     }
 
 }
