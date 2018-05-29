@@ -13,6 +13,7 @@ namespace Firehose.Web.Authors
         public string ShortBioOrTagLine => "Software Developer, DevOps Engineer, Chess Player";
         public string StateOrRegion => "Prague, Czech Republic";
         public string TwitterHandle => "yudinetz";
+        public string GravatarHash => "904c3bb52fa45d319357aa06e7e15f56";
         public string GitHubHandle => "evgenyfedorov2";
         public GeoPosition Position => new GeoPosition(50.032283, 14.529762);
 

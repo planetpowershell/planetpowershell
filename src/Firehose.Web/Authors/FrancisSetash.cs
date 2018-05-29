@@ -14,7 +14,7 @@ namespace Firehose.Web.Authors
         public string ShortBioOrTagLine => "Infrastructure and DevOps Engineer. Lots of working with Chef, and PowerShell DSC";
         public string StateOrRegion => "Arnold, MD";
         public string TwitterHandle => "";
-        public string GravatarHash => "";
+        public string GravatarHash => "0959b63fb022ccbc7eb47ad472ed5dad";
 
         public Uri WebSite => new Uri("https://i-py.com/");
 

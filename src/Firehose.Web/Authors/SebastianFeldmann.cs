@@ -14,7 +14,7 @@ namespace Firehose.Web.Authors
         public string ShortBioOrTagLine => "dad, musician, sysadmin";
         public string StateOrRegion => "Bremen, Germany";
         public string TwitterHandle => "sebfieldman";
-        public string GravatarHash => "";
+        public string GravatarHash => "36fca3ceda7415942ff31f2bad2a8e62";
         public string GitHubHandle => "seebus";
         public GeoPosition Position => new GeoPosition(53.073635, 8.806422);
 

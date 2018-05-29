@@ -14,7 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Bergen, Norway";
         public string TwitterHandle => "ToreGroneng";
         public string GitHubHandle => "torgro";
-        public string GravatarHash => "";
+        public string GravatarHash => "5179a5eb394ca18bf14daa4e3987989b";
         public GeoPosition Position => new GeoPosition(60.4698789, 5.3307659);
 
         public Uri WebSite => new Uri("https://asaconsultant.blogspot.no");

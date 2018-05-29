@@ -12,7 +12,6 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
     public string ShortBioOrTagLine => "Desktop Support Specialist with admninistrative tendencies excited about PowerShell and automation.";
     public string StateOrRegion => "California, United States";
     public string GravatarHash => "6f38a96cd055f95eacd1d3d102e309fa";
-    public string EmailAddress => "matt@mattbobke.com";
     public string TwitterHandle => "MattBobke";
     public string GitHubHandle => "mcbobke";
     public GeoPosition Position => new GeoPosition(33.6469, -117.6861);

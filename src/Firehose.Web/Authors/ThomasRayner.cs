@@ -15,7 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Canada";
         public string TwitterHandle => "MrThomasRayner";
         public string GitHubHandle => "ThmsRynr";
-        public string GravatarHash => "";
+        public string GravatarHash => "28dbce395fcef492a3874f84afea8144";
         public GeoPosition Position => new GeoPosition(53.5443890, -113.4909270);
 
         public Uri WebSite => new Uri("https://workingsysadmin.com");

@@ -15,7 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "WA, USA";
         public string TwitterHandle => "brianbunke";
         public string GitHubHandle => "brianbunke";
-        public string GravatarHash => "";
+        public string GravatarHash => "5eb2b9485a755280dc633d2a9ab2160b";
 
         public GeoPosition Position => new GeoPosition(48.751911, -122.478685);
 

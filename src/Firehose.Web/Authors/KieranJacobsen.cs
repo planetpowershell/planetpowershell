@@ -14,7 +14,7 @@ namespace Firehose.Web.Authors
         public string ShortBioOrTagLine => "Readifarian, works with PowerShell";
         public string StateOrRegion => "Melbourne, Australia";
         public string TwitterHandle => "kjacobsen";
-        public string GravatarHash => "";
+        public string GravatarHash => "ed4cadbdf180e7da1ce81da17126e571";
 
         public Uri WebSite => new Uri("https://poshsecurity.com/");
 

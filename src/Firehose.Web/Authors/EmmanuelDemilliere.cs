@@ -14,7 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "France";
         public string TwitterHandle => "edemilliere";
         public string GitHubHandle => "edemilliere";
-        public string GravatarHash => "";
+        public string GravatarHash => "04e190a4b14e65b055ba677c11701a91";
         public GeoPosition Position => new GeoPosition(45.750000, 4.850000);
  
         public Uri WebSite => new Uri("https://itfordummies.net");
