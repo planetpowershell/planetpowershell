@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("http://vcloud-lab.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://vcloud-lab.com/entries.atom"); } }
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Title.Text.ToLowerInvariant().Contains("powershell") && item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
     }
 }
