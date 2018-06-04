@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
 using Firehose.Web.Infrastructure;
+
 namespace Firehose.Web.Authors
 {
     public class KunalUdapi : IAmACommunityMember, IFilterMyBlogPosts
@@ -19,6 +20,8 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(18.5714625,73.8274168);
 
         public Uri WebSite => new Uri("http://vcloud-lab.com");
+        
+        public bool Filter(SyndicationItem item)
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://vcloud-lab.com/entries.atom"); } }
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell") && item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
