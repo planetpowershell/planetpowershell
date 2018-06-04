@@ -18,8 +18,6 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "e6600de53eef91dd803a6386c20a40bf";
         public string GitHubHandle => "mcdonaldbm";
         public GeoPosition Position => new GeoPosition(39.0997, -94.5786);
-        public bool Filter(SyndicationItem item)
-
         public Uri WebSite => new Uri("https://www.brycematthew.net");
         public IEnumerable<Uri> FeedUris 
         {
