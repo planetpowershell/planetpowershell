@@ -20,10 +20,10 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(39.0997, -94.5786);
         public bool Filter(SyndicationItem item)
 
-        public Uri WebSite => new Uri("http://www.brycematthew.net");
+        public Uri WebSite => new Uri("https://www.brycematthew.net");
         public IEnumerable<Uri> FeedUris 
         {
-            get { yield return new Uri("http://www.brycematthew.net/feed.xml"); } 
+            get { yield return new Uri("https://www.brycematthew.net/feed.xml"); } 
         }
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
