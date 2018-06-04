@@ -10,7 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kunal";
         public string LastName => "Udapi";
-        public string ShortBioOrTagLine => "vGeek";
+        public string ShortBioOrTagLine => "vGeek - Eating Powershell, Breathing cmdlet, Dreaming automation, Building crazy scripts";
         public string StateOrRegion => "Maharashtra";
         public string EmailAddress => "kunaludapi@gmail.com";
         public string TwitterHandle => "kunaludapi";
