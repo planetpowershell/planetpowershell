@@ -11,7 +11,7 @@ namespace Firehose.Web.Authors
         public string FirstName => "Kunal";
         public string LastName => "Udapi";
         public string ShortBioOrTagLine => "vGeek - Eating Powershell, Breathing cmdlet, Dreaming automation, Building crazy scripts";
-        public string StateOrRegion => "Maharashtra";
+        public string StateOrRegion => "Maharashtra, India";
         public string EmailAddress => "kunaludapi@gmail.com";
         public string TwitterHandle => "kunaludapi";
         public string GravatarHash => "341dff90fe3ea6e6e7d771a0c04a3887";
