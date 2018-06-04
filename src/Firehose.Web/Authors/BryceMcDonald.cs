@@ -25,6 +25,7 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://www.brycematthew.net/feed.xml"); } 
         }
+        public bool Filter(SyndicationItem item)
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
