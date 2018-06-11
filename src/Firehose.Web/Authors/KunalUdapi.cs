@@ -22,11 +22,11 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("http://vcloud-lab.com");
 
         public IEnumerable<Uri> FeedUris { 
-		get { yield return new Uri("https://vcloud-lab.com/entries.atom"); } 
+	    get { yield return new Uri("https://vcloud-lab.com/entries.atom"); } 
 	}
 
-	    public bool Filter(SyndicationItem item) {
-		    return item.Title.Text.ToLowerInvariant().Contains("powershell");
+	public bool Filter(SyndicationItem item) {
+	    return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
     }
 }
