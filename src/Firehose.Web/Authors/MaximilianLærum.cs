@@ -11,3 +11,4 @@ public class MaximilianLærum : IAmACommunityMember
         public Uri WebSite => new Uri("https://get-help.guru/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://get-help.guru/rss"); } }
     }
+ 
