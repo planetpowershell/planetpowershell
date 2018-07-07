@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "McDonald";
         public string ShortBioOrTagLine => "KC based PowerShell and Automation guru";
         public string StateOrRegion => "Kansas City, Missouri";
-        public string EmailAddress => "bryce@northcodesolutions.com";
         public string TwitterHandle => "_brycemcdonald";
         public string GravatarHash => "e6600de53eef91dd803a6386c20a40bf";
         public string GitHubHandle => "mcdonaldbm";
@@ -27,5 +26,6 @@ namespace Firehose.Web.Authors
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
+        public string FeedLanguageCode => "en";
     }
 }

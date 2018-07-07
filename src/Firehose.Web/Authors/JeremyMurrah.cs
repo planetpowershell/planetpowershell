@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Murrah";
         public string ShortBioOrTagLine => "A Windows Sysadmin turned automation engineer.  Passionate about PowerShell and automation in general";
         public string StateOrRegion => "TX, USA";
-        public string EmailAddress => "murrahjm@gmail.com";
         public string TwitterHandle => "Jeremy Murrah";
         public string GitHubHandle => "murrahjm";
         public string GravatarHash => "297b54809ef14f5f3b8d0eb8e3c700f3";
@@ -25,5 +24,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://murrahjm.github.io/feed.xml"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }

@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Houben";
         public string ShortBioOrTagLine => "Blogging about practical PowerShell uses and other things I find interesting";
         public string StateOrRegion => "Heerlen, Netherlands";
-        public string EmailAddress => string.Empty;
         public string TwitterHandle => "bjornhouben";
         public string GravatarHash => "7d072aaf4d60ec2a94367e744a626ea0";
         public string GitHubHandle => "bjornhouben";
@@ -23,5 +22,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://blog.bjornhouben.com/category/powershell/feed/"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }

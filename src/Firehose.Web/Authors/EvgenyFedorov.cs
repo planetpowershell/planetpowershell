@@ -13,7 +13,6 @@ namespace Firehose.Web.Authors
         public string LastName => "Fedorov";
         public string ShortBioOrTagLine => "Software Developer, DevOps Engineer, Chess Player";
         public string StateOrRegion => "Prague, Czech Republic";
-        public string EmailAddress => "evgeny.fedorov2@gmail.com";
         public string GravatarHash => "904c3bb52fa45d319357aa06e7e15f56";
         public string TwitterHandle => "yudinetz";
         public string GitHubHandle => "evgenyfedorov2";
@@ -21,5 +20,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://evgenyfedorov.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://evgenyfedorov.com/rss"); } }
+        public string FeedLanguageCode => "en";
     }
 }
