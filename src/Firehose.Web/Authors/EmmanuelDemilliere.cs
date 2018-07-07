@@ -18,7 +18,7 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(45.750000, 4.850000);
  
         public Uri WebSite => new Uri("https://itfordummies.net");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://itfordummies.net/feed/"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://itfordummies.net/feed/atom/"); } }
  
         public bool Filter(SyndicationItem item)
         {
