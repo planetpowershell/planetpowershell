@@ -25,5 +25,9 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://murrahjm.github.io/feed.xml"); }
         }
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+        }
     }
 }
