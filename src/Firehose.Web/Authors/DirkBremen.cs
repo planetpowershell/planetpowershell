@@ -1,4 +1,12 @@
-public class DirkBremen : IAmACommunityMember, IFilterMyBlogPosts
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Web;
+using Firehose.Web.Infrastructure;
+namespace Firehose.Web.Authors
+{
+    public class DirkBremen : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "Dirk";
         public string LastName => "Bremen";
@@ -18,3 +26,4 @@ public class DirkBremen : IAmACommunityMember, IFilterMyBlogPosts
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
     }
+}
