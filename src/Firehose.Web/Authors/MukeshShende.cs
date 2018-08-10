@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "mukeshshende";
         public GeoPosition Position => new GeoPosition(17.375, 78.4744);
 
-        public Uri WebSite => new Uri("http://mukeshshende.com/");
+        public Uri WebSite => new Uri("https://mukeshnotes.wordpress.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mukeshnotes.wordpress.com/feed/"); } }
 		
 		public bool Filter(SyndicationItem item)

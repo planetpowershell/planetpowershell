@@ -19,8 +19,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "b7735274c4f28b3e241a39fa61cb1d91";
         public GeoPosition Position => new GeoPosition(51.9691870, 5.6653950);
 
-        public Uri WebSite => new Uri("http://www.svenvanrijen.nl");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://www.svenvanrijen.nl/feed.xml"); } }
+        public Uri WebSite => new Uri("https://www.svenvanrijen.nl");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.svenvanrijen.nl/feed.xml"); } }
 
         public bool Filter(SyndicationItem item)
         {

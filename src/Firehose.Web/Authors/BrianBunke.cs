@@ -20,10 +20,10 @@ namespace Firehose.Web.Authors
 
         public GeoPosition Position => new GeoPosition(48.751911, -122.478685);
 
-        public Uri WebSite => new Uri("http://www.brianbunke.com/");
+        public Uri WebSite => new Uri("https://www.brianbunke.com/");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("http://www.brianbunke.com/feed.xml"); }
+            get { yield return new Uri("https://www.brianbunke.com/feed.xml"); }
         }
         public bool Filter(SyndicationItem item)
         {
