@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "seebus";
         public GeoPosition Position => new GeoPosition(53.073635, 8.806422);
 
-        public Uri WebSite => new Uri("http://blog.feldmann.io/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://blog.feldmann.io/feed/"); } }
+        public Uri WebSite => new Uri("https://blog.feldmann.io/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://blog.feldmann.io/feed/"); } }
     }
 }

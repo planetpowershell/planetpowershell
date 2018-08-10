@@ -18,7 +18,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(60.4698789, 5.3307659);
 
-        public Uri WebSite => new Uri("http://asaconsultant.blogspot.no");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://asaconsultant.blogspot.com/feeds/posts/default/-/Powershell"); } }
+        public Uri WebSite => new Uri("https://asaconsultant.blogspot.no");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://asaconsultant.blogspot.com/feeds/posts/default/-/Powershell"); } }
     }
 }
