@@ -10,7 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Dave";
         public string LastName => "Carroll";
-        public string ShortBioOrTagLine => "Systems engineer with a strong predilection for automation. PowerShell to the people!";
+        public string ShortBioOrTagLine => "Systems engineer with a strong predilection for automation.";
         public string StateOrRegion => "Nashville, TN";
         public string EmailAddress => "";
         public string TwitterHandle => "thedavecarroll";
@@ -21,6 +21,6 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://powershell.anovelidea.org/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershell.anovelidea.org/feed.xml"); } }
 
-        
+
     }
 }
