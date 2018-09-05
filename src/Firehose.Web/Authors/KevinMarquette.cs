@@ -7,11 +7,11 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class KevinMarquette : IAmACommunityMember
+    public class KevinMarquette : IAmAMicrosoftMVP
     {
         public string FirstName => "Kevin";
         public string LastName => "Marquette";
-        public string ShortBioOrTagLine => "Sr. DevOps Engineer. Powershell all the things!";
+        public string ShortBioOrTagLine => "Sr. DevOps Engineer, 2018 PowerShell Community Hero, Microsoft MVP, and SoCal PowerShell UserGroup Organizer.";
         public string StateOrRegion => "Orange County, USA";
         public string EmailAddress => "kevmar@gmail.com";
         public string TwitterHandle => "kevinmarquette";
