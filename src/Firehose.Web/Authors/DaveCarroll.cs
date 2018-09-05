@@ -21,6 +21,10 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://powershell.anovelidea.org/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershell.anovelidea.org/feed.xml"); } }
 
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+        }
 
     }
 }
