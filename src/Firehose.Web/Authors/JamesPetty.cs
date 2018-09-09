@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class MarkKraus : IAmACommunityMember, IFilterMyBlogPosts
+    public class JamesPetty : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "James";
         public string LastName => "Petty";
