@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "ryan.yates@kilasuit.org";
         public string TwitterHandle => "ryanyates1990";
         public string GravatarHash => "3dfa95e0c1d6efa49d57dfd89010d0a7";
-
+        public GeoPosition Position => new GeoPosition(53.690760, -1.629070);
         public Uri WebSite => new Uri("https://blog.kilasuit.org/");
 
         public IEnumerable<Uri> FeedUris
