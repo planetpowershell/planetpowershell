@@ -28,7 +28,7 @@ namespace Firehose.Web.Authors
 
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("xamarin")) ?? false;
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
 
         public GeoPosition Position => new GeoPosition(-37.816667, 144.966667);
