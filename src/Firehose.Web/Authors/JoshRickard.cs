@@ -21,10 +21,10 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://letsautomate.it");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://letsautomate.it/index.xml"); } }
+        
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Title.Text.ToLowerInvariant().Contains("powershell");
+        } 
     }
-    
-     public bool Filter(SyndicationItem item)
-     {
-         return item.Title.Text.ToLowerInvariant().Contains("powershell");
-     }      
 }
