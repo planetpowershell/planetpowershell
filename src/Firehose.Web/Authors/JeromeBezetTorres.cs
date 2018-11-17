@@ -21,5 +21,12 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://JM2K69.github.io/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://jm2k69.github.io/feed.xml"); } }
+    
+        public bool Filter(SyndicationItem item)
+        {
+            // This filters out only the posts that have the "PowerShell" category
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+        }
+    
     }
 }
