@@ -10,6 +10,8 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  artifactname: 'planetpowershell'
+  
 
 steps:
 - task: NuGetToolInstaller@0
@@ -33,7 +35,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-
 - task: PublishSymbols@2
   displayName: 'Publish symbols path'
   inputs:
@@ -45,5 +46,5 @@ steps:
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: '$(Parameters.ArtifactName)'
+    ArtifactName: '$(artifactname)'
 
