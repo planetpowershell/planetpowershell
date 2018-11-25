@@ -32,3 +32,18 @@ steps:
       !**\obj\**
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+
+- task: PublishSymbols@2
+  displayName: 'Publish symbols path'
+  inputs:
+    SearchPattern: '**\bin\**\*.pdb'
+    PublishSymbols: false
+  continueOnError: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: '$(Parameters.ArtifactName)'
+
