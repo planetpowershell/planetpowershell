@@ -22,6 +22,5 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://flxsql.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://flxsql.com/category/powershell/feed/"); } }
 
-        }
     }
 }
