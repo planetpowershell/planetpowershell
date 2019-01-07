@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "d7d29e9573b5da44d9886df24fcc6142";
         public GeoPosition Position => new GeoPosition(33.6800000,-117.7900000);
 
-        public Uri WebSite => new Uri("https://kevinmarquette.github.io");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://kevinmarquette.github.io/feed.xml"); } }
+        public Uri WebSite => new Uri("https://PowerShellExplained.com");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershellexplained.com/feed.xml"); } }
     }
 }
