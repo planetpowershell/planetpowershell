@@ -11,7 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Bradley";
         public string LastName => "Wyatt";
-        public string ShortBioOrTagLine => "Finding wayt to do the most work with the least effort possible";
+        public string ShortBioOrTagLine => "Finding ways to do the most work with the least effort possible";
         public string StateOrRegion => "Chicago, IL, USA";
         public string EmailAddress => "brad@thelazyadministrator.com";
         public string TwitterHandle => "bwya77";
