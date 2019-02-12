@@ -17,7 +17,7 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "SOZDBA";
         public string GravatarHash => "0440d5d8f1b51b4765e3d48aec441510";
         public string GitHubHandle => "shaneis";
-        public GeoPosition Position => new GeoPosition(53.2707, 9.0568);
+        public GeoPosition Position => new GeoPosition(53.2707, -9.0568);
 
         public Uri WebSite => new Uri("https://nocolumnname.blog/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://nocolumnname.blog/feed/"); } }
