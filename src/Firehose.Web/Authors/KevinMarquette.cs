@@ -12,7 +12,7 @@ namespace Firehose.Web.Authors
         public string FirstName => "Kevin";
         public string LastName => "Marquette";
         public string ShortBioOrTagLine => "Principal DevOps Engineer, Microsoft MVP, 2018 PowerShell Community Hero, and SoCal PowerShell UserGroup Organizer.";
-        public string StateOrRegion => "Orange County, USA";
+        public string StateOrRegion => "Irvine, CA, USA";
         public string EmailAddress => "kevmar@gmail.com";
         public string TwitterHandle => "kevinmarquette";
         public string GitHubHandle => "kevinmarquette";
