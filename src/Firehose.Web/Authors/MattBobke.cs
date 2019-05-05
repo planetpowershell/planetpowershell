@@ -15,10 +15,10 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
     public string EmailAddress => "matt@mattbobke.com";
     public string TwitterHandle => "MattBobke";
     public string GitHubHandle => "mcbobke";
-    public GeoPosition Position => new GeoPosition(33.6469, -117.6861);
+    public GeoPosition Position => new GeoPosition(33.5676842, -117.7256083);
 
     public Uri WebSite => new Uri("https://mattbobke.com");
-    public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mattbobke.com/feed/"); } }
+    public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mattbobke.com/feed"); } }
 
     public bool Filter(SyndicationItem item)
     {
