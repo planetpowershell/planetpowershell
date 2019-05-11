@@ -21,14 +21,14 @@ namespace Firehose.Web.Authors
 
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("http://poshsecurity.com/blog/?format=rss"); }
+            get { yield return new Uri("https://poshsecurity.com/blog/?format=rss"); }
         }
 
         public string GitHubHandle => "kjacobsen";
 
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
 
         public GeoPosition Position => new GeoPosition(-37.816667, 144.966667);

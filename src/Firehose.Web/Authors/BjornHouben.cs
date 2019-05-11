@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://blog.bjornhouben.com");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://blog.bjornhouben.com/category/powershell/feed/atom/"); }
+            get { yield return new Uri("https://blog.bjornhouben.com/category/powershell/feed/"); }
         }
     }
 }
