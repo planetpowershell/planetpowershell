@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://blog.destruktive.one");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://blog.destruktive.one/tag/powershell/rss/"); }
+            get { yield return new Uri("https://destruktive.one/category/powershell/feed/"); }
         }
     }
 }
