@@ -8,9 +8,9 @@ namespace UnitTest
     public class SyndicationItemExtensionsTest
     {
         [Fact]
-        public void FilterXamarinTitleTest()
+        public void FilterPowerShellTitleTest()
         {
-            var item = new SyndicationItem("some blog post about xamarin android stuff", "whatever", new Uri("http://derp.org"));
+            var item = new SyndicationItem("some blog post about powershell android stuff", "whatever", new Uri("http://derp.org"));
 
             var ok = item.ApplyDefaultFilter();
             Assert.True(ok);
@@ -22,12 +22,12 @@ namespace UnitTest
         }
 
         [Fact]
-        public void FilterXamarinCategoryTest()
+        public void FilterPowerShellCategoryTest()
         {
             var item = new SyndicationItem();
             item.Categories.Add(new SyndicationCategory("android"));
             item.Categories.Add(new SyndicationCategory("ios"));
-            item.Categories.Add(new SyndicationCategory("xamarin"));
+            item.Categories.Add(new SyndicationCategory("powershell"));
 
             var ok = item.ApplyDefaultFilter();
             Assert.True(ok);
@@ -39,10 +39,10 @@ namespace UnitTest
         }
 
         [Fact]
-        public void FitlerXamarinTitleAndCategoryTest()
+        public void FitlerPowerShellTitleAndCategoryTest()
         {
-            var item = new SyndicationItem("some blog post about xamarin android stuff", "whatever", new Uri("http://derp.org"));
-            item.Categories.Add(new SyndicationCategory("xamarin"));
+            var item = new SyndicationItem("some blog post about powershell android stuff", "whatever", new Uri("http://derp.org"));
+            item.Categories.Add(new SyndicationCategory("powershell"));
 
             var ok = item.ApplyDefaultFilter();
             Assert.True(ok);
@@ -54,12 +54,12 @@ namespace UnitTest
             Assert.False(ok);
 
             item = new SyndicationItem("some blog post about java android stuff", "whatever", new Uri("http://derp.org"));
-            item.Categories.Add(new SyndicationCategory("xamarin"));
+            item.Categories.Add(new SyndicationCategory("powershell"));
 
             ok = item.ApplyDefaultFilter();
             Assert.True(ok);
 
-            item = new SyndicationItem("some blog post about xamarin android stuff", "whatever", new Uri("http://derp.org"));
+            item = new SyndicationItem("some blog post about powershell android stuff", "whatever", new Uri("http://derp.org"));
             item.Categories.Add(new SyndicationCategory("java"));
 
             ok = item.ApplyDefaultFilter();
