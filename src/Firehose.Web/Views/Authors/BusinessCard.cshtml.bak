@@ -1,6 +1,4 @@
 ﻿@using Firehose.Web.Infrastructure
-@using Firehose.Web.Extensions
-
 @model IAmACommunityMember
 
 <div class="businessCard">

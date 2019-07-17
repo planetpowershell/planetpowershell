@@ -1,8 +1,6 @@
 ﻿@using BlogMonster.Extensions
 @using Firehose.Web.Infrastructure
-@using Firehose.Web.Extensions
 @using ThirdDrawer.Extensions.ClassExtensionMethods
-
 @model System.ServiceModel.Syndication.SyndicationFeed
 
 @{

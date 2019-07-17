@@ -1,6 +1,4 @@
 ﻿@using Firehose.Web.Infrastructure
-@using Firehose.Web.Extensions 
- 
 @model IAmACommunityMember
 
 <div class="col-md-4 profileCard" id="@Model.GetType().Name">
@@ -17,11 +15,27 @@
         <p class="description">
             @if (!string.IsNullOrWhiteSpace(Model.ShortBioOrTagLine))
             {
-               
-                <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine</text>          
+
+                if (Model is IWorkAtMicrosoft)
+                {
+                    <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine at Microsoft</text>
+                }
+                else
+                {
+                    if (Model is IAmAMicrosoftMVP)
+                    {
+                        <text>@Model.FirstName @Model.LastName is a Microsoft MVP who @Model.ShortBioOrTagLine</text>
+                    }
+                    else
+                    {
+                        <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine</text>
+                    }
+                }
             }
         </p>
 
+        <p class="location">
+            <i class="fa fa-map-marker"></i> @Model.StateOrRegion</p>
         <p class="website">
             <a href="@(Model.WebSite.ToString())" title="@Model.WebSite.ToString()">@Model.WebSite.ToString()</a>
         </p>

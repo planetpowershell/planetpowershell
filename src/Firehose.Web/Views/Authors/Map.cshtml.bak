@@ -1,6 +1,4 @@
 ﻿@using Firehose.Web.Infrastructure
-@using Firehose.Web.Extensions 
- 
 @model Firehose.Web.Infrastructure.IAmACommunityMember[]
 
 <div id="authorMap"></div>
