@@ -222,6 +222,7 @@
     <Compile Remove="Authors\GrahamBeer.cs" />
     <Compile Remove="Authors\MukeshShende.cs" />
     <Compile Remove="Authors\PaoloFrigo.cs" />
+    <Compile Remove="Authors\XajuanSmith.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
