@@ -24,4 +24,5 @@ namespace Firehose.Web.Authors
             get { yield return new Uri("https://blog.hybridcloud-ops.com/feeds/posts/default/-/powershell?alt=rss"); }
         }
     }
+    public string FeedLanguageCode => "en";
 }

@@ -27,5 +27,6 @@ namespace Firehose.Web.Authors
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
+        public string FeedLanguageCode => "en";
     }
 }

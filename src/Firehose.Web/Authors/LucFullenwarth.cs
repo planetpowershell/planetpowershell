@@ -16,13 +16,12 @@ public class LucFullenwarth : IAmACommunityMember, IFilterMyBlogPosts
     public string GitHubHandle => "fullenw1";
     public string TwitterHandle => "";
     public GeoPosition Position => new GeoPosition(48.583636, 7.745839);
-
     public Uri WebSite => new Uri("https://itluke.online/");
     public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://itluke.online/feed/"); } }
-
     public bool Filter(SyndicationItem item)
     {
         // this filters out posts that do not have PowerShell in the title
         return item.Title.Text.ToLowerInvariant().Contains("powershell");
     }
+    public string FeedLanguageCode => "en";
 }

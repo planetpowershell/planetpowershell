@@ -16,13 +16,12 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
     public string TwitterHandle => "MattBobke";
     public string GitHubHandle => "mcbobke";
     public GeoPosition Position => new GeoPosition(33.5676842, -117.7256083);
-
     public Uri WebSite => new Uri("https://mattbobke.com");
     public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mattbobke.com/feed"); } }
-
     public bool Filter(SyndicationItem item)
     {
         // This filters out only the posts that have the "PowerShell" category
         return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
     }
+    public string FeedLanguageCode => "en";
 }

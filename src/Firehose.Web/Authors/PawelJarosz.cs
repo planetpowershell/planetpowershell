@@ -22,4 +22,5 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://paweljarosz.wordpress.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://paweljarosz.wordpress.com/feed/"); } }
     }
+    public string FeedLanguageCode => "en";
 }

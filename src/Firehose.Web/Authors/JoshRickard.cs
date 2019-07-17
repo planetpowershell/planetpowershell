@@ -18,13 +18,12 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "MSAdministrator";
         public string GravatarHash => "a3cab24cca7ccf6c969a9161fa1405ef";
         public GeoPosition Position => new GeoPosition(38.9517, 92.3341);
-
         public Uri WebSite => new Uri("https://letsautomate.it");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://letsautomate.it/index.xml"); } }
-        
         public bool Filter(SyndicationItem item)
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
-        } 
+        }
+        public string FeedLanguageCode => "en";
     }
 }

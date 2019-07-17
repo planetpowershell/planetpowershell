@@ -16,21 +16,17 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "code@poshsecurity.com";
         public string TwitterHandle => "kjacobsen";
         public string GravatarHash => "";
-
         public Uri WebSite => new Uri("https://poshsecurity.com/");
-
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://poshsecurity.com/blog/?format=rss"); }
         }
-
         public string GitHubHandle => "kjacobsen";
-
         public bool Filter(SyndicationItem item)
         {
             return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
-
         public GeoPosition Position => new GeoPosition(-37.816667, 144.966667);
+        public string FeedLanguageCode => "en";
     }
 }

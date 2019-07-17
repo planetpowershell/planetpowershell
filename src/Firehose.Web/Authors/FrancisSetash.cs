@@ -16,21 +16,17 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "francis@i-py.com";
         public string TwitterHandle => "";
         public string GravatarHash => "";
-
         public Uri WebSite => new Uri("https://i-py.com/");
-
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://i-py.com/feed.xml"); }
         }
-
         public string GitHubHandle => "walked";
-
         public bool Filter(SyndicationItem item)
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
-
+        public string FeedLanguageCode => "en";
         public GeoPosition Position => new GeoPosition(39.0589050,-76.49100906);
     }
 }

@@ -21,5 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://ramblingcookiemonster.github.io/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://ramblingcookiemonster.github.io/feed.xml"); } }
+        public string FeedLanguageCode => "en";
     }
 }

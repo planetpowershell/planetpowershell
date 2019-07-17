@@ -20,5 +20,6 @@ public class MattMcNabb : IAmACommunityMember
         public Uri WebSite => new Uri("https://mattmcnabb.github.io");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mattmcnabb.github.io/feed.xml"); } }
         public string GravatarHash => "";
+        public string FeedLanguageCode => "en";
     }
 }

@@ -18,15 +18,14 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "JM2K69";
         public string GravatarHash => "d1c4718717fd44b6577e071b73649882";
         public GeoPosition Position => new GeoPosition(45.750000, 4.850000);
-
         public Uri WebSite => new Uri("https://JM2K69.github.io/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://jm2k69.github.io/feed.xml"); } }
-    
         public bool Filter(SyndicationItem item)
         {
             // This filters out only the posts that have the "PowerShell" category
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+        public string FeedLanguageCode => "en";
     
     }
 }
