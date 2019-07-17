@@ -15,6 +15,7 @@
 	var itemUri = item.Links.FirstOrDefault();
 	var author = Model.Bloggers.FirstOrDefault(b => b.FeedUris.Any(u => itemUri != null && (itemUri.Uri.Host == u.Host || itemUri.Uri.Host.Replace("www.", "") == u.Host.Replace("www.", ""))));
 	string authorName;
+    string twitterHandle;
 
 	// If we couldn't match the autor by FeedUri link, retry on Website
 	if (author == null)
@@ -26,6 +27,7 @@
 	if (author != null)
 	{
 		authorName = author.FirstName + " " + author.LastName;
+        twitterHandle = author.twitterHandle;
 	}
 	// If no author was matched, extract the name from the RSS feed, something is better than nothing right?!
 	else
@@ -50,6 +52,11 @@
                 {
                 <text>|</text>
                 @authorName
+            }
+            @if (!string.IsNullOrWhiteSpace(twitterHandle))
+            {
+                <text>|</text>
+                <a href="https://twiter.com/@twitterHandle">@twitterHandle</a>
             }
         </h2>
         <div class="syndicationItemContent">
