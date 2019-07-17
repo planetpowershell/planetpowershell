@@ -217,6 +217,7 @@
     <Compile Include="ViewModels\PreviewViewModel.cs" />
     <Compile Include="Authors\*.cs" />
     <Compile Remove="Authors\DavidOBrien.cs" />
+    <Compile Remove="Authors\EvgenyFedorov.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
