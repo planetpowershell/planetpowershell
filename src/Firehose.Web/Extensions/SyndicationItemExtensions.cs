@@ -7,13 +7,13 @@ namespace Firehose.Web.Extensions
     {
         public static bool ApplyDefaultFilter(this SyndicationItem item)
         {
-            var hasXamarinCategory = false;
-            var hasXamarinKeywords = false;
+            var hasPowerShellCategory = false;
+            var hasPowerShellKeywords = false;
 
             if (item.Categories.Count > 0)
             {
-                hasXamarinCategory = item.Categories.Any(category =>
-                    category.Name.ToLowerInvariant().Contains("xamarin"));
+                hasPowerShellCategory = item.Categories.Any(category =>
+                    category.Name.ToLowerInvariant().Contains("powershell"));
             }
 
             if (item.ElementExtensions.Count > 0)
@@ -22,13 +22,13 @@ namespace Firehose.Web.Extensions
                 if (element != null)
                 {
                     var keywords = element.GetObject<string>();
-                    hasXamarinKeywords = keywords.ToLowerInvariant().Contains("xamarin");
+                    hasPowerShellKeywords = keywords.ToLowerInvariant().Contains("powershell");
                 }
             }
 
-            var hasXamarinTitle = item.Title?.Text.ToLowerInvariant().Contains("xamarin") ?? false;
+            var hasPowerShellTitle = item.Title?.Text.ToLowerInvariant().Contains("powershell") ?? false;
 
-            return hasXamarinTitle || hasXamarinCategory || hasXamarinKeywords;
+            return hasPowerShellTitle || hasPowerShellCategory || hasPowerShellKeywords;
         }
     }
 }
