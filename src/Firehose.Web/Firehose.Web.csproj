@@ -224,6 +224,7 @@
     <Compile Remove="Authors\PaoloFrigo.cs" />
     <Compile Remove="Authors\XajuanSmith.cs" />
     <Compile Remove="Authors\QuintenSteenhuis.cs" />
+    <Compile Remove="Authors\SvenVanRijen.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
