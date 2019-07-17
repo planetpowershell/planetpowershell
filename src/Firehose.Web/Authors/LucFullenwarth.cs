@@ -4,7 +4,8 @@ using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
 using Firehose.Web.Infrastructure;
-
+namespace Firehose.Web.Authors
+{
 public class LucFullenwarth : IAmACommunityMember, IFilterMyBlogPosts
 {
     public string FirstName => "Luc";
@@ -24,4 +25,5 @@ public class LucFullenwarth : IAmACommunityMember, IFilterMyBlogPosts
         return item.Title.Text.ToLowerInvariant().Contains("powershell");
     }
     public string FeedLanguageCode => "en";
+}
 }
