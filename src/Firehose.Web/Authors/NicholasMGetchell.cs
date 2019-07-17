@@ -21,5 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://powershell.getchell.org");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershell.getchell.org/feed/"); } }
+        public string FeedLanguageCode => "en";
     }
 }

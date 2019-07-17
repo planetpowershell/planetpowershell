@@ -22,5 +22,6 @@ namespace Firehose.Web.Authors
         { 
           get { yield return new Uri("https://kurtroggen.wordpress.com/feed/"); } 
         }
+        public string FeedLanguageCode => "en";
     }
 }

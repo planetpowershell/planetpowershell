@@ -16,6 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "Xajuan@live.com";
         public string TwitterHandle => "XajuanS1";
         public string GravatarHash => "9084467aac5841fa7977fa8cafae76c4";
+        public GeoPosition Position => null;
         public Uri WebSite => new Uri("https://Powershell.city/");
         public IEnumerable<Uri> FeedUris
         {
@@ -25,6 +26,7 @@ namespace Firehose.Web.Authors
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Where(i => i.Name.Equals("PowerShell", StringComparison.OrdinalIgnoreCase)).Any();
-        }     
+        }
+        public string FeedLanguageCode => "en";
     }
 }

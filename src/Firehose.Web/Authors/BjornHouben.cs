@@ -23,5 +23,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://blog.bjornhouben.com/category/powershell/feed/"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }

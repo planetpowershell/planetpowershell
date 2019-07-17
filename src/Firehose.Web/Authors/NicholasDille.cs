@@ -31,6 +31,7 @@ namespace Firehose.Web.Authors
             return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
         }
 
-        public GeoPosition Position => new GeoPosition(47.9874048, 7.7263806);       
+        public GeoPosition Position => new GeoPosition(47.9874048, 7.7263806);
+        public string FeedLanguageCode => "en";
     }
 }

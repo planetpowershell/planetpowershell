@@ -25,6 +25,6 @@ namespace Firehose.Web.Authors
             // this filters out posts that do not have PowerShell in the title
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
-     
+        public string FeedLanguageCode => "en";
     }
 }

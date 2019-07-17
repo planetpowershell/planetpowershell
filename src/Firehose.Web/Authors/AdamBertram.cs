@@ -23,10 +23,10 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://www.adamtheautomator.com/feed/"); }
         }
-  
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+        public string FeedLanguageCode => "en";
     }
 }

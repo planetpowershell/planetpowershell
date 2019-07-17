@@ -23,5 +23,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://chrislgardner.github.io/feed.xml"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }
