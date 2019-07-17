@@ -216,7 +216,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PreviewViewModel.cs" />
     <Compile Include="Authors\*.cs" />
-    <Compile Exclude="Authors\DavidOBrien.cs" />
+    <Compile Remove="Authors\DavidOBrien.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
