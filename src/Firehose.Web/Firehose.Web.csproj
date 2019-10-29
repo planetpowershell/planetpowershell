@@ -219,6 +219,7 @@
 		<Compile Remove="Authors\DavidOBrien.cs" />
     <Compile Remove="Authors\EvgenyFedorov.cs" />
 		<Compile Remove="Authors\GrahamBeer.cs" />
+		<Compile Remove="Authors\JoshRickard.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
