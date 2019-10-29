@@ -11,40 +11,24 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   artifactname: 'planetpowershell'
-  
 
 steps:
-- task: NuGetToolInstaller@0
-
-- task: NuGetCommand@2
+- task: Cake@0
+  displayName: 'Build with Cake'
   inputs:
-    restoreSolution: '$(solution)'
+    script: 'build.cake'
+    target: 'Build'
+    verbosity: 'Normal'
 
-- task: VSBuild@1
+- task: Cake@0
+  displayName: 'Test with Cake'
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    testAssemblyVer2: |
-      **\$(BuildConfiguration)\*test*.dll
-      !**\obj\**
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: PublishSymbols@2
-  displayName: 'Publish symbols path'
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    PublishSymbols: false
-  continueOnError: true
+    script: 'build.cake'
+    target: 'UnitTest'
+    verbosity: 'Normal'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: '$(artifactname)'
-
