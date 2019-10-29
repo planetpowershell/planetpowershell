@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class JoshRickard : IAmACommunityMember, IFilterMyBlogPosts
+    public class JoshRickard : IAmACommunityMember
     {
         public string FirstName => "Josh";
         public string LastName => "Rickard";
@@ -20,10 +20,7 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(38.9517, 92.3341);
         public Uri WebSite => new Uri("https://letsautomate.it");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://letsautomate.it/index.xml"); } }
-        public bool Filter(SyndicationItem item)
-        {
-            return item.Title.Text.ToLowerInvariant().Contains("powershell");
-        }
+
         public string FeedLanguageCode => "en";
     }
 }
