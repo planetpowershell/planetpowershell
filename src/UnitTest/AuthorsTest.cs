@@ -35,7 +35,7 @@ namespace UnitTest
 		{
 			_output = output;
 
-			ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
+			ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls13 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
 		}
 
 		[Fact]
