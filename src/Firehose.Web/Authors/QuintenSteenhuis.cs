@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class QuintenSteenhuis : IAmACommunityMember, IFilterMyBlogPosts
+    public class QuintenSteenhuis : IAmACommunityMember
     {
         public string FirstName => "Quinten";
         public string LastName => "Steenhuis";
@@ -21,10 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://nonprofittechy.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://nonprofittechy.com/feed/"); } }
-        public bool Filter(SyndicationItem item)
-        {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
-        }
         public string FeedLanguageCode => "en";
     }
 }
