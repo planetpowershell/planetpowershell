@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class MukeshShende : IAmACommunityMember, IFilterMyBlogPosts
+    public class MukeshShende : IAmACommunityMember
     {
         public string FirstName => "Mukesh";
         public string LastName => "Shende";
@@ -21,12 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://mukeshnotes.wordpress.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mukeshnotes.wordpress.com/feed/"); } }
-		
-		public bool Filter(SyndicationItem item)
-        {
-            // This filters out only the posts that have the "PowerShell" category
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Contains("powershell"));
-        }
         public string FeedLanguageCode => "en";
     }
 }
