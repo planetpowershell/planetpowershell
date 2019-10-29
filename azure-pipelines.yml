@@ -11,14 +11,20 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   artifactname: 'planetpowershell'
-  
 
 steps:
 - task: Cake@0
   displayName: 'Build with Cake'
   inputs:
     script: 'build.cake'
-    target: 'Default'
+    target: 'Build'
+    verbosity: 'Normal'
+
+- task: Cake@0
+  displayName: 'Test with Cake'
+  inputs:
+    script: 'build.cake'
+    target: 'UnitTest'
     verbosity: 'Normal'
 
 - task: PublishBuildArtifacts@1
@@ -26,4 +32,3 @@ steps:
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: '$(artifactname)'
-
