@@ -20,13 +20,6 @@ steps:
     target: 'Build'
     verbosity: 'Normal'
 
-- task: Cake@0
-  displayName: 'Test with Cake'
-  inputs:
-    script: 'build.cake'
-    target: 'UnitTest'
-    verbosity: 'Normal'
-
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
