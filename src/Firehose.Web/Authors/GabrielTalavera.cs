@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://blog.hybridcloud-ops.com");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://blog.hybridcloud-ops.com/feeds/posts/default/-/powershell?alt=rss"); }
+            get { yield return new Uri("https://hybridcloud-ops.blogspot.com/feeds/posts/default/-/powershell?alt=rss"); }
         }
         public string FeedLanguageCode => "en";
     }
