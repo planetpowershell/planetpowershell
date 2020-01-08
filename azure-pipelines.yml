@@ -13,12 +13,33 @@ variables:
   artifactname: 'planetpowershell'
 
 steps:
-- task: Cake@0
-  displayName: 'Build with Cake'
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
   inputs:
-    script: 'build.cake'
-    target: 'Build'
-    verbosity: 'Normal'
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  inputs:
+    testAssemblyVer2: |
+      **\$(BuildConfiguration)\*test*.dll
+      !**\obj\**
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: PublishSymbols@2
+  displayName: 'Publish symbols path'
+  inputs:
+    SearchPattern: '**\bin\**\*.pdb'
+    PublishSymbols: false
+  continueOnError: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
