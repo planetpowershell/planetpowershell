@@ -1,5 +1,9 @@
 # C:\\> Get-Greeting 'Welcome to PlanetPowerShell.com'
 
+![Build Status](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_apis/build/status/planetpowershell.planetpowershell?branchName=master)
+
+![Release Status](https://vsrm.dev.azure.com/planetpowershell/_apis/public/Release/badge/ada87215-ce32-443c-a0b7-5512f6b742ed/3/4)
+
 Welcome!
 
 The goal of PlanetPowerShell is to provide an aggregated feed of PowerShell community content. If you write about PowerShell, then jump in and add your blog to the feed. The only thing we wask is that you do not violate the community [code of conduct](https://github.com/planetpowershell/planetpowershell/blob/master/CODE_OF_CONDUCT.md)
