@@ -15,7 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Arnold, MD";
         public string EmailAddress => "francis@i-py.com";
         public string TwitterHandle => "";
-        public string GravatarHash => "";
+        public string GravatarHash => "0959b63fb022ccbc7eb47ad472ed5dad";
         public Uri WebSite => new Uri("https://i-py.com/");
         public IEnumerable<Uri> FeedUris
         {
