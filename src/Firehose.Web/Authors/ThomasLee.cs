@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://tfl09.blogspot.com");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://tfl09.blogspot.com/feeds/posts/default/"); }
+            get { yield return new Uri("https://tfl09.blogspot.com/feeds/posts/default?alt=rss"); }
         }
         public string FeedLanguageCode => "en";
     }
