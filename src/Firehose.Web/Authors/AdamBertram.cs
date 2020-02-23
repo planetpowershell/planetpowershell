@@ -18,10 +18,23 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "f21b5adac336b3678098de870efcf994";
         public string GitHubHandle => "adbertram";
         public GeoPosition Position => new GeoPosition(37.996239,-87.54378);
+<<<<<<< HEAD
         public Uri WebSite => new Uri("http://www.adamtheautomator.com");
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("http://www.adamtheautomator.com/feed/"); }
         }
+=======
+        public Uri WebSite => new Uri("https://adamtheautomator.com");
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://adamtheautomator.com/rss/"); }
+        }
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("PowerShell"));
+        }
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

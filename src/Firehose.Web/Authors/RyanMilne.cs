@@ -25,5 +25,9 @@ namespace Firehose.Web.Authors
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+<<<<<<< HEAD
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

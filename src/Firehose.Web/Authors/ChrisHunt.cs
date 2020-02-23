@@ -16,16 +16,13 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "cdhunt@gmail.com";
         public string TwitterHandle => "logicaldiagram";
         public string GravatarHash => "d5d9ccbefb9ee62169d1543d5634d0fd";
-
         public Uri WebSite => new Uri("https://www.automatedops.com/");
-
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://www.automatedops.com/index.xml"); }
         }
-
         public string GitHubHandle => "cdhunt";
-
+        public string FeedLanguageCode => "en";
         public GeoPosition Position => new GeoPosition(39.0913089, -77.5440391);
     }
 }

@@ -16,21 +16,23 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "";
         public string TwitterHandle => "TheShellNut";
         public string GravatarHash => "25061653796d5c748192c68e2eb6bde8";
+<<<<<<< HEAD
 
         public Uri WebSite => new Uri("https://mathieubuisson.github.io/");
 
+=======
+        public Uri WebSite => new Uri("https://mathieubuisson.github.io/");
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://mathieubuisson.github.io/feed.xml"); }
         }
-
         public string GitHubHandle => "MathieuBuisson";
-
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
-
         public GeoPosition Position => new GeoPosition(53.294469, -6.141136);
+        public string FeedLanguageCode => "en";
     }
 }

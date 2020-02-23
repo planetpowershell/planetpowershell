@@ -19,7 +19,11 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "mukeshshende";
         public GeoPosition Position => new GeoPosition(17.375, 78.4744);
 
+<<<<<<< HEAD
         public Uri WebSite => new Uri("http://mukeshshende.com/");
+=======
+        public Uri WebSite => new Uri("https://mukeshnotes.wordpress.com");
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mukeshnotes.wordpress.com/feed/"); } }
 		
 		public bool Filter(SyndicationItem item)
@@ -27,5 +31,9 @@ namespace Firehose.Web.Authors
             // This filters out only the posts that have the "PowerShell" category
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Contains("powershell"));
         }
+<<<<<<< HEAD
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

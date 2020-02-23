@@ -15,22 +15,18 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Arnold, MD";
         public string EmailAddress => "francis@i-py.com";
         public string TwitterHandle => "";
-        public string GravatarHash => "";
-
+        public string GravatarHash => "0959b63fb022ccbc7eb47ad472ed5dad";
         public Uri WebSite => new Uri("https://i-py.com/");
-
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://i-py.com/feed.xml"); }
         }
-
         public string GitHubHandle => "walked";
-
         public bool Filter(SyndicationItem item)
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
-
+        public string FeedLanguageCode => "en";
         public GeoPosition Position => new GeoPosition(39.0589050,-76.49100906);
     }
 }

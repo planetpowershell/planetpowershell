@@ -18,8 +18,14 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "mczerniawski";
         public string GravatarHash => "f0e6c49009d0a9fb3c1453c2cfd9334a";
         public GeoPosition Position => new GeoPosition(51.1078850,17.0385380);
+<<<<<<< HEAD
 
         public Uri WebSite => new Uri("https://arconnetblog.wordpress.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://arconnetblog.wordpress.com/feed/"); } }
+=======
+        public Uri WebSite => new Uri("https://www.mczerniawski.pl");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.mczerniawski.pl/feed.xml"); } }
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

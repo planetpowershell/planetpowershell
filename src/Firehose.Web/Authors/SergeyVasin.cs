@@ -22,12 +22,24 @@ namespace Firehose.Web.Authors
         
         public IEnumerable<Uri> FeedUris
         {
+<<<<<<< HEAD
             get { yield return new Uri("https://sergeyvasin.net/feed/"); }
+=======
+            get
+            {
+                yield return new Uri("https://sergeyvasin.net/feed/");
+                yield return new Uri("https://sergeyvasin.com/feed/");
+            }
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
         }
         
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+<<<<<<< HEAD
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

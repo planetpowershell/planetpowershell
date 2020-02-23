@@ -19,6 +19,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "df83ceb7d3b3b924f131abc408c3bfa";
         public GeoPosition Position => new GeoPosition(42.364086, -71.060546);
 
+<<<<<<< HEAD
         public Uri WebSite => new Uri("http://nonprofittechy.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("http://nonprofittechy.com/feed/"); } }
 
@@ -27,5 +28,14 @@ namespace Firehose.Web.Authors
 		return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
 	}
 
+=======
+        public Uri WebSite => new Uri("https://nonprofittechy.com");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://nonprofittechy.com/feed/"); } }
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+        }
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

@@ -17,13 +17,22 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "Graham-Beer";
         public string GravatarHash => "159bdc93f5c3783799b4d298d6d87dde";
         public GeoPosition Position => new GeoPosition(50.7167, -1.8833);
+<<<<<<< HEAD
 
         public Uri WebSite => new Uri("https://graham-beer.github.io/#blog");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://graham-beer.github.io/feed.xml"); } }
 
+=======
+        public Uri WebSite => new Uri("https://graham-beer.github.io/#blog");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://graham-beer.github.io/feed.xml"); } }
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+<<<<<<< HEAD
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

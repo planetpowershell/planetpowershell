@@ -18,10 +18,19 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "dc8d4d1ec3179e966ccdd959aa16d11c";
         public string GitHubHandle => "jaapbrasser";
         public GeoPosition Position => new GeoPosition(52.635340, 4.885695);
+<<<<<<< HEAD
         public Uri WebSite => new Uri("http://www.jaapbrasser.com");
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("http://www.jaapbrasser.com/category/powershell/feed/"); }
         }
+=======
+        public Uri WebSite => new Uri("https://www.jaapbrasser.com");
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://www.jaapbrasser.com/category/powershell/feed/"); }
+        }
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

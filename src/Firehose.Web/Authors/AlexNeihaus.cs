@@ -19,6 +19,10 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(42.355291, -71.066245);
         public Uri WebSite => new Uri("https://www.yobyot.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.yobyot.com/category/powershell/feed/"); } }
+<<<<<<< HEAD
         
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

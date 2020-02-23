@@ -18,10 +18,19 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "3bde2094c84fb81661c04ed87f8336b7";
         public string GitHubHandle => "boeprox";
         public GeoPosition Position => new GeoPosition(41.15861, -95.93417);
+<<<<<<< HEAD
         public Uri WebSite => new Uri("http://www.learn-powershell.net");
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("http://www.learn-powershell.net/feed/"); }
         }
+=======
+        public Uri WebSite => new Uri("https://www.learn-powershell.net");
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://www.learn-powershell.net/feed/"); }
+        }
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

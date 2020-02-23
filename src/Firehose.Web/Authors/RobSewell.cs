@@ -7,7 +7,11 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
+<<<<<<< HEAD
     public class RobSewell : IFilterMyBlogPosts
+=======
+    public class RobSewell : IAmAMicrosoftMVP, IFilterMyBlogPosts
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     {
         public string FirstName => "Rob";
         public string LastName => "Sewell";
@@ -32,5 +36,11 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(50.952495, -3.267374);
+<<<<<<< HEAD
     }
 }
+=======
+        public string FeedLanguageCode => "en";
+    }
+}
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded

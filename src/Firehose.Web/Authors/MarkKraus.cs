@@ -18,8 +18,14 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "markekraus";
         public string GravatarHash => "ddd9a3f6a4c31ea3c3a214b5f0912c36";
         public GeoPosition Position => new GeoPosition(32.9481800,-96.7297200);
+<<<<<<< HEAD
 
         public Uri WebSite => new Uri("https://get-powershellblog.blogspot.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://get-powershellblog.blogspot.com/feeds/posts/default"); } }
+=======
+        public Uri WebSite => new Uri("https://get-powershellblog.blogspot.com/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://get-powershellblog.blogspot.com/feeds/posts/default"); } }
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

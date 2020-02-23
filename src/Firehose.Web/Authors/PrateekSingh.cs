@@ -17,11 +17,19 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "SinghPrateik";
         public string GravatarHash => "2b2f100e9097063a5777a26820a58fc7";
 
+<<<<<<< HEAD
         public Uri WebSite => new Uri("https://geekeefy.wordpress.com/");
 
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://geekeefy.wordpress.com/feed/"); }
+=======
+        public Uri WebSite => new Uri("https://ridicurious.com/");
+
+        public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://ridicurious.com/feed/"); }
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
         }
 
         public string GitHubHandle => "prateekkumarsingh";
@@ -32,5 +40,9 @@ namespace Firehose.Web.Authors
         }
 
         public GeoPosition Position => new GeoPosition(28.4594970, 77.0266380);
+<<<<<<< HEAD
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

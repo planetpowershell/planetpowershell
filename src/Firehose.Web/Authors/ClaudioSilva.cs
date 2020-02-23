@@ -23,5 +23,9 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://claudioessilva.eu/category/powershell/feed/"); }
         }
+<<<<<<< HEAD
+=======
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }

@@ -17,13 +17,24 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "chelnak";
         public string GravatarHash => "ad535ae27561b4df47261f2cebeed368";
         public GeoPosition Position => new GeoPosition(52.2823160, -1.5849270);
+<<<<<<< HEAD
 
         public Uri WebSite => new Uri("https://www.helloitscraig.co.uk/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.helloitscraig.co.uk/feed/"); } }
 
+=======
+        public Uri WebSite => new Uri("https://www.helloitscraig.co.uk/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.helloitscraig.co.uk/feed.xml"); } }
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+<<<<<<< HEAD
     }
 }
+=======
+        public string FeedLanguageCode => "en";
+    }
+}
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded

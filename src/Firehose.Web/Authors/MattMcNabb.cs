@@ -19,6 +19,11 @@ public class MattMcNabb : IAmACommunityMember
         public GeoPosition Position => new GeoPosition(39.403986, -84.406761);
         public Uri WebSite => new Uri("https://mattmcnabb.github.io");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mattmcnabb.github.io/feed.xml"); } }
+<<<<<<< HEAD
         public string GravatarHash => "";
+=======
+        public string GravatarHash => "719f5e885b7641673038f02b79923f1a";
+        public string FeedLanguageCode => "en";
+>>>>>>> 9eab8079ac1607d478edbee7c9564718e09a7ded
     }
 }
