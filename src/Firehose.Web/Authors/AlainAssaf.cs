@@ -18,7 +18,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "55e3ac1ac8ca9129cc9e138a158b07bb";
         public GeoPosition Position => new GeoPosition(35.7795900, -78.6381790);
         public Uri WebSite => new Uri("https://alainassaf.github.io/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://alainassaf.github.io/feed"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://alainassaf.github.io/feed.xml"); } }
      	public string FeedLanguageCode => "en";
     }
 }
