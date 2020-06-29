@@ -11,17 +11,17 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Roberth";
         public string LastName => "Strand";
-        public string ShortBioOrTagLine => "Norwegian consultant writing about PowerShell, cloud, security and other fun topics.";
+        public string ShortBioOrTagLine => "PowerShell, Azure, Security and other fun stuff!";
         public string StateOrRegion => "Tromsø, Norway";
-        public string EmailAddress => "rs@destruktive.one";
+        public string EmailAddress => "me@robstr.dev";
         public string TwitterHandle => "RoberthTweets";
-        public string GravatarHash => "0f8d0c1b68924de4beed584aefd30e20";
+        public string GravatarHash => "b82b95a9133d614b90ef718572959d47";
         public string GitHubHandle => "roberthstrand";
         public GeoPosition Position => new GeoPosition(69.648491, 18.983705);
-        public Uri WebSite => new Uri("https://blog.destruktive.one");
+        public Uri WebSite => new Uri("https://robstr.dev");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://destruktive.one/category/powershell/feed/"); }
+            get { yield return new Uri("https://robstr.dev/powershell"); }
         }
         public string FeedLanguageCode => "en";
     }
