@@ -27,7 +27,7 @@ namespace Firehose.Web.Authors
         }
         public bool Filter(SyndicationItem item)
         {
-            return item.Link.Text.ToLowerInvariant().Contains("powershell");
+            return item.link.Text.ToLowerInvariant().Contains("powershell");
         }
         public string FeedLanguageCode => "en";
     }
