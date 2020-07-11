@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "kiran@patnayakuni.com";
         public string TwitterHandle => "kpatnayakuni";
         public string GitHubHandle => "kpatnayakuni";
-        public string GravatarHash => "8005482ab7de92b77be6f178fff5c12a";
+        public string GravatarHash => "9e6f3d364a0c54d745ff5c33ab4a8885";
 
         public GeoPosition Position => new GeoPosition(12.896208, 77.596138);
 
