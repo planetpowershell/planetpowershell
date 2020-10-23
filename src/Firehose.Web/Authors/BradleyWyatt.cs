@@ -19,7 +19,6 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "c4eaa00e143c7abb1362dc9a8a48da09";
         public GeoPosition Position => new GeoPosition(41.887212,-88.302487);
 
-
         public Uri WebSite => new Uri("https://www.thelazyadministrator.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.thelazyadministrator.com/feed/"); } }
     }
