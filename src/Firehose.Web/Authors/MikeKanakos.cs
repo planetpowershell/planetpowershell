@@ -21,5 +21,6 @@ namespace Firehose.Web.Authors
 
         public Uri WebSite => new Uri("https://www.networkadm.in/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.networkadm.in/rss/"); } }
+        public string FeedLanguageCode => "en";
     }
 }

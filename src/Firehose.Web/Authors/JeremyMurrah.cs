@@ -17,9 +17,7 @@ namespace Firehose.Web.Authors
         public string TwitterHandle => "Jeremy Murrah";
         public string GitHubHandle => "murrahjm";
         public string GravatarHash => "297b54809ef14f5f3b8d0eb8e3c700f3";
-
         public GeoPosition Position => new GeoPosition(29.7602, -95.3694);
-
         public Uri WebSite => new Uri("https://murrahjm.github.io/");
         public IEnumerable<Uri> FeedUris
         {
@@ -29,5 +27,6 @@ namespace Firehose.Web.Authors
         {
             return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
         }
+        public string FeedLanguageCode => "en";
     }
 }

@@ -16,21 +16,17 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "dfranciscus@gmail.com";
         public string TwitterHandle => "dan_franciscus";
         public string GravatarHash => "c99c2eda81dc29f5b8adaf625e4db414";
-
         public Uri WebSite => new Uri("https://winsysblog.com/");
-
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://winsysblog.com/feed/"); }
         }
-
         public string GitHubHandle => "dfranciscus";
-
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
-
         public GeoPosition Position => new GeoPosition(40.462445, 74.6744);
+        public string FeedLanguageCode => "en";
     }
 }

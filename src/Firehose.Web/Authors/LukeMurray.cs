@@ -19,5 +19,6 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(-37.45579900000001, 175.18940450000002);
         public Uri WebSite => new Uri("https://luke.geek.nz");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://luke.geek.nz/feed.category.powershell.xml"); } }
+        public string FeedLanguageCode => "en";
     }
 }

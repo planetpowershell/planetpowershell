@@ -18,14 +18,15 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "e6600de53eef91dd803a6386c20a40bf";
         public string GitHubHandle => "mcdonaldbm";
         public GeoPosition Position => new GeoPosition(39.0997, -94.5786);
-        public Uri WebSite => new Uri("https://www.brycematthew.net");
+        public Uri WebSite => new Uri("https://www.brycemcdonald.net");
         public IEnumerable<Uri> FeedUris 
         {
-            get { yield return new Uri("https://www.brycematthew.net/feed.xml"); } 
+            get { yield return new Uri("https://www.brycemcdonald.net/feed.xml"); } 
         }
         public bool Filter(SyndicationItem item)
         {
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
+        public string FeedLanguageCode => "en";
     }
 }

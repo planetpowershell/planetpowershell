@@ -23,5 +23,6 @@ namespace Firehose.Web.Authors
         {
             get { yield return new Uri("https://www.guidooliveira.com/feed/"); }
         }
+        public string FeedLanguageCode => "en";
     }
 }

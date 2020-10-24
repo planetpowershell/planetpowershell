@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "me@brianbunke.com";
         public string TwitterHandle => "brianbunke";
         public string GitHubHandle => "brianbunke";
-        public string GravatarHash => "";
+        public string GravatarHash => "5eb2b9485a755280dc633d2a9ab2160b";
 
         public GeoPosition Position => new GeoPosition(48.751911, -122.478685);
 
@@ -29,5 +29,6 @@ namespace Firehose.Web.Authors
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+        public string FeedLanguageCode => "en";
     }
 }

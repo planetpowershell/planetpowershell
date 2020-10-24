@@ -22,5 +22,6 @@ public class StephenOwen : IAmAMicrosoftMVP
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://foxdeploy.com/tag/powershell/feed/"); } }
 
         public string GravatarHash => "3dd39b0d646f3b959b741eb0196c4c21";
+        public string FeedLanguageCode => "en";
     }
 }

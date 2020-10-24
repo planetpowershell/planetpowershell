@@ -17,14 +17,12 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "thedavecarroll";
         public string GravatarHash => "fd0387e212af38089603b5480e406545";
         public GeoPosition Position => new GeoPosition(36.0679, -86.7194);
-
         public Uri WebSite => new Uri("https://powershell.anovelidea.org/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershell.anovelidea.org/feed.xml"); } }
-
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
         }
-
+        public string FeedLanguageCode => "en";
     }
 }

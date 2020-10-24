@@ -18,13 +18,12 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "psjamesp";
         public string GravatarHash => "a7f8b94204f4ca1e53c84aedc1242f8e";
         public GeoPosition Position => new GeoPosition(35.045631, -85.309677);
-
         public Uri WebSite => new Uri("https://www.scriptautomaterepeat.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://scriptautomaterepeat.com/feed/"); } }
-
         public bool Filter(SyndicationItem item)
         {
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
+        public string FeedLanguageCode => "en";
     }
 }

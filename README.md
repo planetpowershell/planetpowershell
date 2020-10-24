@@ -1,4 +1,8 @@
-# C:\\> Get-Greeting 'Welcome to PlanetPowerShell.com' [![Build status](https://ci.appveyor.com/api/projects/status/u2rw5yhq0638shf1?svg=true)](https://ci.appveyor.com/project/PlanetPowershell/planetpowershell)
+# C:\\> Get-Greeting 'Welcome to PlanetPowerShell.com'
+
+![Build Status](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_apis/build/status/planetpowershell.planetpowershell?branchName=master)
+
+![Release Status](https://vsrm.dev.azure.com/planetpowershell/_apis/public/Release/badge/ada87215-ce32-443c-a0b7-5512f6b742ed/3/4)
 
 Welcome!
 
