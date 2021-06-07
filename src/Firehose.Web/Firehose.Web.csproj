@@ -79,7 +79,7 @@
     <PackageReference Include="Elmah.Mvc" Version="2.1.2" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Humanizer.Core" Version="2.1.0" />
-    <PackageReference Include="jQuery" Version="3.1.1" />
+    <PackageReference Include="jQuery" Version="3.5.0" />
     <PackageReference Include="MarkdownSharp" Version="1.13.0.0" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
     <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.3" />
@@ -184,11 +184,11 @@
     <Content Include="Content\plugins\fontawesome\scss\_stacked.scss" />
     <Content Include="Content\plugins\fontawesome\scss\_variables.scss" />
     <Content Include="Content\css\variables.less" />
-    <None Include="Content\plugins\jquery\jquery-3.1.1.intellisense.js" />
-    <Content Include="Content\plugins\jquery\jquery-3.1.1.js" />
-    <Content Include="Content\plugins\jquery\jquery-3.1.1.min.js" />
-    <Content Include="Content\plugins\jquery\jquery-3.1.1.slim.js" />
-    <Content Include="Content\plugins\jquery\jquery-3.1.1.slim.min.js" />
+    <None Include="Content\plugins\jquery\jquery-3.5.0.intellisense.js" />
+    <Content Include="Content\plugins\jquery\jquery-3.5.0.js" />
+    <Content Include="Content\plugins\jquery\jquery-3.5.0.min.js" />
+    <Content Include="Content\plugins\jquery\jquery-3.5.0.slim.js" />
+    <Content Include="Content\plugins\jquery\jquery-3.5.0.slim.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -227,8 +227,8 @@
     <Content Include="Views\Authors\Index.cshtml" />
     <Content Include="Views\Authors\BusinessCard.cshtml" />
     <Content Include="Content\plugins\bootstrap\css\bootstrap.planetpowershell.less" />
-    <Content Include="Content\plugins\jquery\jquery-3.1.1.slim.min.map" />
-    <Content Include="Content\plugins\jquery\jquery-3.1.1.min.map" />
+    <Content Include="Content\plugins\jquery\jquery-3.5.0.slim.min.map" />
+    <Content Include="Content\plugins\jquery\jquery-3.5.0.min.map" />
     <Content Include="Views\Preview\Index.cshtml" />
     <Content Include="Views\Authors\ProfileCard.cshtml" />
     <Content Include="Views\Authors\Map.cshtml" />
