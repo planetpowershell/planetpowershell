@@ -127,6 +127,6 @@ Of course you are more than welcome to submit other features and bugfixes as wel
 
 # PS > Get-Acknowledgements
 
-* Thanks to Readify for open sourcing their employee blog aggregation platform, which Planet Xamarin forked. Looking for your next challenge? [Readify is hiring](https://join.readify.net/?source=StaffReferral&campaign=kieran.jacobsen) and offers relocation services for developers from abroad.
+* Thanks to Readify/Telstra Purple for open sourcing their employee blog aggregation platform, which Planet Xamarin forked.
 * Big thanks to [Planet Xamarin](https://planetxamarin.com), they really did a lot of the hard work in getting this setup.
 * Thanks to [our awesome contributors](https://github.com/planetpowershell/planetpowershell/graphs/contributors) and our [community of authors](https://github.com/planetpowershell/planetpowershell/tree/master/src/Firehose.Web/Authors) who make this all possible.
