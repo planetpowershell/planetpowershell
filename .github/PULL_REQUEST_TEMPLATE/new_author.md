@@ -1,3 +1,9 @@
+---
+name: New Author
+about: Add a new author to Planet PowerShell
+
+---
+
 <!--
 If you are submitting a new blog please read and check the boxes below.
  -->
