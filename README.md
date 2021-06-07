@@ -1,8 +1,4 @@
-# C:\\> Get-Greeting 'Welcome to PlanetPowerShell.com'
-
-![Build Status](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_apis/build/status/planetpowershell.planetpowershell?branchName=master)
-
-![Release Status](https://vsrm.dev.azure.com/planetpowershell/_apis/public/Release/badge/ada87215-ce32-443c-a0b7-5512f6b742ed/3/4)
+# PS > Get-Greeting 'Welcome to PlanetPowerShell.com'
 
 Welcome!
 
@@ -10,9 +6,10 @@ The goal of PlanetPowerShell is to provide an aggregated feed of PowerShell comm
 
 This site couldn't have been made without the help of Readify and the Planet Xamarin team (who I have blatantly stolen the content from, yay Open Source!). For more information see the Acknowledgements.
 
-# C:\\> Get-Help 'Adding yourself as an author'
+# PS > Get-Help 'Adding yourself as an author'
 
 ## Guidlines for submission
+
 - I have a valid blog & RSS URL
 - Host NO malicious or offensive content on the blog (including photos, swearing, etc.)
 - Blog is active with atleast 3 PowerShell related blog posts in the last 6 months
@@ -23,6 +20,7 @@ This site couldn't have been made without the help of Readify and the Planet Xam
 - Your blog may be removed at any time if any of these are broken.
 
 ## How to add yourself
+
 Adding yourself as an author is easy! All you need to do is fork this project, and add a file to the `src\Firehose.Web\Authors\` folder.
 
 The author file is a C# class that implements the `IAmACommunityMember` interface. It doesn't matter if you don't know C# though: just follow the many examples already there.
@@ -65,6 +63,7 @@ A few things:
 If you also do some blogging about other stuff, no worries! You're fine! Just have a look at the next section on how to filter out your PowerShell specific posts.
 
 ### Special note for Microsoft MVPs
+
 Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
 ``` csharp
     public class MVPGuy : IAmAMicrosoftMVP
@@ -120,7 +119,14 @@ Enjoy all of our great content!
 
 Of course you are more than welcome to submit other features and bugfixes as well.
 
-# C:\\> Get-Acknowledgements
-* Thanks to Readify for open sourcing their employee blog aggregation platform, which Planet Xamarin forked. Looking for your next challenge? [Readify is hiring](https://join.readify.net/?source=StaffReferral&campaign=kieran.jacobsen) and offers relocation services for developers from abroad.
+# PS > Get-BuildStatus
+
+![Build Status](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_apis/build/status/planetpowershell.planetpowershell?branchName=master)
+
+![Release Status](https://vsrm.dev.azure.com/planetpowershell/_apis/public/Release/badge/ada87215-ce32-443c-a0b7-5512f6b742ed/3/4)
+
+# PS > Get-Acknowledgements
+
+* Thanks to Readify/Telstra Purple for open sourcing their employee blog aggregation platform, which Planet Xamarin forked.
 * Big thanks to [Planet Xamarin](https://planetxamarin.com), they really did a lot of the hard work in getting this setup.
 * Thanks to [our awesome contributors](https://github.com/planetpowershell/planetpowershell/graphs/contributors) and our [community of authors](https://github.com/planetpowershell/planetpowershell/tree/master/src/Firehose.Web/Authors) who make this all possible.
