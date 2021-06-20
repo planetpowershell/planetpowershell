@@ -1,10 +1,4 @@
-# ASP.NET
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
-pool:
-  vmImage: 'VS2017-Win2016'
 
 variables:
   solution: '**/*.sln'
@@ -12,37 +6,32 @@ variables:
   buildConfiguration: 'Release'
   artifactname: 'planetpowershell'
 
-steps:
-- task: NuGetToolInstaller@0
+stages:
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    testAssemblyVer2: |
-      **\$(BuildConfiguration)\*test*.dll
-      !**\obj\**
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: PublishSymbols@2
-  displayName: 'Publish symbols path'
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    PublishSymbols: false
-  continueOnError: true
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: '$(artifactname)'
+- stage: build
+  jobs:
+  - job: build_planetpowershell
+    displayName: 'Build PlanetPowerShell'
+    pool:
+      vmImage: 'VS2017-Win2016'
+    steps:
+    - checkout: self
+      persistCredentials: true
+      clean: true
+    - task: NuGetToolInstaller@0
+    - task: NuGetCommand@2
+      inputs:
+        restoreSolution: '$(solution)'
+    - task: VSBuild@1
+      inputs:
+        solution: '$(solution)'
+        msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+        platform: '$(buildPlatform)'
+        configuration: '$(buildConfiguration)'
+    - task: VSTest@2
+      inputs:
+        testAssemblyVer2: |
+          **\$(BuildConfiguration)\*test*.dll
+          !**\obj\**
+        platform: '$(buildPlatform)'
+        configuration: '$(buildConfiguration)'
