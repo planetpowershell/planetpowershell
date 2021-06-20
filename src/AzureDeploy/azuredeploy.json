@@ -51,10 +51,10 @@
                 "name": "[variables('appServicePlanName')]"
             },
             "sku": {
-                "name": "P1",
-                "tier": "Premium",
-                "size": "1",
-                "family": "P",
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
                 "capacity": "1"
             }
         },
