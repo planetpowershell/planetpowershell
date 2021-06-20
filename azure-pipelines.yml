@@ -4,7 +4,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  artifactname: 'planetpowershell'
 
 stages:
 
@@ -45,7 +44,7 @@ stages:
       displayName: 'Publish Artifact'
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
-        ArtifactName: '$(artifactname)'
+        ArtifactName: 'planetpowershell'
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
@@ -75,7 +74,7 @@ stages:
             clean: true
             persistCredentials: true
           - download: current
-            artifact: $(artifactname)
+            artifact: 'planetpowershell'
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
