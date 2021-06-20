@@ -35,3 +35,17 @@ stages:
           !**\obj\**
         platform: '$(buildPlatform)'
         configuration: '$(buildConfiguration)'
+    - task: AzSKARMTemplateChecker@4
+      inputs:
+        ARMTemplateFilePath: '/src/AzureDeploy/azuredeploy.json'
+    - task: AzureResourceManagerTemplateDeployment@3
+      inputs:
+        deploymentScope: 'Resource Group'
+        azureResourceManagerConnection: 'Azure Sponsorship - Dev(5e32aad4-771d-4098-98d5-6cda4f387656)'
+        subscriptionId: '5e32aad4-771d-4098-98d5-6cda4f387656'
+        action: 'Create Or Update Resource Group'
+        resourceGroupName: 'PlanetPowerShell-Dev-RG'
+        location: 'East US 2'
+        templateLocation: 'Linked artifact'
+        csmFile: '/src/AzureDeploy/azuredeploy.json'
+        deploymentMode: 'Validation'
