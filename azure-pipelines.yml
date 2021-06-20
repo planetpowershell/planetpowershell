@@ -35,6 +35,17 @@ stages:
           !**\obj\**
         platform: '$(buildPlatform)'
         configuration: '$(buildConfiguration)'
+    - task: PublishSymbols@2
+      displayName: 'Publish symbols path'
+      inputs:
+        SearchPattern: '**\bin\**\*.pdb'
+        PublishSymbols: false
+      continueOnError: true  
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
+        ArtifactName: '$(artifactname)'
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
@@ -47,7 +58,8 @@ stages:
         csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
         overrideParameters: '$(DevAzureParameters)'
         deploymentMode: 'Validation'
-- stage: release
+
+  - stage: release
   dependsOn: build
 
   jobs:
@@ -60,6 +72,11 @@ stages:
       runOnce:
         deploy:
           steps:
+          - checkout: self
+            clean: true
+            persistCredentials: true
+          - download: current
+            artifact: $(artifactname)
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
