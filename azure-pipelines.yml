@@ -37,7 +37,8 @@ stages:
         configuration: '$(buildConfiguration)'
     - task: AzSKARMTemplateChecker@4
       inputs:
-        ARMTemplateFilePath: '/src/AzureDeploy/azuredeploy.json'
+        ARMTemplateFilePath: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
+    
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
@@ -47,5 +48,5 @@ stages:
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
         templateLocation: 'Linked artifact'
-        csmFile: '/src/AzureDeploy/azuredeploy.json'
+        csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
         deploymentMode: 'Validation'
