@@ -83,6 +83,12 @@ stages:
             persistCredentials: true
           - download: current
             artifact: 'planetpowershell'
+          - task: AzureKeyVault@2
+            inputs:
+              azureSubscription: 'Azure Sponsorship - Shared(e5a918a2-2948-42ec-ac76-0dd92867344d)'
+              KeyVaultName: 'PlanetPowerShell-ADO-KV'
+              SecretsFilter: '*'
+              RunAsPreJob: false
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
