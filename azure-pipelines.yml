@@ -60,32 +60,31 @@ stages:
         deploymentMode: 'Validation'
 
   - stage: release
-  dependsOn: build
-
-  jobs:
-  - deployment: DeployDevelopment
-    displayName: 'Deploy Development'
-    pool:
-      vmImage: VS2017-Win2016
-    environment: 'PlanetPowerShell Dev'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - checkout: self
-            clean: true
-            persistCredentials: true
-          - download: current
-            artifact: $(artifactname)
-          - task: AzureResourceManagerTemplateDeployment@3
-            inputs:
-              deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: 'Azure Sponsorship - Dev(5e32aad4-771d-4098-98d5-6cda4f387656)'
-              subscriptionId: '5e32aad4-771d-4098-98d5-6cda4f387656'
-              action: 'Create Or Update Resource Group'
-              resourceGroupName: 'PlanetPowerShell-Dev-RG'
-              location: 'East US 2'
-              templateLocation: 'Linked artifact'
-              csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-              overrideParameters: '$(DevAzureParameters)'
-              deploymentMode: 'Incremental'
+    dependsOn: build
+    jobs:
+    - deployment: DeployDevelopment
+      displayName: 'Deploy Development'
+      pool:
+        vmImage: VS2017-Win2016
+      environment: 'PlanetPowerShell Dev'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - checkout: self
+              clean: true
+              persistCredentials: true
+            - download: current
+              artifact: $(artifactname)
+            - task: AzureResourceManagerTemplateDeployment@3
+              inputs:
+                deploymentScope: 'Resource Group'
+                azureResourceManagerConnection: 'Azure Sponsorship - Dev(5e32aad4-771d-4098-98d5-6cda4f387656)'
+                subscriptionId: '5e32aad4-771d-4098-98d5-6cda4f387656'
+                action: 'Create Or Update Resource Group'
+                resourceGroupName: 'PlanetPowerShell-Dev-RG'
+                location: 'East US 2'
+                templateLocation: 'Linked artifact'
+                csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
+                overrideParameters: '$(DevAzureParameters)'
+                deploymentMode: 'Incremental'
