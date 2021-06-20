@@ -35,10 +35,6 @@ stages:
           !**\obj\**
         platform: '$(buildPlatform)'
         configuration: '$(buildConfiguration)'
-    - task: AzSKARMTemplateChecker@4
-      inputs:
-        ARMTemplateFilePath: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-    
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
