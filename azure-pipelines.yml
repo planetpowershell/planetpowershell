@@ -45,4 +45,5 @@ stages:
         location: 'East US 2'
         templateLocation: 'Linked artifact'
         csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
+        overrideParameters: '$(DevAzureParameters)'
         deploymentMode: 'Validation'
