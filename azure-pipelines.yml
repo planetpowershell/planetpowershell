@@ -45,6 +45,14 @@ stages:
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
         ArtifactName: 'planetpowershell'
+  - job: validate_armtemplate
+    displayName: 'Validate ARM Template'
+    pool:
+      vmImage: 'VS2017-Win2016'
+    steps:
+    - checkout: self
+      persistCredentials: true
+      clean: true
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
