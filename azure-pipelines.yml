@@ -60,7 +60,7 @@ stages:
       runOnce:
         deploy:
           steps:
-            - task: AzureResourceManagerTemplateDeployment@3
+          - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
               azureResourceManagerConnection: 'Azure Sponsorship - Dev(5e32aad4-771d-4098-98d5-6cda4f387656)'
