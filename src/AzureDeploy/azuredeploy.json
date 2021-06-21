@@ -108,7 +108,7 @@
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]",
-                "[resourceId('Microsoft.Web/sites/hostnameBindings', variables('wwwcustomHostname'))]"
+                "[resourceId('Microsoft.Web/sites/hostnameBindings', parameters('webAppName'), variables('wwwcustomHostname'))]"
                 
             ],
             "properties": {
