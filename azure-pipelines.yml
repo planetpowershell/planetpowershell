@@ -46,8 +46,8 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: '${{ variables.devSubscriptionName }}'
-        subscriptionId: '${{ variables.devSubscriptionID }}'
+        azureResourceManagerConnection: '$(devSubscriptionName)'
+        subscriptionId: '$(variables.devSubscriptionID)'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
