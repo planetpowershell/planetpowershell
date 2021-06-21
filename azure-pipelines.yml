@@ -1,5 +1,3 @@
-
-
 variables:
 - group: PlanetPowerShellShared
 - name: solution
@@ -54,14 +52,14 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: '$(devSubscriptionName)'
-        subscriptionId: '$(devSubscriptionID)'
+        azureResourceManagerConnection: $(devSubscriptionName)
+        subscriptionId: $(devSubscriptionID)
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
         templateLocation: 'Linked artifact'
         csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-        overrideParameters: '$(DevAzureParameters)'
+        overrideParameters: $(DevAzureParameters)
         deploymentMode: 'Validation'
 
 - stage: release
@@ -84,25 +82,25 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: '$(devSubscriptionName)'
-              subscriptionId: '$(devSubscriptionID)'
+              azureResourceManagerConnection: $(devSubscriptionName)
+              subscriptionId: $(devSubscriptionID)
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Dev-RG'
               location: 'East US 2'
               templateLocation: 'Linked artifact'
               csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-              overrideParameters: '$(DevAzureParameters)'
+              overrideParameters: $(DevAzureParameters)
               deploymentMode: 'Incremental'
           - task: AzureRmWebAppDeployment@4
             displayName: 'Deploy Azure App Service'
             inputs:
-              azureSubscription: '$(devSubscriptionName)'
+              azureSubscription: $(devSubscriptionName)
               WebAppName: PlanetPowerShell-Dev
           - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
             displayName: 'Purge Cloudflare cache'
             inputs:
-              username: '$(cloudflareapiuser)'
-              apikey: '$(cloudflareapikey)'
+              username: $(cloudflareapiuser)
+              apikey: $(cloudflareapikey)
               zonename: planetpowershell.com
           - task: luuksommers.website-warmup.website-warmup.Website Warmup@2
             displayName: 'Warmup website'
@@ -136,12 +134,12 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: '$(prodSubscriptionName)'
-              subscriptionId: '$(prodSubscriptionID)'
+              azureResourceManagerConnection: $(prodSubscriptionName)
+              subscriptionId: $(prodSubscriptionID)
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Prod-RG'
               location: 'East US 2'
               templateLocation: 'Linked artifact'
               csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-              overrideParameters: '$(ProdAzureParameters)'
+              overrideParameters: $(ProdAzureParameters)
               deploymentMode: 'Incremental'
