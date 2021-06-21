@@ -52,8 +52,8 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: $(devSubscriptionName)
-        subscriptionId: $(devSubscriptionID)
+        azureResourceManagerConnection: ${{devSubscriptionName}}
+        subscriptionId: ${{devSubscriptionID}}
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
@@ -82,8 +82,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: $(devSubscriptionName)
-              subscriptionId: $(devSubscriptionID)
+              azureResourceManagerConnection: ${{devSubscriptionName}}
+              subscriptionId: ${{devSubscriptionID}}
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Dev-RG'
               location: 'East US 2'
@@ -134,8 +134,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: $(prodSubscriptionName)
-              subscriptionId: $(prodSubscriptionID)
+              azureResourceManagerConnection: ${{prodSubscriptionName}}
+              subscriptionId: ${{prodSubscriptionID}}
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Prod-RG'
               location: 'East US 2'
