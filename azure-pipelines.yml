@@ -52,8 +52,8 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: '${{ PlanetPowerShellShared.devSubscriptionName }}'
-        subscriptionId: '${{ PlanetPowerShellShared.devSubscriptionID }}'
+        azureResourceManagerConnection: '$(devSubscriptionName)'
+        subscriptionId: '$(devSubscriptionID)'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
@@ -82,8 +82,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: '${{ variables.devSubscriptionName }}'
-              subscriptionId: '${{ variables.devSubscriptionID }}'
+              azureResourceManagerConnection: '$(devSubscriptionName)'
+              subscriptionId: '$(devSubscriptionID)'
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Dev-RG'
               location: 'East US 2'
@@ -94,7 +94,7 @@ stages:
           - task: AzureRmWebAppDeployment@4
             displayName: 'Deploy Azure App Service'
             inputs:
-              azureSubscription: '${{ variables.devSubscriptionName }}'
+              azureSubscription: '$(devSubscriptionName)'
               WebAppName: PlanetPowerShell-Dev
           - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
             displayName: 'Purge Cloudflare cache'
@@ -134,8 +134,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: '${{ variables.prodSubscriptionName }}'
-              subscriptionId: '${{ variables.prodSubscriptionID }}'
+              azureResourceManagerConnection: '$(prodSubscriptionName)'
+              subscriptionId: '$(prodSubscriptionID)'
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Prod-RG'
               location: 'East US 2'
