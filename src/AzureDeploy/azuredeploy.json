@@ -39,7 +39,9 @@
     "variables": {
         "appServicePlanName": "[concat(parameters('webAppName'),'-asp-', uniquestring(resourceGroup().id))]",
         "certificateName": "[concat(parameters('webAppName'),'-cert')]",
-        "enableSSL": "[not(empty(parameters('existingKeyVaultId')))]"
+        "enableSSL": "[not(empty(parameters('existingKeyVaultId')))]",
+        "wwwcustomHostname": "[concat('www.',parameters('webAppName'))]"
+
     },
     "resources": [
         {
@@ -93,6 +95,20 @@
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]"
+            ],
+            "properties": {
+                "sslState": "[if(variables('enableSSL'), 'SniEnabled', json('null'))]",
+                "thumbprint": "[if(variables('enableSSL'), reference(resourceId('Microsoft.Web/certificates', variables('certificateName'))).Thumbprint, json('null'))]"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/hostnameBindings",
+            "name": "[concat(parameters('webAppName'), '/', variables('wwwcustomHostname'))]",
+            "apiVersion": "2019-08-01",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]",
+                "[resourceId('Microsoft.Web/sites/hostnameBindings', concat(parameters('webAppName'), '/', parameters('customHostname')))]"
             ],
             "properties": {
                 "sslState": "[if(variables('enableSSL'), 'SniEnabled', json('null'))]",
