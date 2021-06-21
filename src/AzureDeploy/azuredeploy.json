@@ -107,8 +107,7 @@
             "apiVersion": "2019-08-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]",
-                "[resourceId('Microsoft.Web/sites/hostnameBindings', concat(parameters('webAppName'), '/', parameters('customHostname')))]"
+                "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]"
             ],
             "properties": {
                 "sslState": "[if(variables('enableSSL'), 'SniEnabled', json('null'))]",
