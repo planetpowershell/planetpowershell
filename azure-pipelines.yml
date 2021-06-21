@@ -52,8 +52,8 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: ${{ variables.devSubscriptionName }}
-        subscriptionId: ${{ variables.devSubscriptionID }}
+        azureResourceManagerConnection: '${{ variables.devSubscriptionName }}'
+        subscriptionId: '${{ variables.devSubscriptionID }}'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
@@ -82,8 +82,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: ${{ variables.devSubscriptionName }}
-              subscriptionId: ${{ variables.devSubscriptionID }}
+              azureResourceManagerConnection: '${{ variables.devSubscriptionName }}'
+              subscriptionId: '${{ variables.devSubscriptionID }}'
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Dev-RG'
               location: 'East US 2'
@@ -94,13 +94,13 @@ stages:
           - task: AzureRmWebAppDeployment@4
             displayName: 'Deploy Azure App Service'
             inputs:
-              azureSubscription: ${{ variables.devSubscriptionName }}
+              azureSubscription: '${{ variables.devSubscriptionName }}'
               WebAppName: PlanetPowerShell-Dev
           - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
             displayName: 'Purge Cloudflare cache'
             inputs:
-              username: $(cloudflareapiuser)
-              apikey: $(cloudflareapikey)
+              username: '$(cloudflareapiuser)'
+              apikey: '$(cloudflareapikey)'
               zonename: planetpowershell.com
           - task: luuksommers.website-warmup.website-warmup.Website Warmup@2
             displayName: 'Warmup website'
@@ -134,8 +134,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: ${{ variables.prodSubscriptionName }}
-              subscriptionId: ${{ variables.prodSubscriptionID }}
+              azureResourceManagerConnection: '${{ variables.prodSubscriptionName }}'
+              subscriptionId: '${{ variables.prodSubscriptionID }}'
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Prod-RG'
               location: 'East US 2'
