@@ -108,7 +108,8 @@
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]",
-                "[concat(parameters('webAppName'), '/', parameters('customHostname'))]"
+                "[resourceId('Microsoft.Web/sites/hostnameBindings', concat(parameters('webAppName'), '/', variables('wwwcustomHostname')))]"
+                
             ],
             "properties": {
                 "sslState": "[if(variables('enableSSL'), 'SniEnabled', json('null'))]",
