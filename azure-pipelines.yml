@@ -51,14 +51,14 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: '$(devSubscriptionName)'
-        subscriptionId: '$(devSubscriptionID)'
+        azureResourceManagerConnection: '${{ variables.devSubscriptionName }}'
+        subscriptionId: '${{ variables.devSubscriptionID }}'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
         templateLocation: 'Linked artifact'
         csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-        overrideParameters: $(DevAzureParameters)
+        overrideParameters: '${{ variables.DevAzureParameters }}'
         deploymentMode: 'Validation'
 
 - stage: release
