@@ -1,9 +1,13 @@
 
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+- group: PlanetPowerShellShared
+- name: solution
+  value: '**/*.sln'
+- name: buildPlatform
+  value: 'Any CPU'
+- name: buildConfiguration
+  value: 'Release'
 
 stages:
 
@@ -50,8 +54,8 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: 'Azure Sponsorship - Dev(5e32aad4-771d-4098-98d5-6cda4f387656)'
-        subscriptionId: '5e32aad4-771d-4098-98d5-6cda4f387656'
+        azureResourceManagerConnection: '$(devSubscriptionName)'
+        subscriptionId: '$(devSubscriptionID)'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
@@ -80,8 +84,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: 'Azure Sponsorship - Dev(5e32aad4-771d-4098-98d5-6cda4f387656)'
-              subscriptionId: '5e32aad4-771d-4098-98d5-6cda4f387656'
+              azureResourceManagerConnection: '$(devSubscriptionName)'
+              subscriptionId: '$(devSubscriptionID)'
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Dev-RG'
               location: 'East US 2'
@@ -89,6 +93,31 @@ stages:
               csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
               overrideParameters: '$(DevAzureParameters)'
               deploymentMode: 'Incremental'
+          - task: AzureRmWebAppDeployment@4
+            displayName: 'Deploy Azure App Service'
+            inputs:
+              azureSubscription: '$(devSubscriptionName)'
+              WebAppName: PlanetPowerShell-Dev
+          - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
+            displayName: 'Purge Cloudflare cache'
+            inputs:
+              username: '$(cloudflareapiuser)'
+              apikey: '$(cloudflareapikey)'
+              zonename: planetpowershell.com
+          - task: luuksommers.website-warmup.website-warmup.Website Warmup@2
+            displayName: 'Warmup website'
+            inputs:
+              Urls: 'https://dev.planetpowershell.com'
+          - task: kasunkodagoda.ssl-labs-test.ssl-labs-test.ssl-labs-test@1
+            displayName: 'SSL Labs Test'
+            inputs:
+              hostname: 'https://dev.planetpowershell.com'
+              freshScan: true
+              publishScanResults: true
+              enableVerification: true
+              enableExpirationAlert: true
+              daysBeforeExpiration: 5
+            
   - deployment: deploy_production
     displayName: 'Deploy Production'
     dependsOn: deploy_development
@@ -107,8 +136,8 @@ stages:
           - task: AzureResourceManagerTemplateDeployment@3
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: 'Azure Sponsorship - Prod(8ab775cc-fea2-4356-9307-a9b79faab5ed)'
-              subscriptionId: '8ab775cc-fea2-4356-9307-a9b79faab5ed'
+              azureResourceManagerConnection: '$(prodSubscriptionName)'
+              subscriptionId: '$(prodSubscriptionID)'
               action: 'Create Or Update Resource Group'
               resourceGroupName: 'PlanetPowerShell-Prod-RG'
               location: 'East US 2'
