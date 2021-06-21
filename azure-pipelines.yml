@@ -1,6 +1,11 @@
 variables:
-  - template: variables.yml
-
+  - name: solution
+    value: '**/*.sln'
+  - name: buildPlatform
+    value: 'Any CPU'
+  - name: buildConfiguration
+    value: 'Release'
+  
 stages:
 
 - stage: build
@@ -47,7 +52,7 @@ stages:
       inputs:
         deploymentScope: 'Resource Group'
         azureResourceManagerConnection: '$(devSubscriptionName)'
-        subscriptionId: '$(variables.devSubscriptionID)'
+        subscriptionId: '$(devSubscriptionID)'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'PlanetPowerShell-Dev-RG'
         location: 'East US 2'
