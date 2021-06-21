@@ -34,12 +34,6 @@ stages:
           !**\obj\**
         platform: '$(buildPlatform)'
         configuration: '$(buildConfiguration)'
-    - task: PublishSymbols@2
-      displayName: 'Publish symbols path'
-      inputs:
-        SearchPattern: '**\bin\**\*.pdb'
-        PublishSymbols: false
-      continueOnError: true  
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact'
       inputs:
@@ -69,7 +63,7 @@ stages:
 - stage: release
   dependsOn: build
   jobs:
-  - deployment: DeployDevelopment
+  - deployment: deploy_development
     displayName: 'Deploy Development'
     pool:
       vmImage: VS2017-Win2016
@@ -94,4 +88,31 @@ stages:
               templateLocation: 'Linked artifact'
               csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
               overrideParameters: '$(DevAzureParameters)'
+              deploymentMode: 'Incremental'
+  - deployment: deploy_production
+    displayName: 'Deploy Production'
+    dependsOn: deploy_development
+    pool:
+      vmImage: VS2017-Win2016
+    environment: 'PlanetPowerShell Prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: self
+            clean: true
+            persistCredentials: true
+          - download: current
+            artifact: 'planetpowershell'
+          - task: AzureResourceManagerTemplateDeployment@3
+            inputs:
+              deploymentScope: 'Resource Group'
+              azureResourceManagerConnection: 'Azure Sponsorship - Prod(8ab775cc-fea2-4356-9307-a9b79faab5ed)'
+              subscriptionId: '8ab775cc-fea2-4356-9307-a9b79faab5ed'
+              action: 'Create Or Update Resource Group'
+              resourceGroupName: 'PlanetPowerShell-Prod-RG'
+              location: 'East US 2'
+              templateLocation: 'Linked artifact'
+              csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
+              overrideParameters: '$(ProdAzureParameters)'
               deploymentMode: 'Incremental'
