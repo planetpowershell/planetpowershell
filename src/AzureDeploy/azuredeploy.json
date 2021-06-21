@@ -40,7 +40,7 @@
         "appServicePlanName": "[concat(parameters('webAppName'),'-asp-', uniquestring(resourceGroup().id))]",
         "certificateName": "[concat(parameters('webAppName'),'-cert')]",
         "enableSSL": "[not(empty(parameters('existingKeyVaultId')))]",
-        "wwwcustomHostname": "[concat('www.',parameters('webAppName'))]"
+        "wwwcustomHostname": "[concat('www.',parameters('customHostname'))]"
 
     },
     "resources": [
