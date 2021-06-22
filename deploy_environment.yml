@@ -1,20 +1,28 @@
 parameters:
 - name: resourceGroup
   type: string
+  default: 'invalid resourceGroup'
 - name: connectionName
   type: string
+  default: 'invalid connectionName'
 - name: subscriptionID
   type: string
+  default: 'invalid subscriptionID'
 - name: azureDeployParameters
   type: string
+  default: 'invalid azureDeployParameters'
 - name: webAppName
   type: string
+  default: 'invalid webAppName'
 - name: cloudflareapiuser
   type: string
+  default: 'invalid cloudflareapiuser'
 - name: cloudflareapikey
   type: string
+  default: 'invalid cloudflareapikey'
 - name: hostname
   type: string
+  default: 'invalid hostname'
 
 steps:
 - checkout: self
@@ -25,25 +33,25 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: ${{ parameters.connectionName }}
-    subscriptionId: ${{ parameters.subscriptionID }}
+    azureResourceManagerConnection: '${{ parameters.connectionName }}'
+    subscriptionId: '${{ parameters.subscriptionID }}'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: ${{ parameters.resourceGroup }}
+    resourceGroupName: '${{ parameters.resourceGroup }}'
     location: 'East US 2'
     templateLocation: 'Linked artifact'
     csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-    overrideParameters: ${{ parameters.azureDeployParameters }}
+    overrideParameters: '${{ parameters.azureDeployParameters }}'
     deploymentMode: 'Incremental'
 - task: AzureRmWebAppDeployment@4
   displayName: 'Deploy Azure App Service'
   inputs:
-    azureSubscription: ${{ parameters.connectionName }}
-    WebAppName: ${{ parameters.webAppName }}
+    azureSubscription: '${{ parameters.connectionName }}'
+    WebAppName: '${{ parameters.webAppName }}'
 - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
   displayName: 'Purge Cloudflare cache'
   inputs:
-    username: ${{ parameters.cloudflareapiuser }}
-    apikey: ${{ parameters.cloudflareapikey }}
+    username: '${{ parameters.cloudflareapiuser }}'
+    apikey: '${{ parameters.cloudflareapikey }}'
     zonename: planetpowershell.com
 - task: luuksommers.website-warmup.website-warmup.Website Warmup@2
   displayName: 'Warmup website'
