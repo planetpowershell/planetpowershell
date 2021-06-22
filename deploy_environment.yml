@@ -1,0 +1,60 @@
+parameters:
+- name: resourceGroup
+  type: string
+- name: connectionName
+  type: string
+- name: subscriptionID
+  type: string
+- name: azureDeployParameters
+  type: string
+- name: webAppName
+  type: string
+- name: cloudflareapiuser
+  type: string
+- name: cloudflareapikey
+  type: string
+- name: hostname
+  type: string
+
+steps:
+- checkout: self
+  clean: true
+  persistCredentials: true
+- download: current
+  artifact: 'planetpowershell'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: ${{ parameters.connectionName }}
+    subscriptionId: ${{ parameters.subscriptionID }}
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: ${{ parameters.resourceGroup }}
+    location: 'East US 2'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
+    overrideParameters: ${{ parameters.azureDeployParameters }}
+    deploymentMode: 'Incremental'
+- task: AzureRmWebAppDeployment@4
+  displayName: 'Deploy Azure App Service'
+  inputs:
+    azureSubscription: ${{ parameters.connectionName }}
+    WebAppName: ${{ parameters.webAppName }}
+- task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
+  displayName: 'Purge Cloudflare cache'
+  inputs:
+    username: ${{ parameters.cloudflareapiuser }}
+    apikey: ${{ parameters.cloudflareapikey }}
+    zonename: planetpowershell.com
+- task: luuksommers.website-warmup.website-warmup.Website Warmup@2
+  displayName: 'Warmup website'
+  inputs:
+    Urls: '${{ parameters.hostname }}'
+- task: kasunkodagoda.ssl-labs-test.ssl-labs-test.ssl-labs-test@1
+            displayName: 'SSL Labs Test'
+            inputs:
+              hostname: '${{ parameters.hostname }}'
+              freshScan: true
+              publishScanResults: true
+              enableVerification: true
+              enableExpirationAlert: true
+              daysBeforeExpiration: 5
