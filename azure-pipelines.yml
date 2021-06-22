@@ -50,7 +50,7 @@ stages:
         azureDeployParameters: '$(DevAzureParameters)'
         deploymentMode: 'Validation'
 
-- stage: release
+- stage: development
   dependsOn: build
   jobs:
   - deployment: deploy_dev_armtemplate
@@ -71,7 +71,7 @@ stages:
               deploymentMode: 'Incremental'
 
   - deployment: deploy_development
-    displayName: 'Deploy Development'
+    displayName: 'Deploy Development WebApp'
     dependsOn: deploy_dev_armtemplate
     pool:
       vmImage: VS2017-Win2016
@@ -88,4 +88,40 @@ stages:
               cloudflareapikey: '$(cloudflareapikey)'
               hostname: 'dev.planetpowershell.com'
 
+- stage: production
+  dependsOn: development
+  jobs:
+  - deployment: deploy_prod_armtemplate
+    displayName: 'Deploy Production Azure Resources'
+    pool:
+      vmImage: VS2017-Win2016
+    environment: 'PlanetPowerShell Prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: arm_template.yml
+            parameters:
+              resourceGroup: '$(prodResourceGroup)'
+              connectionName: '$(prodSubscriptionName)'
+              subscriptionID: '$(prodSubscriptionID)'
+              azureDeployParameters: '$(ProdAzureParameters)'
+              deploymentMode: 'Incremental'
 
+  - deployment: deploy_production
+    displayName: 'Deploy Production WebApp'
+    dependsOn: deploy_prod_armtemplate
+    pool:
+      vmImage: VS2017-Win2016
+    environment: 'PlanetPowerShell Prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: deploy_webapp.yml
+            parameters:
+              connectionName: '$(prodSubscriptionName)'
+              webAppName: '$(prodAppName)'
+              cloudflareapiuser: '$(cloudflareapiuser)'
+              cloudflareapikey: '$(cloudflareapikey)'
+              hostname: 'planetpowershell.com'
