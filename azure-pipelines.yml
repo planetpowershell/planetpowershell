@@ -1,5 +1,5 @@
 variables:
-  - group: PlanetPowerShellShared
+  - group: TestLibrary
   - name: solution
     value: '**/*.sln'
   - name: buildPlatform
