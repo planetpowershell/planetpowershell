@@ -55,7 +55,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - template: test.yml
+          - template: deploy_environment.yml
             parameters:
               resourceGroup: 'PlanetPowerShell-Dev-RG'
               connectionName: '$(devSubscriptionName)'
