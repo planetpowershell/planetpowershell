@@ -50,11 +50,11 @@ steps:
   inputs:
     Urls: '${{ parameters.hostname }}'
 - task: kasunkodagoda.ssl-labs-test.ssl-labs-test.ssl-labs-test@1
-            displayName: 'SSL Labs Test'
-            inputs:
-              hostname: '${{ parameters.hostname }}'
-              freshScan: true
-              publishScanResults: true
-              enableVerification: true
-              enableExpirationAlert: true
-              daysBeforeExpiration: 5
+  displayName: 'SSL Labs Test'
+  inputs:
+    hostname: '${{ parameters.hostname }}'
+    freshScan: true
+    publishScanResults: true
+    enableVerification: true
+    enableExpirationAlert: true
+    daysBeforeExpiration: 5
