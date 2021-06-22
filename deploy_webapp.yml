@@ -1,0 +1,40 @@
+parameters:
+- name: connectionName
+  type: string
+- name: webAppName
+  type: string
+- name: cloudflareapiuser
+  type: string
+- name: cloudflareapikey
+  type: string
+- name: hostname
+  type: string
+
+steps:
+- download: current
+  artifact: 'planetpowershell'
+- task: AzureRmWebAppDeployment@4
+  displayName: 'Deploy Azure App Service'
+  inputs:
+    azureSubscription: ${{ parameters.connectionName }}
+    WebAppName: ${{ parameters.webAppName }}
+    package: $(Pipeline.Workspace)/**/*.zip
+- task: tfx-cloudflare-purge@1
+  displayName: 'Purge Cloudflare cache'
+  inputs:
+    username: $(cloudflareapiuser)
+    apikey: $(cloudflareapikey)
+    zonename: planetpowershell.com
+- task: Website Warmup@2
+  displayName: 'Warmup website'
+  inputs:
+    Urls: ${{ parameters.hostname }}
+- task: ssl-labs-test@1
+  displayName: 'SSL Labs Test'
+  inputs:
+    hostname: ${{ parameters.hostname }}
+    freshScan: true
+    publishScanResults: true
+    enableVerification: true
+    enableExpirationAlert: true
+    daysBeforeExpiration: 5

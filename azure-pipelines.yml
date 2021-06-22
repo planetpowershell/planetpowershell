@@ -36,13 +36,25 @@ stages:
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
         ArtifactName: 'planetpowershell'
-
+  
+  - job: validate_armtemplate
+    displayName: 'Validate ARM Template'
+    pool:
+      vmImage: 'VS2017-Win2016'
+    steps:
+    - template: arm_template.yml
+      parameters:
+        resourceGroup: '$(devResourceGroup)'
+        connectionName: '$(devSubscriptionName)'
+        subscriptionID: '$(devSubscriptionID)'
+        azureDeployParameters: '$(DevAzureParameters)'
+        deploymentMode: 'Validation'
 
 - stage: release
   dependsOn: build
   jobs:
-  - deployment: deploy_development
-    displayName: 'Deploy Development'
+  - deployment: deploy_dev_armtemplate
+    displayName: 'Deploy Development Azure Resources'
     pool:
       vmImage: VS2017-Win2016
     environment: 'PlanetPowerShell Dev'
@@ -50,12 +62,27 @@ stages:
       runOnce:
         deploy:
           steps:
-          - template: deploy_environment.yml
+          - template: arm_template.yml
             parameters:
               resourceGroup: '$(devResourceGroup)'
               connectionName: '$(devSubscriptionName)'
               subscriptionID: '$(devSubscriptionID)'
               azureDeployParameters: '$(DevAzureParameters)'
+              deploymentMode: 'Incremental'
+
+  - deployment: deploy_development
+    displayName: 'Deploy Development'
+    dependsOn: deploy_dev_armtemplate
+    pool:
+      vmImage: VS2017-Win2016
+    environment: 'PlanetPowerShell Dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: deploy_webapp.yml
+            parameters:
+              connectionName: '$(devSubscriptionName)'
               webAppName: '$(devAppName)'
               cloudflareapiuser: '$(cloudflareapiuser)'
               cloudflareapikey: '$(cloudflareapikey)'
