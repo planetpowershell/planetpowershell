@@ -47,6 +47,7 @@ steps:
   inputs:
     azureSubscription: ${{ parameters.connectionName }}
     WebAppName: ${{ parameters.webAppName }}
+    package: $(Pipeline.Workspace)/*.zip
 - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
   displayName: 'Purge Cloudflare cache'
   inputs:
