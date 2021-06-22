@@ -55,11 +55,15 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: echo PlanetPowerShell-Dev-RG
-          - script: echo $(devSubscriptionName)
-          - script: echo $(devSubscriptionID)
-          - script: echo $(DevAzureParameters)
-          - script: echo PlanetPowerShell-Dev
-          - script: echo dev.planetpowershell.com
+          - template: test.yml
+            parameters:
+              resourceGroup: 'PlanetPowerShell-Dev-RG'
+              connectionName: '$(devSubscriptionName)'
+              subscriptionID: '$(devSubscriptionID)'
+              azureDeployParameters: '$(DevAzureParameters)'
+              webAppName: 'PlanetPowerShell-Dev'
+              cloudflareapiuser: '$(cloudflareapiuser)'
+              cloudflareapikey: '$(cloudflareapikey)'
+              hostname: 'dev.planetpowershell.com'
 
 

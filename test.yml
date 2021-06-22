@@ -1,0 +1,35 @@
+parameters:
+- name: resourceGroup
+  type: string
+  default: 'invalid resourceGroup'
+- name: connectionName
+  type: string
+  default: 'invalid connectionName'
+- name: subscriptionID
+  type: string
+  default: 'invalid subscriptionID'
+- name: azureDeployParameters
+  type: string
+  default: 'invalid azureDeployParameters'
+- name: webAppName
+  type: string
+  default: 'invalid webAppName'
+- name: cloudflareapiuser
+  type: string
+  default: 'invalid cloudflareapiuser'
+- name: cloudflareapikey
+  type: string
+  default: 'invalid cloudflareapikey'
+- name: hostname
+  type: string
+  default: 'invalid hostname'
+
+steps:
+- script: ${{ parameters.resourceGroup }}
+- script: ${{ parameters.connectionName }}
+- script: ${{ parameters.subscriptionID }}
+- script: ${{ parameters.azureDeployParameters }}
+- script: ${{ parameters.webAppName }}
+- script: ${{ parameters.cloudflareapiuser }}
+- script: ${{ parameters.cloudflareapikey }}
+- script: ${{ parameters.hostname }}
