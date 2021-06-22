@@ -41,6 +41,8 @@ stages:
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
         ArtifactName: 'planetpowershell'
+
+
 - stage: release
   dependsOn: build
   jobs:
