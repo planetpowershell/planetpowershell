@@ -25,11 +25,11 @@ parameters:
   default: 'invalid hostname'
 
 steps:
-- script: ${{ parameters.resourceGroup }}
-- script: ${{ parameters.connectionName }}
-- script: ${{ parameters.subscriptionID }}
-- script: ${{ parameters.azureDeployParameters }}
-- script: ${{ parameters.webAppName }}
-- script: ${{ parameters.cloudflareapiuser }}
-- script: ${{ parameters.cloudflareapikey }}
-- script: ${{ parameters.hostname }}
+- script: echo ${{ parameters.resourceGroup }}
+- script: echo ${{ parameters.connectionName }}
+- script: echo ${{ parameters.subscriptionID }}
+- script: echo ${{ parameters.azureDeployParameters }}
+- script: echo ${{ parameters.webAppName }}
+- script: echo ${{ parameters.cloudflareapiuser }}
+- script: echo ${{ parameters.cloudflareapikey }}
+- script: echo ${{ parameters.hostname }}
