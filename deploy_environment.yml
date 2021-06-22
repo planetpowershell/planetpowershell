@@ -43,8 +43,8 @@ steps:
 - task: staff0rd.tfx-cloudflare-purge.custom-build-release-task.tfx-cloudflare-purge@1
   displayName: 'Purge Cloudflare cache'
   inputs:
-    username: ${{ parameters.cloudflareapiuser }}
-    apikey: ${{ parameters.cloudflareapikey }}
+    username: $(cloudflareapiuser)
+    apikey: $(cloudflareapikey)
     zonename: planetpowershell.com
 - task: luuksommers.website-warmup.website-warmup.Website Warmup@2
   displayName: 'Warmup website'
