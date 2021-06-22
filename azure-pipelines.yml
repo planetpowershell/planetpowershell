@@ -1,11 +1,6 @@
 variables:
-  - group: TestLibrary
-  - name: solution
-    value: '**/*.sln'
-  - name: buildPlatform
-    value: 'Any CPU'
-  - name: buildConfiguration
-    value: 'Release'
+  - group: PlanetPowerShellCredentials
+  - group: PlanetPowerShellSettings
   
 stages:
 
@@ -57,11 +52,11 @@ stages:
           steps:
           - template: deploy_environment.yml
             parameters:
-              resourceGroup: 'PlanetPowerShell-Dev-RG'
+              resourceGroup: '$(devResourceGroup)'
               connectionName: '$(devSubscriptionName)'
               subscriptionID: '$(devSubscriptionID)'
               azureDeployParameters: '$(DevAzureParameters)'
-              webAppName: 'PlanetPowerShell-Dev'
+              webAppName: '$(devAppName)'
               cloudflareapiuser: '$(cloudflareapiuser)'
               cloudflareapikey: '$(cloudflareapikey)'
               hostname: 'dev.planetpowershell.com'
