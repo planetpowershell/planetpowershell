@@ -41,27 +41,6 @@ stages:
       inputs:
         PathtoPublish: '$(build.artifactstagingdirectory)'
         ArtifactName: 'planetpowershell'
-  - job: validate_armtemplate
-    displayName: 'Validate ARM Template'
-    pool:
-      vmImage: 'VS2017-Win2016'
-    steps:
-    - checkout: self
-      persistCredentials: true
-      clean: true
-    - task: AzureResourceManagerTemplateDeployment@3
-      inputs:
-        deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: '$[variables.devSubscriptionName]'
-        subscriptionId: '$[variables.devSubscriptionID]'
-        action: 'Create Or Update Resource Group'
-        resourceGroupName: 'PlanetPowerShell-Dev-RG'
-        location: 'East US 2'
-        templateLocation: 'Linked artifact'
-        csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
-        overrideParameters: $(variables.DevAzureParameters)
-        deploymentMode: 'Validation'
-
 - stage: release
   dependsOn: build
   jobs:
