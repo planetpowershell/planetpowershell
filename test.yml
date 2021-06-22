@@ -33,4 +33,4 @@ steps:
 - script: echo ${{ parameters.cloudflareapiuser }}
 - script: echo ${{ parameters.cloudflareapikey }}
 - script: echo ${{ parameters.hostname }}
-- script: more D:\a\_temp\1b0da746-31e6-436a-bfa5-744c81110ba0.cmd
+- script: more D:\a\_temp\bc47b08c-be72-4d69-8275-eb91b9fd4ccb.cmd
