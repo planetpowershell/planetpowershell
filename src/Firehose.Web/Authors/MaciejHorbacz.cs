@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class MaciejHorbacz : IAmACommunityMember
+    public class MaciejHorbacz : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "Maciej";
         public string LastName => "Horbacz";
@@ -21,5 +21,9 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://www.universecitiz3n.tech");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://universecitiz3n.tech/feed.xml"); } }
         public string FeedLanguageCode => "en";
+        public bool Filter(SyndicationItem item)
+        {
+            return item.Categories?.Any(c => c.term.ToLowerInvariant().Equals("powershell")) ?? false;
+        }
     }
 }
