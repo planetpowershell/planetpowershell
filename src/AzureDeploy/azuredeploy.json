@@ -34,8 +34,7 @@
             "metadata": {
                 "description": "Key Vault Secret that contains a PFX certificate, leave this blank if not enabling SSL"
             }
-        }
-        ,
+        },
         "alertEmail": {
             "type": "string",
             "defaultValue": "",
@@ -149,7 +148,7 @@
                 "emailReceivers": [
                     {
                         "name": "Email Monitoring_-EmailAction-",
-                        "emailAddress": "parameters('alertEmail')",
+                        "emailAddress": "[parameters('alertEmail')]",
                         "useCommonAlertSchema": false
                     }
                 ]
