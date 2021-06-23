@@ -5,7 +5,9 @@ using System.ServiceModel.Syndication;
 using System.Web;
 using Firehose.Web.Infrastructure;
 
-public class DarrenJRobinson : IAmAMicrosoftMVP, IFilterMyBlogPosts
+namespace Firehose.Web.Authors
+{
+    public class DarrenJRobinson : IAmAMicrosoftMVP, IFilterMyBlogPosts
     {
         public string FirstName => "Darren";
         public string LastName => "Robinson";
@@ -27,3 +29,4 @@ public class DarrenJRobinson : IAmAMicrosoftMVP, IFilterMyBlogPosts
             return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
         }
     }
+}

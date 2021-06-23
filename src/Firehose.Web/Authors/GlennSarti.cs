@@ -25,7 +25,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "glennsarti";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
         public GeoPosition Position => new GeoPosition(45.5234500,-122.6762100);
     }

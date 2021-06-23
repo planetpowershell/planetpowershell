@@ -24,7 +24,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "dfinke";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
         public GeoPosition Position => new GeoPosition(40.7526970, -73.9749950);

@@ -26,7 +26,7 @@ namespace Firehose.Web.Authors
         {
 
             // This filters out only the posts that have the "PowerShell" category
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
 
         }
         public string FeedLanguageCode => "en";

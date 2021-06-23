@@ -23,7 +23,7 @@ namespace Firehose.Web.Authors
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://nonprofittechy.com/feed/"); } }
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     }

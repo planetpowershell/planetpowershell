@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Web;
 using Firehose.Web.Infrastructure;
+
 namespace Firehose.Web.Authors
 {
     public class FrancoisxavierCat : IAmAMicrosoftMVP, IFilterMyBlogPosts
@@ -22,7 +23,7 @@ namespace Firehose.Web.Authors
         public bool Filter(SyndicationItem item)
         {
             // This filters out only the posts that have the "PowerShell" category
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     }

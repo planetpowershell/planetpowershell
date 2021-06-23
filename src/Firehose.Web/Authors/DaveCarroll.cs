@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershell.anovelidea.org/feed.xml"); } }
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     }
