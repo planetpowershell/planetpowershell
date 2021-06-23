@@ -57,7 +57,7 @@ stages:
 
 - stage: development
   dependsOn: build
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/development'))
   jobs:
   - deployment: deploy_dev_armtemplate
     displayName: 'Deploy Development Azure Resources'
@@ -95,7 +95,7 @@ stages:
               hostname: 'dev.planetpowershell.com'
 
 - stage: production
-  dependsOn: development
+  dependsOn: build
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   jobs:
   - deployment: deploy_prod_armtemplate
