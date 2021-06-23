@@ -53,7 +53,6 @@ stages:
         connectionName: '$(devSubscriptionName)'
         subscriptionID: '$(devSubscriptionID)'
         azureDeployParameters: '$(DevAzureParameters)'
-        alertEmail: '$(alertEmail)'
         deploymentMode: 'Validation'
 
 - stage: development
@@ -75,7 +74,6 @@ stages:
               connectionName: '$(devSubscriptionName)'
               subscriptionID: '$(devSubscriptionID)'
               azureDeployParameters: '$(DevAzureParameters)'
-              alertEmail: '$(alertEmail)'
               deploymentMode: 'Incremental'
 
   - deployment: deploy_development
@@ -95,7 +93,6 @@ stages:
               cloudflareapiuser: '$(cloudflareapiuser)'
               cloudflareapikey: '$(cloudflareapikey)'
               hostname: 'dev.planetpowershell.com'
-              alertEmail: '$(alertEmail)'
 
 - stage: production
   dependsOn: development
@@ -116,7 +113,6 @@ stages:
               connectionName: '$(prodSubscriptionName)'
               subscriptionID: '$(prodSubscriptionID)'
               azureDeployParameters: '$(ProdAzureParameters)'
-              alertEmail: '$(alertEmail)'
               deploymentMode: 'Incremental'
 
   - deployment: deploy_production

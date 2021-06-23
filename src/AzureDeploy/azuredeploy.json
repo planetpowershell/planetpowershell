@@ -190,7 +190,7 @@
                 "targetResourceType": "Microsoft.Web/sites",
                 "actions": [
                     {
-                        "actionGroupId": "[resourceId('microsoft.insights/actionGroups', 'Email')]",
+                        "actionGroupId": "[resourceId('microsoft.insights/actionGroups', 'Email')]"
                     }
                 ]
             }
