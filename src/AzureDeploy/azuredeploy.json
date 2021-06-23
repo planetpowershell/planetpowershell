@@ -75,7 +75,7 @@
         },
         {
             "type": "Microsoft.Web/sites/config",
-            "name": "[parameters('webAppName')]",
+            "name": "[concat(parameters('webAppName'), '/web')]",
             "apiVersion": "2019-08-01",
             "location": "[parameters('location')]",
             "dependsOn": [
