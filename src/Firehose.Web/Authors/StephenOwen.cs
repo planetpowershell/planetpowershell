@@ -26,7 +26,7 @@ public class StephenOwen : IAmAMicrosoftMVP, IFilterMyBlogPosts
 
         public bool Filter(SyndicationItem item)
         {
-            return item.Title.Text.ToLowerInvariant().Contains("powershell") && (item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false);
+            return item.Title.Text.ToLowerInvariant().Contains("powershell") && (item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false);
         }
     }
 }

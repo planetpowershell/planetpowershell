@@ -23,7 +23,7 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
     public bool Filter(SyndicationItem item)
     {
         // This filters out only the posts that have the "PowerShell" category
-        return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
+        return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
     }
     public string FeedLanguageCode => "en";
 }
