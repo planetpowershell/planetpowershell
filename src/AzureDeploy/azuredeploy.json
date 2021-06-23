@@ -74,6 +74,20 @@
             }
         },
         {
+            "type": "Microsoft.Web/sites/config",
+            "name": "[parameters('webAppName')]",
+            "apiVersion": "2019-08-01",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]"
+            ],
+            "properties": {
+                "clientAffinityEnabled": false,
+                "httpsOnly": true,
+                "minTlsVersion": "1.2"
+            }
+        },
+        {
             "condition": "[variables('enableSSL')]",
             "type": "Microsoft.Web/certificates",
             "apiVersion": "2019-08-01",
