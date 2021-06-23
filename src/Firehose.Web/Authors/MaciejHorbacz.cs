@@ -23,7 +23,7 @@ namespace Firehose.Web.Authors
         public string FeedLanguageCode => "en";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories?.Any(c => c.term.ToLowerInvariant().Equals("powershell")) ?? false;
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
     }
 }
