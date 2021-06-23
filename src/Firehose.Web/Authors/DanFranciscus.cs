@@ -24,7 +24,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "dfranciscus";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
         }
         public GeoPosition Position => new GeoPosition(40.462445, 74.6744);
         public string FeedLanguageCode => "en";
