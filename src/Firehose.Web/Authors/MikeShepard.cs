@@ -6,7 +6,7 @@ using System.Web;
 using Firehose.Web.Infrastructure;
 namespace Firehose.Web.Authors
 {
-    public class MikeShepard : IAmACommunityMember, IFilterMyBlogPosts
+    public class MikeShepard : IAmACommunityMember
     {
         public string FirstName => "Mike";
         public string LastName => "Shepard";
@@ -19,10 +19,6 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(37.1291,-93.5151 );
         public Uri WebSite => new Uri("https://powershellstation.com");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershellstation.com/feed"); } }
-        public bool Filter(SyndicationItem item)
-        {
-            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
-        }
         public string FeedLanguageCode => "en";
     }
 }
