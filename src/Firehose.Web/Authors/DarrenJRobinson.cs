@@ -26,7 +26,7 @@ namespace Firehose.Web.Authors
 		public bool Filter(SyndicationItem item)
         {            
             // This filters out only the posts that have the "PowerShell" category
-            return item.Title.Text.ToLowerInvariant().Contains("powershell") && (item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false);
+            return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
     }
 }
