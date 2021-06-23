@@ -1,3 +1,8 @@
+trigger:
+  branches:
+    include:
+    - master
+
 variables:
   - group: PlanetPowerShellCredentials
   - group: PlanetPowerShellSettings
@@ -48,10 +53,12 @@ stages:
         connectionName: '$(devSubscriptionName)'
         subscriptionID: '$(devSubscriptionID)'
         azureDeployParameters: '$(DevAzureParameters)'
+        alertEmail: '$(alertEmail)'
         deploymentMode: 'Validation'
 
 - stage: development
   dependsOn: build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   jobs:
   - deployment: deploy_dev_armtemplate
     displayName: 'Deploy Development Azure Resources'
@@ -68,6 +75,7 @@ stages:
               connectionName: '$(devSubscriptionName)'
               subscriptionID: '$(devSubscriptionID)'
               azureDeployParameters: '$(DevAzureParameters)'
+              alertEmail: '$(alertEmail)'
               deploymentMode: 'Incremental'
 
   - deployment: deploy_development
@@ -87,9 +95,11 @@ stages:
               cloudflareapiuser: '$(cloudflareapiuser)'
               cloudflareapikey: '$(cloudflareapikey)'
               hostname: 'dev.planetpowershell.com'
+              alertEmail: '$(alertEmail)'
 
 - stage: production
   dependsOn: development
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   jobs:
   - deployment: deploy_prod_armtemplate
     displayName: 'Deploy Production Azure Resources'
@@ -106,6 +116,7 @@ stages:
               connectionName: '$(prodSubscriptionName)'
               subscriptionID: '$(prodSubscriptionID)'
               azureDeployParameters: '$(ProdAzureParameters)'
+              alertEmail: '$(alertEmail)'
               deploymentMode: 'Incremental'
 
   - deployment: deploy_production
