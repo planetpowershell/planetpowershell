@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "f59ba35493d7f1b99e25b6455dc39f5b";
         public GeoPosition Position => new GeoPosition(51.1078850,17.0385380);
         public Uri WebSite => new Uri("https://www.universecitiz3n.tech");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.universecitiz3n.tech/feed.xml"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://universecitiz3n.tech/feed.xml"); } }
         public string FeedLanguageCode => "en";
     }
 }
