@@ -24,7 +24,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "MathieuBuisson";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public GeoPosition Position => new GeoPosition(53.294469, -6.141136);
         public string FeedLanguageCode => "en";
