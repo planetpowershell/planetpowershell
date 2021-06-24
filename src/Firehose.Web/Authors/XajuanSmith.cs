@@ -25,7 +25,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "XajuanXBTS";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("PowerShell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     }
