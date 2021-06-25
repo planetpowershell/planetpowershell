@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:code@poshsecurity.com
+Contact: https://twitter.com/kjacobsen
+Encryption: https://keybase.io/kjacobsen
+-----BEGIN PGP SIGNATURE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+wsBcBAABCgAGBQJg1cHYAAoJEMpHmhahzXklp5AH+wTh4CqdAUWvgdxug+XXEeBB
+82gIAMDkVRGFmXkDAX642LGAJud4GTwMoR723U95WrSaeZ+ZnZGo6I7GL5+RO9H4
+2tAhMt5BwcXu9EDwEjwbH9jM/c2BBmjT5qDUAjXiXlSNtdXGO30o63//Py3k34ep
+ixvyOQbvtIbNb/XaNQDsAqvRn6K2T+p0FBiu5jBDLgE6nB683xNW6hzBMwCNcUpc
++Ertl90A2JJl5Lhho9Eon49dO41/TLTG/B0HsxT3lM13WPGBbgquIBCjKzRylx1r
+ve1B+xiJdrMZV/GeD+hqNFTzBZie4wTCMR73Ptx9XCJVF9slPKs128XOL96LJI0=
+=dqKY
+-----END PGP SIGNATURE-----
