@@ -15,7 +15,7 @@ stages:
   - job: build_planetpowershell
     displayName: 'Build PlanetPowerShell'
     pool:
-      vmImage: 'VS2017-Win2016'
+      vmImage: 'windows-latest'
     steps:
     - checkout: self
       persistCredentials: true
