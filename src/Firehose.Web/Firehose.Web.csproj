@@ -71,7 +71,7 @@
     <PackageReference Include="Autofac" Version="6.3.0" />
     <PackageReference Include="Autofac.Mvc5" Version="6.0.0" />
     <PackageReference Include="bootstrap" Version="5.1.3" />
-    <PackageReference Include="elmah.corelibrary" Version="1.2" />
+    <PackageReference Include="elmah.corelibrary" Version="1.2.2" />
     <PackageReference Include="Elmah.Mvc" Version="2.1.2" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Humanizer.Core" Version="2.1.0" />
