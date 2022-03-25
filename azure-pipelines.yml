@@ -15,7 +15,7 @@ stages:
   - job: build_planetpowershell
     displayName: 'Build PlanetPowerShell'
     pool:
-      vmImage: 'windows-latest'
+      vmImage: windows-latest
     steps:
     - checkout: self
       persistCredentials: true
@@ -47,7 +47,7 @@ stages:
   - job: validate_armtemplate
     displayName: 'Validate ARM Template'
     pool:
-      vmImage: 'VS2017-Win2016'
+      vmImage: windows-latest
     steps:
     - template: arm_template.yml
       parameters:
@@ -64,7 +64,7 @@ stages:
   - deployment: deploy_dev_armtemplate
     displayName: 'Deploy Development Azure Resources'
     pool:
-      vmImage: VS2017-Win2016
+      vmImage: windows-latest
     environment: 'PlanetPowerShell Dev'
     strategy:
       runOnce:
@@ -82,7 +82,7 @@ stages:
     displayName: 'Deploy Development WebApp'
     dependsOn: deploy_dev_armtemplate
     pool:
-      vmImage: VS2017-Win2016
+      vmImage: windows-latest
     environment: 'PlanetPowerShell Dev'
     strategy:
       runOnce:
@@ -103,7 +103,7 @@ stages:
   - deployment: deploy_prod_armtemplate
     displayName: 'Deploy Production Azure Resources'
     pool:
-      vmImage: VS2017-Win2016
+      vmImage: windows-latest
     environment: 'PlanetPowerShell Prod'
     strategy:
       runOnce:
@@ -121,7 +121,7 @@ stages:
     displayName: 'Deploy Production WebApp'
     dependsOn: deploy_prod_armtemplate
     pool:
-      vmImage: VS2017-Win2016
+      vmImage: windows-latest
     environment: 'PlanetPowerShell Prod'
     strategy:
       runOnce:
