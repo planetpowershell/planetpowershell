@@ -76,9 +76,9 @@
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Humanizer.Core" Version="2.1.0" />
     <PackageReference Include="jQuery" Version="3.6.0" />
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
-    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.7" />
     <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
     <PackageReference Include="MvcNavigationHelpers" Version="0.0.0.5" />
     <PackageReference Include="Polly">
