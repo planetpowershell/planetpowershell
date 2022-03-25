@@ -68,8 +68,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.EnterpriseServices" />
-    <PackageReference Include="Autofac" Version="4.2.1" />
-    <PackageReference Include="Autofac.Mvc5" Version="4.0.0" />
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Mvc5" Version="6.0.0" />
     <PackageReference Include="bootstrap" Version="3.4.1" />
     <PackageReference Include="elmah.corelibrary" Version="1.2" />
     <PackageReference Include="Elmah.Mvc" Version="2.1.2" />
