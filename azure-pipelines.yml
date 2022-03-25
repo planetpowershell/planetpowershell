@@ -1,0 +1,136 @@
+trigger:
+  branches:
+    include:
+    - main
+    - development
+
+variables:
+  - group: PlanetPowerShellCredentials
+  - group: PlanetPowerShellSettings
+  
+stages:
+
+- stage: build
+  jobs:
+  - job: build_planetpowershell
+    displayName: 'Build PlanetPowerShell'
+    pool:
+      vmImage: windows-latest
+    steps:
+    - checkout: self
+      persistCredentials: true
+      clean: true
+    - task: NuGetToolInstaller@0
+    - task: NuGetCommand@2
+      inputs:
+        restoreSolution: '$(solution)'
+    - task: VSBuild@1
+      inputs:
+        solution: '$(solution)'
+        msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+        platform: '$(buildPlatform)'
+        configuration: '$(buildConfiguration)'
+    - task: VSTest@2
+      continueOnError: true
+      inputs:
+        testAssemblyVer2: |
+          **\$(BuildConfiguration)\**\*test*.dll
+          !**\obj\**
+        platform: '$(buildPlatform)'
+        configuration: '$(buildConfiguration)'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
+        ArtifactName: 'planetpowershell'
+  
+  - job: validate_armtemplate
+    displayName: 'Validate ARM Template'
+    pool:
+      vmImage: windows-latest
+    steps:
+    - template: arm_template.yml
+      parameters:
+        resourceGroup: '$(devResourceGroup)'
+        connectionName: '$(devSubscriptionName)'
+        subscriptionID: '$(devSubscriptionID)'
+        azureDeployParameters: '$(DevAzureParameters)'
+        deploymentMode: 'Validation'
+
+- stage: development
+  dependsOn: build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/development'))
+  jobs:
+  - deployment: deploy_dev_armtemplate
+    displayName: 'Deploy Development Azure Resources'
+    pool:
+      vmImage: windows-latest
+    environment: 'PlanetPowerShell Dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: arm_template.yml
+            parameters:
+              resourceGroup: '$(devResourceGroup)'
+              connectionName: '$(devSubscriptionName)'
+              subscriptionID: '$(devSubscriptionID)'
+              azureDeployParameters: '$(DevAzureParameters)'
+              deploymentMode: 'Incremental'
+
+  - deployment: deploy_development
+    displayName: 'Deploy Development WebApp'
+    dependsOn: deploy_dev_armtemplate
+    pool:
+      vmImage: windows-latest
+    environment: 'PlanetPowerShell Dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: deploy_webapp.yml
+            parameters:
+              connectionName: '$(devSubscriptionName)'
+              webAppName: '$(devAppName)'
+              cloudflareapiuser: '$(cloudflareapiuser)'
+              cloudflareapikey: '$(cloudflareapikey)'
+              hostname: 'dev.planetpowershell.com'
+
+- stage: production
+  dependsOn: build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - deployment: deploy_prod_armtemplate
+    displayName: 'Deploy Production Azure Resources'
+    pool:
+      vmImage: windows-latest
+    environment: 'PlanetPowerShell Prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: arm_template.yml
+            parameters:
+              resourceGroup: '$(prodResourceGroup)'
+              connectionName: '$(prodSubscriptionName)'
+              subscriptionID: '$(prodSubscriptionID)'
+              azureDeployParameters: '$(ProdAzureParameters)'
+              deploymentMode: 'Incremental'
+
+  - deployment: deploy_production
+    displayName: 'Deploy Production WebApp'
+    dependsOn: deploy_prod_armtemplate
+    pool:
+      vmImage: windows-latest
+    environment: 'PlanetPowerShell Prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: deploy_webapp.yml
+            parameters:
+              connectionName: '$(prodSubscriptionName)'
+              webAppName: '$(prodAppName)'
+              cloudflareapiuser: '$(cloudflareapiuser)'
+              cloudflareapikey: '$(cloudflareapikey)'
+              hostname: 'planetpowershell.com'

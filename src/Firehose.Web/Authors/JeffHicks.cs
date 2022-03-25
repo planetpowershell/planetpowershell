@@ -16,22 +16,17 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "jhicks@jdhitsolutions.com";
         public string TwitterHandle => "jeffhicks";
         public string GravatarHash => "1393cfe66dace329de043b14544985db ";
-
-        public Uri WebSite => new Uri("http://blog.jdhitsolutions.com/");
-
+        public Uri WebSite => new Uri("https://blog.jdhitsolutions.com/");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("http://jdhitsolutions.com/blog/feed"); }
+            get { yield return new Uri("https://jdhitsolutions.com/blog/feed"); }
         }
-
         public string GitHubHandle => "jdhitsolutions";
-
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
-            
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
-
         public GeoPosition Position => new GeoPosition(43.035234,-76.13928);
+        public string FeedLanguageCode => "en";
     }
 }

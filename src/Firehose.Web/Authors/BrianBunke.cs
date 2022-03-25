@@ -16,18 +16,19 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "me@brianbunke.com";
         public string TwitterHandle => "brianbunke";
         public string GitHubHandle => "brianbunke";
-        public string GravatarHash => "";
+        public string GravatarHash => "5eb2b9485a755280dc633d2a9ab2160b";
 
         public GeoPosition Position => new GeoPosition(48.751911, -122.478685);
 
-        public Uri WebSite => new Uri("http://www.brianbunke.com/");
+        public Uri WebSite => new Uri("https://www.brianbunke.com/");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("http://www.brianbunke.com/feed.xml"); }
+            get { yield return new Uri("https://www.brianbunke.com/feed.xml"); }
         }
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
+        public string FeedLanguageCode => "en";
     }
 }

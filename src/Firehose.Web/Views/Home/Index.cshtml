@@ -1,5 +1,7 @@
 ﻿@using Firehose.Web.Controllers
 @using MvcNavigationHelpers
+@using Firehose.Web.Infrastructure
+@model IAmACommunityMember[]
 
 @{
     Layout = "~/Views/Shared/_ContainerLayout.cshtml";
@@ -16,7 +18,7 @@
         <i class="fa fa-rss"></i>
         <h1>Where's the feed?!</h1>
         <p>
-            Point your RSS reader at this page and it'll find it; or subscribe to <a href="@(Url.UrlFor<FeedController>(c => c.Index(null)))">the feed manually.</a>
+            Point your RSS reader at this page and it'll find it; or subscribe to <a href="@(Url.UrlFor<FeedController>(c => c.Index(null, null)))">the feed manually.</a>
         </p>
     </div>
     <div class="col-md-4">
@@ -24,7 +26,7 @@
         <h1>Can I just read it here?</h1>
         <p>
             You can, but we don't want to redirect traffic from our people's individual sites. Here's a
-            <a href="@(Url.UrlFor<PreviewController>(c => c.Index(null)))">sneak peek</a> in case you're still trying to decide
+            <a href="@(Url.UrlFor<PreviewController>(c => c.Index()))">sneak peek</a> in case you're still trying to decide
             to subscribe.
         </p>
     </div>
@@ -38,6 +40,7 @@
 </div>
 
 <hr />
+
 <h2>Authors' opinions</h2>
 <p>
 
@@ -55,4 +58,11 @@
 </p>
 <img class="featuredbadge" src="~/Content/img/planetpowershell-featured-badge.png" alt="Featured on Planet PowerShell badge" />
 
-
+<hr />
+<h1>PowerShell Podcasts, Shows Newsletters & YouTubers</h1>
+<p>
+    @foreach (var member in Model.Where(m => m is IAmAPodcast || m is IAmANewsletter || m is IAmAYoutuber).ToArray())
+    {
+        Html.RenderPartial("PodcastCard", member);
+    }
+</p>

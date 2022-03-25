@@ -1,47 +1,39 @@
 ﻿using System;
-using System.Linq;
-using System.Reflection;
+using System.Globalization;
 using System.ServiceModel.Syndication;
 using System.Web.Mvc;
-using BlogMonster.Web;
 using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Controllers
 {
     public class FeedController : BaseController
     {
-        private readonly CombinedFeedSource _combinedFeedSource;
+        private readonly NewCombinedFeedSource _combinedFeedSource;
 
-        public FeedController(CombinedFeedSource combinedFeedSource)
+        public FeedController(NewCombinedFeedSource combinedFeedSource)
         {
             _combinedFeedSource = combinedFeedSource;
         }
 
         [Route("feed")]
-        public RssFeedResult Index(int? numPosts = 50)
+        public RssFeedResult Index(int? numPosts = 150, string lang = "mixed")
         {
-            var feed = GetFeed(numPosts);
+            var feed = GetFeed(numPosts, lang);
             return new RssFeedResult(feed);
         }
 
-        private SyndicationFeed GetFeed(int? numPosts)
+        private SyndicationFeed GetFeed(int? numPosts = 150, string lang = "mixed")
         {
             SyndicationFeed originalFeed = null;
+
             try
             {
-                originalFeed = _combinedFeedSource.Feed;
-                if (numPosts == null) return originalFeed;
+                string language = null;
+                if (!string.IsNullOrEmpty(lang) && lang != "mixed")
+                    language = CultureInfo.CreateSpecificCulture(lang).Name;
 
-                var items = _combinedFeedSource.Feed.Items
-                    .OrderByDescending(item => item.PublishDate)
-                    .Take((int)numPosts)
-                    .ToArray();
-
-                var shorterFeed = originalFeed.Clone(false);
-                var itemsField = shorterFeed.GetType().GetField("items", BindingFlags.Instance | BindingFlags.NonPublic);
-                itemsField.SetValue(shorterFeed, items);
-
-                return shorterFeed;
+                originalFeed = _combinedFeedSource.LoadFeed(numPosts, language).GetAwaiter().GetResult();
+                return originalFeed;
             }
             catch (Exception ex)
             {

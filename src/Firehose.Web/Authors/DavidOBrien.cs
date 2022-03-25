@@ -16,21 +16,17 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "me@david-obrien.net";
         public string TwitterHandle => "david_obrien";
         public string GravatarHash => "c93bbf72255d38bab70895eb7c0b3f99";
-
         public Uri WebSite => new Uri("https://david-obrien.net/");
-
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://david-obrien.net/feed.xml"); }
         }
-
         public string GitHubHandle => "davidobrien1985";
-
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
-
-        public GeoPosition Position => new GeoPosition(-37.8136,144.9631);       
+        public GeoPosition Position => new GeoPosition(-37.8136,144.9631);
+        public string FeedLanguageCode => "en";
     }
 }
