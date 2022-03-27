@@ -20,7 +20,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://Powershell.city/");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri(" https://powershell.city/feed/"); }
+            get { yield return new Uri("https://powershell.city/feed/"); }
         }
         public string GitHubHandle => "XajuanXBTS";
         public bool Filter(SyndicationItem item)
