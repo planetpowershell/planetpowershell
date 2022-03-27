@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "";
         public string TwitterHandle => "glennsarti";
         public string GravatarHash => "aac3dafaab7a7c2063d2526ba5936305";
-        public Uri WebSite => new Uri("https:/sarti.dev/");
+        public Uri WebSite => new Uri("https://sarti.dev");
         public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://sarti.dev/feed.xml"); }
