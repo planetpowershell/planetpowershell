@@ -11,15 +11,15 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Glenn";
         public string LastName => "Sarti";
-        public string ShortBioOrTagLine => "is a Windows Software and Infrastructure Developer for Puppet.";
-        public string StateOrRegion => "Portland OR, USA";
+        public string ShortBioOrTagLine => "is a Senior Software Developer for HashiCorp.";
+        public string StateOrRegion => "Perth, Australia";
         public string EmailAddress => "";
         public string TwitterHandle => "glennsarti";
         public string GravatarHash => "aac3dafaab7a7c2063d2526ba5936305";
-        public Uri WebSite => new Uri("https://glennsarti.github.io/");
+        public Uri WebSite => new Uri("https://sarti.dev");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://glennsarti.github.io/feed.xml"); }
+            get { yield return new Uri("https://sarti.dev/feed.xml"); }
         }
         public string FeedLanguageCode => "en";
         public string GitHubHandle => "glennsarti";
@@ -27,6 +27,6 @@ namespace Firehose.Web.Authors
         {
             return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
-        public GeoPosition Position => new GeoPosition(45.5234500,-122.6762100);
+        public GeoPosition Position => new GeoPosition(-31.9523,115.8613);
     }
 }
