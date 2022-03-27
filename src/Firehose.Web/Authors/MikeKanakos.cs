@@ -20,6 +20,6 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(35.7327, 78.8503);
         public Uri WebSite => new Uri("https://www.commandline.ninja");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.commandline.ninja/rss/"); } }
-
+		public string FeedLanguageCode => "en";
     }
 }
