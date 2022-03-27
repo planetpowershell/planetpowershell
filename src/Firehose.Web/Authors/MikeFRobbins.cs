@@ -6,7 +6,7 @@ using System.Web;
 using Firehose.Web.Infrastructure;
 namespace Firehose.Web.Authors
 {
-    public class MikeFRobbins : IAmAMicrosoftMVP, IFilterMyBlogPosts
+    public class MikeFRobbins : IAmAMicrosoftMVP
     {
         public string FirstName => "Mike";
         public string LastName => "Robbins";
@@ -19,12 +19,8 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(32.3643100, -88.7036560);
 
         public Uri WebSite => new Uri("https://mikefrobbins.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mikefrobbins.com/feed/"); } }
-
-        public bool Filter(SyndicationItem item)
-        {
-            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
-        }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://mikefrobbins.com/index.xml"); } }
+		
         public string FeedLanguageCode => "en";
     }
 }
