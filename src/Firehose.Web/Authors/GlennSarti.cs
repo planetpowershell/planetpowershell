@@ -12,7 +12,7 @@ namespace Firehose.Web.Authors
         public string FirstName => "Glenn";
         public string LastName => "Sarti";
         public string ShortBioOrTagLine => "is a Senior Software Developer for HashiCorp.";
-        public string StateOrRegion => "Perth WA, Australia";
+        public string StateOrRegion => "Perth, Australia";
         public string EmailAddress => "";
         public string TwitterHandle => "glennsarti";
         public string GravatarHash => "aac3dafaab7a7c2063d2526ba5936305";
