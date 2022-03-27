@@ -123,9 +123,7 @@ Of course you are more than welcome to submit other features and bugfixes as wel
 
 ## PS > Get-BuildStatus
 
-![Build Status](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_apis/build/status/planetpowershell.planetpowershell?branchName=master)
-
-![Release Status](https://vsrm.dev.azure.com/planetpowershell/_apis/public/Release/badge/ada87215-ce32-443c-a0b7-5512f6b742ed/3/4)
+[![Status](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_apis/build/status/Planet%20PowerShell?branchName=main)](https://dev.azure.com/planetpowershell/Planet%20PowerShell/_build/latest?definitionId=8&branchName=main)
 
 ## PS > Get-Acknowledgements
 
