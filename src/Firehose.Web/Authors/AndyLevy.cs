@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "andylevy";
         public GeoPosition Position => new GeoPosition(42.8875, -77.281667);
         public Uri WebSite => new Uri("https://flxsql.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://flxsql.com/category/powershell/feed/"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.flxsql.com/feed/"); } }
         public string FeedLanguageCode => "en";
     }
 }

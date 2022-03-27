@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class RyanYatesMVP : IFilterMyBlogPosts, IAmAMicrosoftMVP
+    public class RyanYatesMVP :IAmAMicrosoftMVP
     {
         public string FirstName => "Ryan";
         public string LastName => "Yates";
@@ -21,15 +21,10 @@ namespace Firehose.Web.Authors
 
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://blog.kilasuit.org/feed/"); }
+            get { yield return new Uri("https://blog.kilasuit.org/index.xml"); }
         }
 
         public string GitHubHandle => "kilasuit";
-
-        public bool Filter(SyndicationItem item)
-        {
-            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
-        }
         public string FeedLanguageCode => "en";
     }
 }
