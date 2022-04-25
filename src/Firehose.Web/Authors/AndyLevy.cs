@@ -16,10 +16,10 @@ namespace Firehose.Web.Authors
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "alevyinroc";
         public string GravatarHash => "6a2838f9f6d7e95c1124d4a301a1ae0d";
-        public string GitHubHandle => "andylevy";
+        public string GitHubHandle => "alevyinroc";
         public GeoPosition Position => new GeoPosition(42.8875, -77.281667);
         public Uri WebSite => new Uri("https://flxsql.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.flxsql.com/feed/"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.flxsql.com/categories/powershell/rss.xml"); } }
         public string FeedLanguageCode => "en";
     }
 }
