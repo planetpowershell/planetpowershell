@@ -21,7 +21,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://robstr.dev");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://www.robstr.dev/tag/powershell/rss/"); }
+            get { yield return new Uri("https://robstr.dev/index.xml"); }
         }
         public string FeedLanguageCode => "en";
     }
