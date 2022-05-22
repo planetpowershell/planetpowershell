@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class KelvinTegelaar : IAmACommunityMember
+    public class KelvinTegelaar : IAmAMicrosoftMVP
     {
         public string FirstName => "Kelvin";
         public string LastName => "Tegelaar";
@@ -19,7 +19,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "4dc012d6848c8403805130f2fefcf64b";
         public GeoPosition Position => new GeoPosition(51.921638,4.528056);
         public Uri WebSite => new Uri("https://www.cyberdrain.com");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.cyberdrain.com/feed/"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.cyberdrain.com/feed.xml"); } }
         public string FeedLanguageCode => "en";
     }
 }
