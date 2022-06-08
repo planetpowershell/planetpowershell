@@ -1,4 +1,13 @@
-  public class HarmVeenstra : IAmACommunityMember
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Web;
+using Firehose.Web.Infrastructure;
+
+namespace Firehose.Web.Authors
+{
+public class HarmVeenstra : IAmACommunityMember
     {
         public string FirstName => "Harm";
         public string LastName => "Veenstra";
@@ -10,6 +19,10 @@
         public string GitHubHandle => "HarmVeenstra";
         public GeoPosition Position => new GeoPosition(52.786708, 6.116538);
 
-        public Uri WebSite => new Uri("https://powershellisfun.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershellisfun.com/feed/"); } }
+        public Uri WebSite => new Uri("https://powershellisfun.com/");public IEnumerable<Uri> FeedUris
+        {
+            get { yield return new Uri("https://powershellisfun.com//feed/"); }
+        }
+        public string FeedLanguageCode => "en";
     }
+}
