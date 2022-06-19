@@ -19,7 +19,9 @@ public class HarmVeenstra : IAmACommunityMember
         public string GitHubHandle => "HarmVeenstra";
         public GeoPosition Position => new GeoPosition(52.786708, 6.116538);
 
-        public Uri WebSite => new Uri("https://powershellisfun.com/");public IEnumerable<Uri> FeedUris
+        public Uri WebSite => new Uri("https://powershellisfun.com/");
+		
+		public IEnumerable<Uri> FeedUris
         {
             get { yield return new Uri("https://powershellisfun.com//feed/"); }
         }
