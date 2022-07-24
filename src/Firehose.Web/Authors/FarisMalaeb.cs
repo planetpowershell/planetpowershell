@@ -11,5 +11,5 @@ public class BruceWayne : IAmACommunityMember
         public GeoPosition Position => new GeoPosition(24.471011,54.378537);
 
         public Uri WebSite => new Uri("https://powershellcenter.com/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershellcenter.com/rss"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.powershellcenter.com/feed"); } }
     }
