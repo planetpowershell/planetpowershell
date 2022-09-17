@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class JM2K69 : IAmACommunityMember
+    public class JM2K69 : IAmAMicrosoftMVP
     {
         public string FirstName => "Jerome";
         public string LastName => "Bezet-Torres";
@@ -23,7 +23,7 @@ namespace Firehose.Web.Authors
         public bool Filter(SyndicationItem item)
         {
             // This filters out only the posts that have the "PowerShell" category
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     

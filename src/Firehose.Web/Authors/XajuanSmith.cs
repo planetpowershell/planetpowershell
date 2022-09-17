@@ -20,12 +20,12 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://Powershell.city/");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri(" https://powershell.city/feed/"); }
+            get { yield return new Uri("https://powershell.city/feed/"); }
         }
         public string GitHubHandle => "XajuanXBTS";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("PowerShell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     }

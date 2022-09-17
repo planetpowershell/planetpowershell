@@ -6,22 +6,22 @@ using System.Web;
 using Firehose.Web.Infrastructure;
 namespace Firehose.Web.Authors
 {
-    public class DaveCarroll : IAmACommunityMember
+    public class DaveCarroll : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "Dave";
         public string LastName => "Carroll";
-        public string ShortBioOrTagLine => "Systems engineer with a strong predilection for automation.";
+        public string ShortBioOrTagLine => "PowerShell developer and retro-computing enthusiast.";
         public string StateOrRegion => "Nashville, TN";
-        public string EmailAddress => "";
+        public string EmailAddress => string.Empty;
         public string TwitterHandle => "thedavecarroll";
         public string GitHubHandle => "thedavecarroll";
         public string GravatarHash => "fd0387e212af38089603b5480e406545";
         public GeoPosition Position => new GeoPosition(36.0679, -86.7194);
-        public Uri WebSite => new Uri("https://powershell.anovelidea.org/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://powershell.anovelidea.org/feed.xml"); } }
+        public Uri WebSite => new Uri("https://thedavecarroll.com/");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://thedavecarroll.com/feed.xml"); } }
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public string FeedLanguageCode => "en";
     }

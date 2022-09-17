@@ -1,0 +1,29 @@
+parameters:
+- name: resourceGroup
+  type: string
+- name: connectionName
+  type: string
+- name: subscriptionID
+  type: string
+- name: azureDeployParameters
+  type: string
+- name: deploymentMode
+  type: string
+  default: 'Validation'
+
+steps:
+- checkout: self
+  clean: true
+  persistCredentials: true
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: ${{ parameters.connectionName }}
+    subscriptionId: ${{ parameters.subscriptionID }}
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: ${{ parameters.resourceGroup }}
+    location: 'East US 2'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
+    overrideParameters: ${{ parameters.azureDeployParameters }}
+    deploymentMode: ${{ parameters.deploymentMode }}

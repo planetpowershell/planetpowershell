@@ -13,21 +13,21 @@ namespace Firehose.Web.Authors
         public string LastName => "Patnayakuni";
         public string ShortBioOrTagLine => "Cloud Ops Engineering Specialist @ Accenture";
         public string StateOrRegion => "Karnataka, India";
-        public string EmailAddress => "kiran@patnayakuni.in";
+        public string EmailAddress => "kiran@patnayakuni.com";
         public string TwitterHandle => "kpatnayakuni";
         public string GitHubHandle => "kpatnayakuni";
-        public string GravatarHash => "8005482ab7de92b77be6f178fff5c12a";
+        public string GravatarHash => "9e6f3d364a0c54d745ff5c33ab4a8885";
 
         public GeoPosition Position => new GeoPosition(12.896208, 77.596138);
 
         public Uri WebSite => new Uri("https://kpatnayakuni.com/");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://kpatnayakuni.com/feed/"); }
+            get { yield return new Uri("https://kpatnayakuni.com/index.xml"); }
         }
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Any(c => c.Name.ToLowerInvariant().Equals("powershell"));
+            return item.Title.Text.ToLowerInvariant().Contains("powershell");
         }
         public string FeedLanguageCode => "en";
     }

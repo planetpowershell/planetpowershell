@@ -24,7 +24,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "davidobrien1985";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public GeoPosition Position => new GeoPosition(-37.8136,144.9631);
         public string FeedLanguageCode => "en";

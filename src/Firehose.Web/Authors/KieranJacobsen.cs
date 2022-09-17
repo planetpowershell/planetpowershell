@@ -24,7 +24,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "kjacobsen";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public GeoPosition Position => new GeoPosition(-37.816667, 144.966667);
         public string FeedLanguageCode => "en";

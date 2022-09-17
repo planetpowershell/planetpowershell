@@ -1,3 +1,9 @@
+---
+name: New Author
+about: Add a new author to Planet PowerShell
+
+---
+
 <!--
 If you are submitting a new blog please read and check the boxes below.
  -->
@@ -12,7 +18,7 @@ By sending this pull request to add my blog I verify that I adhere to the Planet
 - [ ] I host NO malicious or offensive content on the blog (including photos, swearing, etc.)
 - [ ] My blog is active with at least 3 PowerShell related blog posts in the last 6 months
 - [ ] In addition to the previous guideline; it should be apperant that the blog is active for a longer period of time and the posts on it are not fabricated in a small amount of time to comply to the '3 posts in last 6 months' guideline.
-- [ ] I have applied a filter.
+- [ ] I have applied a filter (Optional: if blog is only about PowerShell or you use `powershell` or `pwsh` in the title or categories in your blog posts)
 - [ ] I have implemented `IAmACommunityMember` or one of the other derivatives
 - [ ] I understand, if I delete my blog, I will be deleted from Planet PowerShell
 - [ ] I understand, my blog may be removed at any time if any of these guidelines are broken.

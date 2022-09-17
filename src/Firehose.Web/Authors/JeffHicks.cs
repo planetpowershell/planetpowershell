@@ -24,7 +24,7 @@ namespace Firehose.Web.Authors
         public string GitHubHandle => "jdhitsolutions";
         public bool Filter(SyndicationItem item)
         {
-            return item.Categories.Where(i => i.Name.Equals("powershell", StringComparison.OrdinalIgnoreCase)).Any();
+            return item.Categories?.Any(c => c.Name.ToLowerInvariant().Contains("powershell")) ?? false;
         }
         public GeoPosition Position => new GeoPosition(43.035234,-76.13928);
         public string FeedLanguageCode => "en";
