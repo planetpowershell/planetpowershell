@@ -9,10 +9,10 @@ namespace Firehose.Web.Authors
     public class AlainAssaf : IAmACommunityMember
     {
         public string FirstName => "Alain";
-        public string LastName => "Alain";
+        public string LastName => "Assaf";
         public string ShortBioOrTagLine => "EUC Engineer/Architect | Citrix CTA | CCE-V Certified | CUGC Leader | PowerShell Fanatic";
         public string StateOrRegion => "North Carolina, USA";
-        public string EmailAddress => "";
+        public string EmailAddress => "alainassaf@outlook.com";
         public string TwitterHandle => "alainassaf";
         public string GitHubHandle => "alainassaf";
         public string GravatarHash => "55e3ac1ac8ca9129cc9e138a158b07bb";
