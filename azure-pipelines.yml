@@ -99,7 +99,7 @@ stages:
 
 - stage: production
   dependsOn: build
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), development)
   jobs:
   - deployment: deploy_prod_armtemplate
     displayName: 'Deploy Production Azure Resources'
