@@ -98,8 +98,8 @@ stages:
               hostname: 'dev.planetpowershell.com'
 
 - stage: production
-  dependsOn: build
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), development)
+  dependsOn: build, development
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   jobs:
   - deployment: deploy_prod_armtemplate
     displayName: 'Deploy Production Azure Resources'
