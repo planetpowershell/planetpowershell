@@ -6,6 +6,10 @@ The goal of PlanetPowerShell is to provide an aggregated feed of PowerShell comm
 
 This site couldn't have been made without the help of Readify and the Planet Xamarin team (who I have blatantly stolen the content from, yay Open Source!). For more information see the Acknowledgements.
 
+## Now on Mastodon
+
+You can now find Planet PowerShell on <a rel="me" href="https://infosec.exchange/@planetpowershell">Mastodon</a>! 
+
 ## PS > Get-Help 'Adding yourself as an author'
 
 ### Guidlines for submission
