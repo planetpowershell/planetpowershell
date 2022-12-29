@@ -6,7 +6,7 @@ using System.Web;
 using Firehose.Web.Infrastructure;
 namespace Firehose.Web.Authors
 {
-    public class AlainAssaf : IAmACommunityMember
+    public class AlainAssaf : IAmACommunityMember, IFilterMyBlogPosts
     {
         public string FirstName => "Alain";
         public string LastName => "Assaf";
@@ -19,6 +19,11 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(35.7795900, -78.6381790);
         public Uri WebSite => new Uri("https://alainassaf.com/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://alainassaf.com/feed.xml"); } }
-     	public string FeedLanguageCode => "en";
-    }
+		public bool Filter(SyndicationItem item)
+    	{
+        	// This filters out only the posts that have the "PowerShell" category
+        	return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
+		}
+		public string FeedLanguageCode => "en";
+	}
 }
