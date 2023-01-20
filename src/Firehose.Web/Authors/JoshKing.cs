@@ -15,7 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Hawke's Bay, NZ";
         public string EmailAddress => "joshua@king.geek.nz";
         public string TwitterHandle => "WindosNZ";
-        public string MastodonHandle => "";
+        public string MastodonHandle => "@josh@toastit.dev";
         public string GitHubHandle => "Windos";
         public string GravatarHash => "fafdbc410c9adf8c4d2235d37470859a";
         public GeoPosition Position => new GeoPosition(-39.4928, 176.9120);
