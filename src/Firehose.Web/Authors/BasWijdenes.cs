@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Heerhugowaard, Netherlands";
         public string EmailAddress => String.Empty;
 		public string TwitterHandle => String.Empty;
+        public string MastodonHandle => "";
         public string GitHubHandle => "baswijdenes";
         public string GravatarHash => "94c48c63e7e63f5e713f7f7a5cdbcac0";
         public Uri WebSite => new Uri("https://baswijdenes.com");
