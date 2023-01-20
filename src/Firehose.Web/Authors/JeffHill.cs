@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Dallas, TX";
         public string EmailAddress => "Jeff.Hill@SQLAdm.in";
         public string TwitterHandle => "sql_jeff";
+        public string MastodonHandle => "";
         public string GitHubHandle => "sqljeff";
         public string GravatarHash => "d83825f965c6ca452e31e9b328561f89";
         public GeoPosition Position => new GeoPosition(32.776700, -96.797000);

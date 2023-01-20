@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Amsterdam, Netherlands";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "jaap_brasser";
+        public string MastodonHandle => "";
         public string GravatarHash => "dc8d4d1ec3179e966ccdd959aa16d11c";
         public string GitHubHandle => "jaapbrasser";
         public GeoPosition Position => new GeoPosition(52.635340, 4.885695);

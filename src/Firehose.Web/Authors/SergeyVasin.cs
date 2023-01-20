@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Yoshkar-Ola, Russia";
         public string EmailAddress => "seth.vs@gmail.com";
         public string TwitterHandle => "vsseth";
+        public string MastodonHandle => "";
         public string GravatarHash => "3baf621c02b71b2333643f4e69791dbd";
         public string GitHubHandle => "sethvs";
         public GeoPosition Position => new GeoPosition(56.63093, 47.89091);

@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Mississippi, USA";
         public string EmailAddress => "";
         public string TwitterHandle => "mikefrobbins";
+        public string MastodonHandle => "";
         public string GitHubHandle => "mikefrobbins";
         public string GravatarHash => "e809f9f3d1f46f219c3a28b2fd7dbf83";
         public GeoPosition Position => new GeoPosition(32.3643100, -88.7036560);

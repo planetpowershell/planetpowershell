@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Warwickshire, United Kingdom";
         public string EmailAddress => "";
         public string TwitterHandle => "_chelnak";
+        public string MastodonHandle => "";
         public string GitHubHandle => "chelnak";
         public string GravatarHash => "ad535ae27561b4df47261f2cebeed368";
         public GeoPosition Position => new GeoPosition(52.2823160, -1.5849270);

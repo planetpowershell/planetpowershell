@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "WA, USA";
         public string EmailAddress => "me@brianbunke.com";
         public string TwitterHandle => "brianbunke";
+        public string MastodonHandle => "";
         public string GitHubHandle => "brianbunke";
         public string GravatarHash => "5eb2b9485a755280dc633d2a9ab2160b";
 

@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Apex, NC";
         public string EmailAddress => "mike@networkadm.in";
         public string TwitterHandle => "MikeKanakos";
+        public string MastodonHandle => "";
         public string GravatarHash => "2bca167386e229ec2c5606f6c1677493";
         public string GitHubHandle => "compwiz32";
         public GeoPosition Position => new GeoPosition(35.7327, 78.8503);

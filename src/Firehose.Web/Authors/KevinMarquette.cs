@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Irvine, CA, USA";
         public string EmailAddress => "kevmar@gmail.com";
         public string TwitterHandle => "kevinmarquette";
+        public string MastodonHandle => "";
         public string GitHubHandle => "kevinmarquette";
         public string GravatarHash => "d7d29e9573b5da44d9886df24fcc6142";
         public GeoPosition Position => new GeoPosition(33.6800000,-117.7900000);

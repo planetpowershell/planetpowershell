@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Costa Rica";
         public string EmailAddress => "string.Empty";
         public string TwitterHandle => "FerCorrales_";
+        public string MastodonHandle => "";
         public string GravatarHash => "f4b846ac7c5798b6700b2e9265a7acd0";
         public string GitHubHandle => "F3rC";
         public GeoPosition Position => new GeoPosition(9.864687, -83.920451);

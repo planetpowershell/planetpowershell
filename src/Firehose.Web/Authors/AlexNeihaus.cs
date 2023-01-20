@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Boston, MA, USA";
         public string EmailAddress => "";
         public string TwitterHandle => "yobyot";
+        public string MastodonHandle => "";
         public string GitHubHandle => "yobyot";
         public string GravatarHash => "84df1a56afda0ae7b7b10e7b8cf5972e";
         public GeoPosition Position => new GeoPosition(42.355291, -71.066245);

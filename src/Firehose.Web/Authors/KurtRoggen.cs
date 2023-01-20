@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Belgium";
         public string EmailAddress => "";
         public string TwitterHandle => "roggenk";
+        public string MastodonHandle => "";
         public string GitHubHandle => "roggenk";
         public string GravatarHash => "00000000000000000000000000000000";
         public GeoPosition Position => new GeoPosition(50.8503, 4.3517);

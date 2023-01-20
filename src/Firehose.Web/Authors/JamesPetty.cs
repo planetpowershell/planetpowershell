@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Chattanooga, Tennessee, USA";
         public string EmailAddress => "";
         public string TwitterHandle => "psjamesp";
+        public string MastodonHandle => "";
         public string GitHubHandle => "psjamesp";
         public string GravatarHash => "a7f8b94204f4ca1e53c84aedc1242f8e";
         public GeoPosition Position => new GeoPosition(35.045631, -85.309677);

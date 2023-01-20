@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "France";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "ChristopheKumor";
+        public string MastodonHandle => "";
         public string GitHubHandle => "christophekumor";
         public string GravatarHash => "577ca07fd4a83e8ee441226dfe56e000";
         public GeoPosition Position => new GeoPosition(50.633331,3.06667);

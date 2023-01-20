@@ -16,6 +16,7 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
     public string GravatarHash => "6f38a96cd055f95eacd1d3d102e309fa";
     public string EmailAddress => "matt@mattbobke.com";
     public string TwitterHandle => "MattBobke";
+    public string MastodonHandle => "";
     public string GitHubHandle => "mcbobke";
     public GeoPosition Position => new GeoPosition(33.5676842, -117.7256083);
     public Uri WebSite => new Uri("https://mattbobke.com");

@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors {
         public string StateOrRegion => "Mexico City, Mexico";
         public string EmailAddress => "sevmont@gmail.com";
         public string TwitterHandle => "";
+        public string MastodonHandle => "";
         public string GravatarHash => "d121a69f0572374af7efcc407160efc9";
         public string GitHubHandle => "mavericksevmont";
         public GeoPosition Position => new GeoPosition(19.432608, -99.133209);

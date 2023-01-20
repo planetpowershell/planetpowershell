@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "New York";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "alevyinroc";
+        public string MastodonHandle => "";
         public string GravatarHash => "6a2838f9f6d7e95c1124d4a301a1ae0d";
         public string GitHubHandle => "andylevy";
         public GeoPosition Position => new GeoPosition(42.8875, -77.281667);

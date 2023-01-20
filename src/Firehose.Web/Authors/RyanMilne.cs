@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "West Midlands, United Kingdom";
         public string EmailAddress => "";
         public string TwitterHandle => "";
+        public string MastodonHandle => "";
         public string GitHubHandle => "RyanMilne";
         public string GravatarHash => "9eaef5f58501b72e6ab5a487bf9e1cb8";
         public GeoPosition Position => new GeoPosition(52.4080, -1.5105);

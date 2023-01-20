@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Boston, MA";
         public string EmailAddress => "nicholas@getchell.org";
         public string TwitterHandle => "getch3028";
+        public string MastodonHandle => "";
         public string GravatarHash => "1ebff516aa68c1b3bc786bd291b8fca1";
         public string GitHubHandle => "ngetchell";
         public GeoPosition Position => new GeoPosition(53.073635, 8.806422);

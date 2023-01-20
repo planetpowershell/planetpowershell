@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Georgia, USA";
         public string EmailAddress => "";
         public string TwitterHandle => "signalwarrant";
+        public string MastodonHandle => "";
         public string GitHubHandle => "signalwarrant";
         public string GravatarHash => "afd7acd25c1511435fd85cdeda29aa43";
         public GeoPosition Position => new GeoPosition(33.281, -82.0743);

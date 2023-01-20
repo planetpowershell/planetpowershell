@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Berkshire, UK";
         public string EmailAddress =>  "DoctorDNS@Gmail.Com";
         public string TwitterHandle => "DoctorDNS";
+        public string MastodonHandle => "";
         public string GravatarHash => "9fac677a9811ddc033b9ec883606031d";
         public string GitHubHandle => "DoctorDNS";
         public GeoPosition Position => new GeoPosition(51.5566737,-0.6941204);

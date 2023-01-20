@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Kansas City, Missouri";
         public string EmailAddress => "bryce@northcodesolutions.com";
         public string TwitterHandle => "_brycemcdonald";
+        public string MastodonHandle => "";
         public string GravatarHash => "e6600de53eef91dd803a6386c20a40bf";
         public string GitHubHandle => "mcdonaldbm";
         public GeoPosition Position => new GeoPosition(39.0997, -94.5786);

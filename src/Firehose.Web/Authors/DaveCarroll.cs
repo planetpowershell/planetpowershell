@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Nashville, TN";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "thedavecarroll";
+        public string MastodonHandle => "";
         public string GitHubHandle => "thedavecarroll";
         public string GravatarHash => "fd0387e212af38089603b5480e406545";
         public GeoPosition Position => new GeoPosition(36.0679, -86.7194);

@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "kamal.farmer@gmail.com";
         public string TwitterHandle => "";
+        public string MastodonHandle => "";
         public string GravatarHash => "f3db3bc85b78d71cb9a76e8039466dfa";
         public string GitHubHandle => "";
         public GeoPosition Position => new GeoPosition(-37.8142, 144.9632);

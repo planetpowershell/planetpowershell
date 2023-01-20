@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Gdansk, Poland";
         public string EmailAddress => "maciej.horbacz@gmail.com";
         public string TwitterHandle => "Universecitiz3n";
+        public string MastodonHandle => "";
         public string GitHubHandle => "Universecitiz3n";
         public string GravatarHash => "f59ba35493d7f1b99e25b6455dc39f5b";
         public GeoPosition Position => new GeoPosition(54.3520,18.6466);

@@ -13,6 +13,13 @@
         <p class="twitter">
             <a href="https://twitter.com/@Model.TwitterHandle">@@@Model.TwitterHandle</a>
         </p>
+        <p class="mastodon">
+            @if (!string.IsNullOrWhiteSpace(Model.MastodonHandle))
+            {
+                
+                <a href="https://@Model.MatodonHandle.split('@')[2]/@@@Model.MatodonHandle.split('@')[1]">@@@Model.MastodonHandle</a>
+            }
+        </p>
 
         <p class="description">
             @if (!string.IsNullOrWhiteSpace(Model.ShortBioOrTagLine))

@@ -15,6 +15,7 @@ public class StephenOwen : IAmAMicrosoftMVP, IFilterMyBlogPosts
         public string StateOrRegion => "Atlanta";
         public string EmailAddress => "Stephen@foxdeploy.com";
         public string TwitterHandle => "FoxDeploy";
+        public string MastodonHandle => "";
         public string GitHubHandle => "1RedOne";
         public GeoPosition Position => new GeoPosition(33.862100, -84.687900);
         

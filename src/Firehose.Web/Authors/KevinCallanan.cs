@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Chicago";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "kevincallanan";
+        public string MastodonHandle => "";
         public string GravatarHash => "efb7bbc92a66d185905c300ad5eafadb";
         public string GitHubHandle => "kevincallanan";
         public GeoPosition Position => new GeoPosition(41.882457, -87.644678);

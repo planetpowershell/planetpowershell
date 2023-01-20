@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "TX, USA";
         public string EmailAddress => "murrahjm@gmail.com";
         public string TwitterHandle => "Jeremy Murrah";
+        public string MastodonHandle => "";
         public string GitHubHandle => "murrahjm";
         public string GravatarHash => "297b54809ef14f5f3b8d0eb8e3c700f3";
         public GeoPosition Position => new GeoPosition(29.7602, -95.3694);

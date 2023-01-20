@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Bergen, Norway";
         public string EmailAddress => "tore.groneng@gmail.com";
         public string TwitterHandle => "ToreGroneng";
+        public string MastodonHandle => "";
         public string GitHubHandle => "torgro";
         public string GravatarHash => "5179a5eb394ca18bf14daa4e3987989b";
         public GeoPosition Position => new GeoPosition(60.4698789, 5.3307659);

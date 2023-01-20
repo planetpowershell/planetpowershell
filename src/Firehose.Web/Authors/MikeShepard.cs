@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Missouri,USA";
         public string EmailAddress => "mshepard70@gmail.com";
         public string TwitterHandle => "MikeShepard70";
+        public string MastodonHandle => "";
         public string GitHubHandle => "MikeShepard";
         public string GravatarHash => "45bc55fe65c938b0c65c20101dd73b6c";
         public GeoPosition Position => new GeoPosition(37.1291,-93.5151 );

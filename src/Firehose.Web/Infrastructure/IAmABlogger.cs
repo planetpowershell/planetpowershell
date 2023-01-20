@@ -26,6 +26,7 @@ namespace Firehose.Web.Infrastructure
         string ShortBioOrTagLine { get; }
         Uri WebSite { get; }
         string TwitterHandle { get; }
+        string MastodonHandle { get; }
         string GitHubHandle { get; }
         string GravatarHash { get; }
         IEnumerable<Uri> FeedUris { get; }

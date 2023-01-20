@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Franklin, USA";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "pdearmen";
+        public string MastodonHandle => "";
         public string GitHubHandle => "armentpau";
         public string GravatarHash => "7baa3ddee66f5b5e251d82079a5f6720";
         public GeoPosition Position => new GeoPosition(42.9011938,-88.0391506);

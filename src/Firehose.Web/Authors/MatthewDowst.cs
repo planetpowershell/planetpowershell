@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Denton, TX";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "mdowst";
+        public string MastodonHandle => "";
         public string GravatarHash => "8d4382ff796ead8712ffdc349a055ba6";
         public string GitHubHandle => "mdowst";
         public GeoPosition Position => new GeoPosition(33.214966,-97.133034);
