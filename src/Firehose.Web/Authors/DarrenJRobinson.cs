@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Sydney, NSW, Australia";
         public string EmailAddress => "darren@darrenjrobinson.com";
         public string TwitterHandle => "darrenjrobinson";
+        public string MastodonHandle => "";
         public string GravatarHash => "e56b6d66daa1d249647109a520ce8759";
         public string GitHubHandle => "darrenjrobinson";
         public GeoPosition Position => new GeoPosition(-33.865143, 151.209900);

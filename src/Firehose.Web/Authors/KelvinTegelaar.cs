@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Rotterdam, Netherlands";
         public string EmailAddress => "ktegelaar@cyberdrain.com";
         public string TwitterHandle => "KelvinTegelaar";
+        public string MastodonHandle => "";
         public string GitHubHandle => "KelvinTegelaar";
         public string GravatarHash => "4dc012d6848c8403805130f2fefcf64b";
         public GeoPosition Position => new GeoPosition(51.921638,4.528056);

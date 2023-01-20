@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "paolo@scriptinglibrary.com";
         public string TwitterHandle => "paolofrigo_oz";
+        public string MastodonHandle => "";
         public string GravatarHash => "444a848421a8068fc75d8cdd6cbd8eff";
         public string GitHubHandle => "paolofrigo";
         public GeoPosition Position => new GeoPosition(-37.816667, 144.966667);

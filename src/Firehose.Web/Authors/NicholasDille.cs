@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Freiburg, Germany";
         public string EmailAddress => "nicholas@dille.name";
         public string TwitterHandle => "nicholasdille";
+        public string MastodonHandle => "";
         public string GravatarHash => "3abbda431b19f55e29a1494b1fb3b859";
 
         public Uri WebSite => new Uri("https://dille.name");

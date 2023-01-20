@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "New York, NY";
         public string EmailAddress => "dan@tsknet.com";
         public string TwitterHandle => "tseknet";
+        public string MastodonHandle => "";
         public string GravatarHash => "fc477805e58b913f5082111d3dcdbe90";
         public string GitHubHandle => "tseknet";
         public GeoPosition Position => new GeoPosition(40.740764, -74.002003);

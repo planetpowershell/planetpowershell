@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Dublin, Ireland";
         public string EmailAddress => "";
         public string TwitterHandle => "TheShellNut";
+        public string MastodonHandle => "";
         public string GravatarHash => "25061653796d5c748192c68e2eb6bde8";
         public Uri WebSite => new Uri("https://mathieubuisson.github.io/");
         public IEnumerable<Uri> FeedUris

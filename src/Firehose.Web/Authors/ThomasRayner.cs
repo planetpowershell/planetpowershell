@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Redmond";
         public string EmailAddress => "thmsrynr@outlook.com";
         public string TwitterHandle => "MrThomasRayner";
+        public string MastodonHandle => "";
         public string GitHubHandle => "thomasrayner";
         public string GravatarHash => "28dbce395fcef492a3874f84afea8144";
         public GeoPosition Position => new GeoPosition(47.642384, -122.126984);

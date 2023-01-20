@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Perth, Australia";
         public string EmailAddress => "";
         public string TwitterHandle => "glennsarti";
+        public string MastodonHandle => "";
         public string GravatarHash => "aac3dafaab7a7c2063d2526ba5936305";
         public Uri WebSite => new Uri("https://sarti.dev");
         public IEnumerable<Uri> FeedUris

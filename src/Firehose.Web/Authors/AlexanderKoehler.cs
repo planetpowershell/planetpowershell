@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Mengen, Germany";
         public string EmailAddress => "planetpowershell@it-koehler.com";
         public string TwitterHandle => "ACharburner";
+        public string MastodonHandle => "";
         public string GravatarHash => "bc09e87a59be038b93da1e03079aa053";
         public string GitHubHandle => "blog-it-koehler-com";
         public GeoPosition Position => new GeoPosition(48.03849438437253, 9.326946932715074);

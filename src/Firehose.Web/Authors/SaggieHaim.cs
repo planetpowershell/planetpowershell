@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Israel";
         public string EmailAddress => "contact@saggiehaim.net";
         public string TwitterHandle => "saggiehaim";
+        public string MastodonHandle => "";
         public string GravatarHash => "933957374d006887d1ac1928e1a02a48";
         public string GitHubHandle => "SaggieHaim";
         public GeoPosition Position => new GeoPosition(32.0853, 34.7818);

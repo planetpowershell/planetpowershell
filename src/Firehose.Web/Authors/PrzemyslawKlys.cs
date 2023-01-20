@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Katowice, Poland";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "PrzemyslawKlys";
+        public string MastodonHandle => "";
         public string GitHubHandle => "PrzemyslawKlys";
         public string GravatarHash => "f855c203fffaae0e1c1f16f4411236bf";
         public GeoPosition Position => new GeoPosition(50.2648919,19.0237815);

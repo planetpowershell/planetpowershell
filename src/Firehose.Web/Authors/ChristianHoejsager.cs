@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Denmark";
         public string EmailAddress => "christian@scriptingchris.tech";
         public string TwitterHandle => "_ScriptingChris";
+        public string MastodonHandle => "";
         public string GitHubHandle => "ScriptingChris";
         public string GravatarHash => "d406f408c17d8a42f431cd6f90b007b1";
         public GeoPosition Position => new GeoPosition(55.709830, 9.536208);

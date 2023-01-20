@@ -16,6 +16,7 @@ public class LucFullenwarth : IAmACommunityMember, IFilterMyBlogPosts
     public string GravatarHash => "ec967d9f1a0a2070951f22d87309d2d3";
     public string GitHubHandle => "fullenw1";
     public string TwitterHandle => "";
+    public string MastodonHandle => "";
     public GeoPosition Position => new GeoPosition(48.583636, 7.745839);
     public Uri WebSite => new Uri("https://itluke.online/");
     public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://itluke.online/feed/"); } }

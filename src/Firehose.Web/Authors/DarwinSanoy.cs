@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Philadelphia, PA";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "DarwinTheorizes";
+        public string MastodonHandle => "";
         public string GravatarHash => "566be8d4a7b78dc25ab07bd61a48116b";
         public string GitHubHandle => "DarwinJS";
         public GeoPosition Position => new GeoPosition(40.1303822,-75.5149128);

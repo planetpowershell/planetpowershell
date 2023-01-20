@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Wroclaw, Poland";
         public string EmailAddress => "mczerniawski@arcon.net.pl";
         public string TwitterHandle => "arcontar";
+        public string MastodonHandle => "";
         public string GitHubHandle => "mczerniawski";
         public string GravatarHash => "f0e6c49009d0a9fb3c1453c2cfd9334a";
         public GeoPosition Position => new GeoPosition(51.1078850,17.0385380);

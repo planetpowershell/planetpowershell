@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Yorkshire, UK";
         public string EmailAddress => "halbaradkenafin@outlook.com";
         public string TwitterHandle => "halbaradkenafin";
+        public string MastodonHandle => "";
         public string GravatarHash => "0fb1b268e36194d977d56e778d5794a2";
         public string GitHubHandle => "chrislgardner";
         public GeoPosition Position => new GeoPosition(53.8008,-1.5491);

@@ -15,6 +15,7 @@ public class FarisMalaeb : IAmACommunityMember
         public string StateOrRegion => "Abu Dhabi";
         public string EmailAddress => "farismalaeb@protonmail.com";
         public string TwitterHandle => "FarisMalaeb";
+        public string MastodonHandle => "";
         public string GravatarHash => "377a1010f17e8d5c5564258012063655";
         public string GitHubHandle => "farismalaeb";
         public GeoPosition Position => new GeoPosition(24.471011, 54.378537);

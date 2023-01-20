@@ -15,6 +15,7 @@ public class MattMcNabb : IAmACommunityMember
         public string StateOrRegion => "Ohio";
         public string EmailAddress => "mmcnabb@outlook.com";
         public string TwitterHandle => "mcnabbmh";
+        public string MastodonHandle => "";
         public string GitHubHandle => "mattmcnabb";
         public GeoPosition Position => new GeoPosition(39.403986, -84.406761);
         public Uri WebSite => new Uri("https://mattmcnabb.github.io");

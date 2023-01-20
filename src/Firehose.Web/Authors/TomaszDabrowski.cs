@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Wroclaw, Poland";
         public string EmailAddress => "dombros@gmail.com";
         public string TwitterHandle => "Dom_Bros";
+        public string MastodonHandle => "";
         public string GitHubHandle => "dombros";
         public string GravatarHash => "aab345407bf784ea4e40334d3ab51eab";
         public GeoPosition Position => new GeoPosition(51.1078850,17.0385380);

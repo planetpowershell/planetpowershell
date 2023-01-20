@@ -16,6 +16,7 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "";
         public string GravatarHash => "70ac0c6fd63afc54ddf5e3c927f51d02";
         public string TwitterHandle => "EwertonJordao";
+        public string MastodonHandle => "";
         public string GitHubHandle => "EwertonJordao";
         public GeoPosition Position => new GeoPosition(-23.536729, -46.635690);
         public Uri WebSite => new Uri("https://medium.com/@ewertonjordao");

@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Dallas/Fort Worth, Texas, USA";
         public string EmailAddress => "Get-PowerShellBlog@markekraus.com";
         public string TwitterHandle => "markekraus";
+        public string MastodonHandle => "";
         public string GitHubHandle => "markekraus";
         public string GravatarHash => "ddd9a3f6a4c31ea3c3a214b5f0912c36";
         public GeoPosition Position => new GeoPosition(32.9481800,-96.7297200);

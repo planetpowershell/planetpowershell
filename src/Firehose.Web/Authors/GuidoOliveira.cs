@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Sao Paulo, BR";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "_Guido_Oliveira";
+        public string MastodonHandle => "";
         public string GravatarHash => "c1246cb9e45ce18ade58f0a99ec0a106";
         public string GitHubHandle => "guidooliveira";
         public GeoPosition Position => new GeoPosition(23.4543,46.5337);

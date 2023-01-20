@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "San Francisco Bay, CA, USA";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "lazywinadmin";
+        public string MastodonHandle => "";
         public string GitHubHandle => "lazywinadmin";
         public string GravatarHash => "d0f72a655be62f8c34d4d1e3c5ba278a";
         public GeoPosition Position => new GeoPosition(37.5545405,-122.2699152);

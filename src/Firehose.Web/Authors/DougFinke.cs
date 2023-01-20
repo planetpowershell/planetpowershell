@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "New York City, United States";
         public string EmailAddress => "finked@hotmail.com";
         public string TwitterHandle => "dfinke";
+        public string MastodonHandle => "";
         public string GravatarHash => "94c48c63e7e63f5e713f7f7a5cdbcac0";
         public Uri WebSite => new Uri("https://dfinke.github.io/#blog");
         public IEnumerable<Uri> FeedUris

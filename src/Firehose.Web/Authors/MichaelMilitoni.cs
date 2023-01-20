@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Brussles, Belgium";
         public string EmailAddress => "mm@v-itpassion.be";
         public string TwitterHandle => "MichaelMilitoni";
+        public string MastodonHandle => "";
         public string GitHubHandle => "itguru4u-be";
         public string GravatarHash => "";
         public GeoPosition Position => new GeoPosition(50.8503396,4.3517103);

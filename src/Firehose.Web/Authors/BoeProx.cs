@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Bellevue, NE";
         public string EmailAddress => "boeprox@gmail.com";
         public string TwitterHandle => "proxb";
+        public string MastodonHandle => "";
         public string GravatarHash => "3bde2094c84fb81661c04ed87f8336b7";
         public string GitHubHandle => "boeprox";
         public GeoPosition Position => new GeoPosition(41.15861, -95.93417);
