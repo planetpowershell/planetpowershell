@@ -20,7 +20,7 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "fafdbc410c9adf8c4d2235d37470859a";
         public GeoPosition Position => new GeoPosition(-39.4928, 176.9120);
         public Uri WebSite => new Uri("https://toastit.dev/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://toastit.dev/tag/powershell/rss/"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://toastit.dev/tag/powershell/index.xml"); } }
         public string FeedLanguageCode => "en";
     }
 }

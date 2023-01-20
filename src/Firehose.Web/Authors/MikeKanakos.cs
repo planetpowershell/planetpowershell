@@ -11,17 +11,16 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Mike";
         public string LastName => "Kanakos";
-        public string ShortBioOrTagLine => "Windows IT pro located in the RTP area of North Carolina. Active Directory, Azure AD, Group Policy, and automation.";
+        public string ShortBioOrTagLine => " A Microsoft MVP and Automation enthusiast located in the RTP area of North Carolina. His blog concentrates on PowerShell and Azure automation.";
         public string StateOrRegion => "Apex, NC";
-        public string EmailAddress => "mike@networkadm.in";
+        public string EmailAddress => "mkanakos@gmail.com";
         public string TwitterHandle => "MikeKanakos";
         public string MastodonHandle => "";
         public string GravatarHash => "2bca167386e229ec2c5606f6c1677493";
         public string GitHubHandle => "compwiz32";
         public GeoPosition Position => new GeoPosition(35.7327, 78.8503);
-
-        public Uri WebSite => new Uri("https://www.networkadm.in/");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.networkadm.in/rss/"); } }
-        public string FeedLanguageCode => "en";
+        public Uri WebSite => new Uri("https://www.commandline.ninja");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.commandline.ninja/rss/"); } }
+		public string FeedLanguageCode => "en";
     }
 }

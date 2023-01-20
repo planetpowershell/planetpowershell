@@ -46,6 +46,7 @@ stages:
   
   - job: validate_armtemplate
     displayName: 'Validate ARM Template'
+    dependsOn: build_planetpowershell
     pool:
       vmImage: windows-latest
     steps:
@@ -59,7 +60,7 @@ stages:
 
 - stage: development
   dependsOn: build
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/development'))
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/development'), eq(variables['Build.SourceBranch'], 'refs/heads/main')))
   jobs:
   - deployment: deploy_dev_armtemplate
     displayName: 'Deploy Development Azure Resources'
@@ -97,7 +98,7 @@ stages:
               hostname: 'dev.planetpowershell.com'
 
 - stage: production
-  dependsOn: build
+  dependsOn: development
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   jobs:
   - deployment: deploy_prod_armtemplate

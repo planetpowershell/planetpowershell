@@ -22,7 +22,7 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://claudioessilva.eu");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://claudioessilva.eu/category/powershell/feed/"); }
+            get { yield return new Uri("https://claudioessilva.eu/feed.xml"); }
         }
         public string FeedLanguageCode => "en";
     }
