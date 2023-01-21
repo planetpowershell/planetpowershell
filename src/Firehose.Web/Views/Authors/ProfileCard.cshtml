@@ -16,7 +16,7 @@
         <p class="mastodon">
             @if (!string.IsNullOrWhiteSpace(Model.MastodonHandle))
             {
-                <a href="https://@Model.MatodonHandle.split('@')[2]/@@@Model.MatodonHandle.split('@')[1]">@@@Model.MastodonHandle</a>
+                <a href="https://@(Model.MastodonHandle.Split('@')[2])/&#64;@(Model.MastodonHandle.Split('@')[1])">@Model.MastodonHandle</a>
             }
         </p>
 
