@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Bradley";
         public string LastName => "Wyatt";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Microsoft MVP, author of The Lazy Administrator, Co-Organizer of the Chicago PowerShell Conference, & Chicago PowerShell Users Group";
         public string StateOrRegion => "Geneva, IL, USA";
         public string EmailAddress => "brad@thelazyadministrator.com";

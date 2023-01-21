@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Warren";
         public string LastName => "Frame";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => ":Infrastructure Engineer with a penchant for PowerShell, science, cooking, information security, family, cookies, and the Oxford comma.";
         public string StateOrRegion => "Boston Area, USA";
         public string EmailAddress => "warren.frame@gmail.com";

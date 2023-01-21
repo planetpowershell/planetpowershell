@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Darren";
         public string LastName => "Robinson";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Bespoke Identity and Access Management Solutions";
         public string StateOrRegion => "Sydney, NSW, Australia";
         public string EmailAddress => "darren@darrenjrobinson.com";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Maciej";
         public string LastName => "Horbacz";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "PowerShell and Intune are my thing ⚔️";
         public string StateOrRegion => "Gdansk, Poland";
         public string EmailAddress => "maciej.horbacz@gmail.com";

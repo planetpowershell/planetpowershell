@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Luke";
         public string LastName => "Murray";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "An IT Engineer with a love for all things IT including (but not limited to), Microsoft Azure, Automation and Service Management!";
         public string StateOrRegion => "Waikato, New Zealand";
         public string EmailAddress => "email@luke.geek.nz";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Nicholas";
         public string LastName => "Getchell";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Systems Administrator";
         public string StateOrRegion => "Boston, MA";
         public string EmailAddress => "nicholas@getchell.org";

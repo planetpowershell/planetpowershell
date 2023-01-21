@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Boe";
         public string LastName => "Prox";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "SQL DBA, Windows Admin, Security wannabe, who loves PowerShell";
         public string StateOrRegion => "Bellevue, NE";
         public string EmailAddress => "boeprox@gmail.com";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Paolo";
         public string LastName => "Frigo";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "DevOps and System Engineer";
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "paolo@scriptinglibrary.com";

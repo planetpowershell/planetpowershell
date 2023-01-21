@@ -20,6 +20,7 @@ namespace Firehose.Web.Infrastructure
     public interface IAmACommunityMember
     {
         string FirstName { get; }
+        string Pronouns { get; }
         string LastName { get; }
         string StateOrRegion { get; }
         string EmailAddress { get; }

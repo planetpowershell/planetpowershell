@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "David";
         public string LastName => "Christian";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Father, DevOps Engineer, Musician, Dude";
         public string StateOrRegion => "Orange County, CA";
         public string EmailAddress => "dchristian3188@gmail.com";

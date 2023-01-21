@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Francois-Xavier";
         public string LastName => "Cat";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Systems Engineer, Microsoft MVP, French PowerShell UserGroup Organizer";
         public string StateOrRegion => "San Francisco Bay, CA, USA";
         public string EmailAddress => string.Empty;

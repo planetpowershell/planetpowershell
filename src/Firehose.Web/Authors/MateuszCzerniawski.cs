@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Mateusz";
         public string LastName => "Czerniawski";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "PowerShell Enthusiast, WinOps and HyperV";
         public string StateOrRegion => "Wroclaw, Poland";
         public string EmailAddress => "mczerniawski@arcon.net.pl";

@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kurt";
         public string LastName => "Roggen [BE]";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Cloud & Datacenter Management MVP and Principal Technical Consultant";
         public string StateOrRegion => "Belgium";
         public string EmailAddress => "";

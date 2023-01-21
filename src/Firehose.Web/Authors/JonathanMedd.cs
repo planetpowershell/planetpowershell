@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jonathan";
         public string LastName => "Medd";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Microsoft MVP - Cloud & Datacenter Management";
         public string StateOrRegion => "United Kingdom";
         public string EmailAddress => "jon_medd@hotmail.com";

@@ -9,7 +9,14 @@
     </div>
     <div class="profileCardWrapper">
 
-        <p class="name">@Model.FirstName @Model.LastName</p>
+        @if (string.IsNullOrWhiteSpace(Model.Pronouns))
+        {
+            <p class="name">@Model.FirstName @Model.LastName</p>
+        }
+        else
+        {
+            <p class="name">@Model.FirstName @Model.LastName (@Model.Pronouns)</p>
+        }
         <p class="twitter">
             <a href="https://twitter.com/@Model.TwitterHandle">@@@Model.TwitterHandle</a>
         </p>

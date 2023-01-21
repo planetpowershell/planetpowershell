@@ -10,6 +10,7 @@ public class LucFullenwarth : IAmACommunityMember, IFilterMyBlogPosts
 {
     public string FirstName => "Luc";
     public string LastName => "Fullenwarth";
+    public string Pronouns => "";
     public string ShortBioOrTagLine => "Luc is working as a Windows SysAdmin since 1999, and focuses mainly on Microsoft products (Windows, Azure, PowerShell, Active Directory, PKI, Security)";
     public string StateOrRegion => "Strasbourg, France";
     public string EmailAddress => "luke.blog@outlook.com";

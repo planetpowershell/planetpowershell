@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Victor";
         public string LastName => "Silva";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "";
         public string StateOrRegion => "Montevideo, Uruguay";
         public string EmailAddress => "vmsilvamolina@hotmail.com";

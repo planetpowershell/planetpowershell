@@ -11,6 +11,7 @@ public class MattBobke : IAmACommunityMember, IFilterMyBlogPosts
 {
     public string FirstName => "Matt";
     public string LastName => "Bobke";
+    public string Pronouns => "";
     public string ShortBioOrTagLine => "Desktop Support Specialist with admninistrative tendencies excited about PowerShell and automation.";
     public string StateOrRegion => "California, United States";
     public string GravatarHash => "6f38a96cd055f95eacd1d3d102e309fa";

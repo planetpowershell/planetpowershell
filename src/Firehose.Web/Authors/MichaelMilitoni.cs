@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Michael";
         public string LastName => "Militoni";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "An IT pro passionned and specialized in Virtualization";
         public string StateOrRegion => "Brussles, Belgium";
         public string EmailAddress => "mm@v-itpassion.be";

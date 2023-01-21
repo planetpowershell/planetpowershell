@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Cláudio";
         public string LastName => "Silva";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "SQL Server DBA and PowerShell MVP who loves to automate any process that needs to be done more than a couple of times.";
         public string StateOrRegion => "Sintra, Portugal";
         public string EmailAddress => string.Empty;

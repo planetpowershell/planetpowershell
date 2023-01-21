@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jeremy";
         public string LastName => "Murrah";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "A Windows Sysadmin turned automation engineer.  Passionate about PowerShell and automation in general";
         public string StateOrRegion => "TX, USA";
         public string EmailAddress => "murrahjm@gmail.com";
