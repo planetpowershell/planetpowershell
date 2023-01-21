@@ -307,10 +307,10 @@
     </None>
     <Content Include="Content\css\site.less" />
     <Content Include="Content\img\icons\manifest.json" />
-    <Content Include="Content\plugins\fontawesome\fonts\fa-regular-400.ttf" />
-    <Content Include="Content\plugins\fontawesome\fonts\fa-regular-400.woff2" />
-    <Content Include="Content\plugins\fontawesome\fonts\fa-v4compatibility.ttf" />
-    <Content Include="Content\plugins\fontawesome\fonts\fa-v4compatibility.woff2" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-v4compatibility.woff2" />
     <Content Include="Content\plugins\fontawesome\less\fontawesome.less" />
     <Content Include="Content\plugins\fontawesome\less\regular.less" />
     <Content Include="Content\plugins\fontawesome\less\v4-shims.less" />
