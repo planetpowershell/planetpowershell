@@ -11,11 +11,11 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kieran";
         public string LastName => "Jacobsen";
-        public string ShortBioOrTagLine => "Readifarian, works with PowerShell";
+        public string ShortBioOrTagLine => " and works for Phocas Software.";
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "code@poshsecurity.com";
         public string TwitterHandle => "kjacobsen";
-        public string MastodonHandle => "@planetpowershell@infosec.exchange";
+        public string MastodonHandle => "@Kjacobsen@infosec.exchange";
         public string GravatarHash => "ed4cadbdf180e7da1ce81da17126e571";
         public Uri WebSite => new Uri("https://poshsecurity.com/");
         public IEnumerable<Uri> FeedUris
