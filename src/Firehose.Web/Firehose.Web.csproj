@@ -315,8 +315,8 @@
     <Content Include="Content\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-brands-400.ttf" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-brands-400.woff2" />
-    <Content Include="Content\plugins\fontawesome\webfonts\fa-solid-400.ttf" />
-    <Content Include="Content\plugins\fontawesome\webfonts\fa-solid-400.woff2" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-v4compatibility.woff2" />
     <Content Include="Content\plugins\fontawesome\less\fontawesome.less" />
