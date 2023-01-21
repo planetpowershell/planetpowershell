@@ -289,6 +289,10 @@
     <Content Include="Content\css\site.css" />
     <Content Include="Content\plugins\fontawesome\css\fontawesome.css" />
     <Content Include="Content\plugins\fontawesome\css\fontawesome.min.css" />
+    <Content Include="Content\plugins\fontawesome\css\brands.css" />
+    <Content Include="Content\plugins\fontawesome\css\brands.min.css" />
+    <Content Include="Content\plugins\fontawesome\css\solid.css" />
+    <Content Include="Content\plugins\fontawesome\css\solid.min.css" />
     <Content Include="Content\plugins\fontawesome\css\v4-font-face.css" />
     <Content Include="Content\plugins\fontawesome\css\v4-font-face.min.css" />
     <Content Include="Global.asax" />
@@ -312,9 +316,15 @@
     <Content Include="Content\img\icons\manifest.json" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-regular-400.ttf" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-solid-400.ttf" />
+    <Content Include="Content\plugins\fontawesome\webfonts\fa-solid-400.woff2" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Content\plugins\fontawesome\webfonts\fa-v4compatibility.woff2" />
     <Content Include="Content\plugins\fontawesome\less\fontawesome.less" />
+    <Content Include="Content\plugins\fontawesome\less\brands.less" />
+    <Content Include="Content\plugins\fontawesome\less\solid.less" />
     <Content Include="Content\plugins\fontawesome\less\regular.less" />
     <Content Include="Content\plugins\fontawesome\less\v4-shims.less" />
     <Content Include="Content\plugins\fontawesome\scss\_animated.scss" />

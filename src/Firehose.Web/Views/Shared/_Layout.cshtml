@@ -29,7 +29,10 @@
     <meta name="msapplication-TileImage" content="~/content/img/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="~/Content/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/Content/plugins/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="~/Content/plugins/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="~/Content/plugins/fontawesome/css/v4-font-dace.min.css">
     @RenderSection("head", false)
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -61,10 +64,10 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Authors", "Index", "Authors")</li>
                     <li>@Html.ActionLink("Preview", "Index", "Preview")</li>
-                    <li><a href="@Url.Action("Index", "Feed")"><i class="fa fa-rss" aria-hidden="true"></i> <span id="rssText">RSS Feed</span></a></li>
-                    <li><a href="https://infosec.exchange/&#64;planetpowershell"><i class="fa fa-mastodon" aria-hidden="true"></i> <span id="mastodonText">Mastodon</span></a></li>
-                    <li><a href="https://twitter.com/planetpshell"><i class="fa fa-twitter" aria-hidden="true"></i> <span id="twitterText">Twitter</span></a></li>
-                    <li><a href="https://www.facebook.com/planetpowershell/"><i class="fa fa-facebook" aria-hidden="true"></i> <span id="facebookText">Facebook</span></a></li>
+                    <li><a href="@Url.Action("Index", "Feed")"><i class="fa-solid fa-rss" aria-hidden="true"></i> <span id="rssText">RSS Feed</span></a></li>
+                    <li><a href="https://infosec.exchange/&#64;planetpowershell"><i class="fa-brands fa-mastodon" aria-hidden="true"></i> <span id="mastodonText">Mastodon</span></a></li>
+                    <li><a href="https://twitter.com/planetpshell"><i class="fa-brands fa-twitter" aria-hidden="true"></i> <span id="twitterText">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/planetpowershell/"><i class="fa-brands fa-facebook" aria-hidden="true"></i> <span id="facebookText">Facebook</span></a></li>
                 </ul>
             </div>
         </div>
