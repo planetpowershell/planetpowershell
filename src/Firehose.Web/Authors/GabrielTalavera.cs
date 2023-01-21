@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Asunción, Paraguay";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "gtalavera_ITPro";
+        public string MastodonHandle => "";
         public string GravatarHash => "00000000000000000000000000000000";
         public string GitHubHandle => "gabrieltalavera";
         public GeoPosition Position => new GeoPosition(-25.2981197,-57.5872534);

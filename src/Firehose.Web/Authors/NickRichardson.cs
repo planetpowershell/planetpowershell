@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Omaha, Nebraska";
         public string EmailAddress => "nick@spiderzebra.com";
         public string TwitterHandle => "ChiefNSR";
+        public string MastodonHandle => "";
         public string GravatarHash => "e0c2f09bf7f391bcf7aac9efc9325d67";
         public string GitHubHandle => "n2501r";
         public GeoPosition Position => new GeoPosition(41.257160, -95.995102);

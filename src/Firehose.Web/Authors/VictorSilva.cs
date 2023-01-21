@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Montevideo, Uruguay";
         public string EmailAddress => "vmsilvamolina@hotmail.com";
         public string TwitterHandle => "vmsilvamolina";
+        public string MastodonHandle => "";
         public string GitHubHandle => "vmsilvamolina";
         public string GravatarHash => "f641e3c18a5af7afb0e78527f2ceaa99";
         public GeoPosition Position => new GeoPosition(-34.908, -56.176);

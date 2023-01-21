@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Northern Virginia, United States";
         public string EmailAddress => "cdhunt@gmail.com";
         public string TwitterHandle => "logicaldiagram";
+        public string MastodonHandle => "";
         public string GravatarHash => "d5d9ccbefb9ee62169d1543d5634d0fd";
         public Uri WebSite => new Uri("https://www.automatedops.com/");
         public IEnumerable<Uri> FeedUris

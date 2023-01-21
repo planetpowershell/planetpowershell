@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Waikato, New Zealand";
         public string EmailAddress => "email@luke.geek.nz";
         public string TwitterHandle => "lukemurraynz";
+        public string MastodonHandle => "";
         public string GitHubHandle => "lukemurraynz";
         public string GravatarHash => "8ffb014d63a93e99033fca127fd14640";
         public GeoPosition Position => new GeoPosition(-37.45579900000001, 175.18940450000002);

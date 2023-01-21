@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Missouri, USA";
         public string EmailAddress => "rickardja@live.com";
         public string TwitterHandle => "MS_dministrator";
+        public string MastodonHandle => "";
         public string GitHubHandle => "MSAdministrator";
         public string GravatarHash => "a3cab24cca7ccf6c969a9161fa1405ef";
         public GeoPosition Position => new GeoPosition(38.9517, 92.3341);

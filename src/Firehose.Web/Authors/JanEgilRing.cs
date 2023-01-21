@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Norway";
         public string EmailAddress => "jan.egil.ring@outlook.com";
         public string TwitterHandle => "JanEgilRing";
+        public string MastodonHandle => "";
         public string GitHubHandle => "janegilring";
         public string GravatarHash => "ed08d635415486b87539a6e5a81982b7";
         public GeoPosition Position => new GeoPosition(59.8832270,10.9551500);

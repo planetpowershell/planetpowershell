@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Ireland";
         public string EmailAddress => "rescueme@planetpowershell.com";
         public string TwitterHandle => "powershellone";
+        public string MastodonHandle => "";
         public string GravatarHash => "fc95464388c9f41d7da43a6618fb04bd";
         public string GitHubHandle => "dbremen";
         public GeoPosition Position => new GeoPosition(53.338389, -6.258877);

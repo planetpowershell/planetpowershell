@@ -14,6 +14,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Arizona, USA";
         public string EmailAddress => "tommy@tommymaynard.com";
         public string TwitterHandle => "thetommymaynard";
+        public string MastodonHandle => "";
         public string GitHubHandle => "tommymaynard";
         public string GravatarHash => "dea0a101353757985987705b513cc540";
         public GeoPosition Position => new GeoPosition(32.2217, -110.9265);

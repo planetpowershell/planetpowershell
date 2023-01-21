@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "me@david-obrien.net";
         public string TwitterHandle => "david_obrien";
+        public string MastodonHandle => "";
         public string GravatarHash => "c93bbf72255d38bab70895eb7c0b3f99";
         public Uri WebSite => new Uri("https://david-obrien.net/");
         public IEnumerable<Uri> FeedUris

@@ -15,6 +15,7 @@ public class HarmVeenstra : IAmACommunityMember
         public string StateOrRegion => "Overijssel";
         public string EmailAddress => "harm.veenstra@gmail.com";
         public string TwitterHandle => "HarmVeenstra";
+        public string MastodonHandle => "";
         public string GravatarHash => "432c4a0a81ea2b900a6d654452002964";
         public string GitHubHandle => "HarmVeenstra";
         public GeoPosition Position => new GeoPosition(52.786708, 6.116538);

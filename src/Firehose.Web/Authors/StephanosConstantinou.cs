@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Limassol,Cyprus";
         public string EmailAddress => "stephanos@sconstantinou.com";
         public string TwitterHandle => "SCPowerShell";
+        public string MastodonHandle => "";
         public string GravatarHash => "04de5e0523cf48e9493c11905fd5999f";
         public string GitHubHandle => "SConstantinou";
         public GeoPosition Position => new GeoPosition(34.706249, 33.022578);

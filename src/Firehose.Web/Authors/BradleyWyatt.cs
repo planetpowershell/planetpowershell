@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Geneva, IL, USA";
         public string EmailAddress => "brad@thelazyadministrator.com";
         public string TwitterHandle => "bwya77";
+        public string MastodonHandle => "";
         public string GitHubHandle => "bwya77";
         public string GravatarHash => "c4eaa00e143c7abb1362dc9a8a48da09";
         public GeoPosition Position => new GeoPosition(41.887212,-88.302487);

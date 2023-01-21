@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Evansville, IN";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "adbertram";
+        public string MastodonHandle => "";
         public string GravatarHash => "f21b5adac336b3678098de870efcf994";
         public string GitHubHandle => "adbertram";
         public GeoPosition Position => new GeoPosition(37.996239,-87.54378);

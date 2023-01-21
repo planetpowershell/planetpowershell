@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "New York, United States";
         public string EmailAddress => "jhicks@jdhitsolutions.com";
         public string TwitterHandle => "jeffhicks";
+        public string MastodonHandle => "";
         public string GravatarHash => "1393cfe66dace329de043b14544985db ";
         public Uri WebSite => new Uri("https://blog.jdhitsolutions.com/");
         public IEnumerable<Uri> FeedUris

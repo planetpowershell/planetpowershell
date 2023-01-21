@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Heerlen, Netherlands";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "bjornhouben";
+        public string MastodonHandle => "@bjompen@mastodon.nu";
         public string GravatarHash => "7d072aaf4d60ec2a94367e744a626ea0";
         public string GitHubHandle => "bjornhouben";
         public GeoPosition Position => new GeoPosition(50.8881740, 5.9794990);

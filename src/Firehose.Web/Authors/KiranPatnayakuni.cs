@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Karnataka, India";
         public string EmailAddress => "kiran@patnayakuni.com";
         public string TwitterHandle => "kpatnayakuni";
+        public string MastodonHandle => "";
         public string GitHubHandle => "kpatnayakuni";
         public string GravatarHash => "9e6f3d364a0c54d745ff5c33ab4a8885";
 

@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Sintra, Portugal";
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "claudioessilva";
+        public string MastodonHandle => "";
         public string GravatarHash => "c01100dc9b797cc424e48ca9c5ecb76f";
         public string GitHubHandle => "claudioessilva";
         public GeoPosition Position => new GeoPosition(38.754074938, -9.2808723);

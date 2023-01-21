@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "United Kingdom";
         public string EmailAddress => "jon_medd@hotmail.com";
         public string TwitterHandle => "jonathanmedd";
+        public string MastodonHandle => "";
         public string GitHubHandle => "jonathanmedd";
         public string GravatarHash => "1b01887ac956ccd429a4209ade5cdb68";
         public GeoPosition Position => new GeoPosition(50.8245565, -1.2148624);

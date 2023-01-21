@@ -52,6 +52,11 @@
   float: right;
   margin-top: 5px;
 }
+.businessCard .mastodon-follow-button {
+  clear: both;
+  float: right;
+  margin-top: 5px;
+}
 .businessCard .contactDetail {
   margin-right: 1em;
 }
@@ -79,7 +84,11 @@
 .profileCard .profileCardWrapper .description {
   min-height: 80px;
 }
-.profileCard .profileCardWrapper .twitter a {
+.profileCard .profileCardWrapper .twitter  a {
+  color: #7d8c8d;
+  font-size: 13px;
+}
+.profileCard .profileCardWrapper .mastodon  a {
   color: #7d8c8d;
   font-size: 13px;
 }
@@ -144,6 +153,9 @@
   margin: 30px 0;
 }
 .leader i.fa {
+  font-size: 40px;
+}
+.leader i.fa-solid {
   font-size: 40px;
 }
 /* No scrolling for collapsed menu */

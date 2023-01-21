@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Boston, USA";
         public string EmailAddress => "qsteenhuis@gmail.com";
         public string TwitterHandle => "qsteenhuis";
+        public string MastodonHandle => "";
         public string GitHubHandle => "nonprofittechy";
         public string GravatarHash => "df83ceb7d3b3b924f131abc408c3bfa";
         public GeoPosition Position => new GeoPosition(42.364086, -71.060546);

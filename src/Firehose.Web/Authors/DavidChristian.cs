@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Orange County, CA";
         public string EmailAddress => "dchristian3188@gmail.com";
         public string TwitterHandle => "dchristian3188";
+        public string MastodonHandle => "";
         public string GitHubHandle => "dchristian3188";
         public string GravatarHash => "835bce5d3f5fbfbad3ac5ec42a6abad2";
         public GeoPosition Position => new GeoPosition(33.7174710,-117.8311430);

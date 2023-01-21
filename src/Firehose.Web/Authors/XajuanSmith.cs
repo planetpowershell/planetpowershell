@@ -15,6 +15,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Michigan, US";
         public string EmailAddress => "Xajuan@live.com";
         public string TwitterHandle => "XajuanS1";
+        public string MastodonHandle => "";
         public string GravatarHash => "9084467aac5841fa7977fa8cafae76c4";
         public GeoPosition Position => new GeoPosition(44.182205, -84.506836);
         public Uri WebSite => new Uri("https://Powershell.city/");
