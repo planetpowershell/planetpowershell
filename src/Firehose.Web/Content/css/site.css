@@ -155,6 +155,9 @@
 .leader i.fa {
   font-size: 40px;
 }
+.leader i.fa-solid {
+  font-size: 40px;
+}
 /* No scrolling for collapsed menu */
 .navbar-collapse.in {
   overflow: hidden;
