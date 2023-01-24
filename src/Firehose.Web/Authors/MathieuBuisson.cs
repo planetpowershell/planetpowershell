@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Mathieu";
         public string LastName => "Buisson";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Senior DevOps Engineer. Working on Dev, Ops and everything in between";
         public string StateOrRegion => "Dublin, Ireland";
         public string EmailAddress => "";

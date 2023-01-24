@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Tommy";
         public string LastName => "Maynard";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Information Technology Professional (PowerShell Enthusiast)";
         public string StateOrRegion => "Arizona, USA";
         public string EmailAddress => "tommy@tommymaynard.com";

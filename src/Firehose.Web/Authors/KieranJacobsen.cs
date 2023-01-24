@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kieran";
         public string LastName => "Jacobsen";
+        public string Pronouns => "he/him";
         public string ShortBioOrTagLine => " and works for Phocas Software.";
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "code@poshsecurity.com";

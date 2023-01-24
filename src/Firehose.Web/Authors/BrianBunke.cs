@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Brian";
         public string LastName => "Bunke";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "A self-deprecating Systems Automator interested in learning, testing, documenting, and open source.";
         public string StateOrRegion => "WA, USA";
         public string EmailAddress => "me@brianbunke.com";

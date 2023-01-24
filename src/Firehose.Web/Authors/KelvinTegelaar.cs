@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kelvin";
         public string LastName => "Tegelaar";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "For every monitoring automation there is an equal PowerShell remediation.";
         public string StateOrRegion => "Rotterdam, Netherlands";
         public string EmailAddress => "ktegelaar@cyberdrain.com";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Roberth";
         public string LastName => "Strand";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "PowerShell, Azure, Security and other fun stuff!";
         public string StateOrRegion => "Tromsø, Norway";
         public string EmailAddress => "me@robstr.dev";

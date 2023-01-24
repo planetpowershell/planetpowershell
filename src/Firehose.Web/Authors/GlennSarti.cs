@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Glenn";
         public string LastName => "Sarti";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "is a Senior Software Developer for HashiCorp.";
         public string StateOrRegion => "Perth, Australia";
         public string EmailAddress => "";

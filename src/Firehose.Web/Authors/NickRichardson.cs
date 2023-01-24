@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Nick";
         public string LastName => "Richardson";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "PowerShell | Automation | DevOps | VDI";
         public string StateOrRegion => "Omaha, Nebraska";
         public string EmailAddress => "nick@spiderzebra.com";

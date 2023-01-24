@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Pawel";
         public string LastName => "Jarosz";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "My IT adventures with a doze of homour";
         public string StateOrRegion => "Wroclaw, Poland";
         public string EmailAddress => "pawel.jarosz@gmail.com";

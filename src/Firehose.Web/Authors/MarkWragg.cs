@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
 	{
 		public string FirstName => "Mark";
 		public string LastName => "Wragg";
+		public string Pronouns => "";
 		public string ShortBioOrTagLine => "Operations Manager interested in all things Windows, Powershell, AWS, Azure, Chef etc.";
 		public string StateOrRegion => "Hook, England";
 		public string EmailAddress => "mark@wragg.io";

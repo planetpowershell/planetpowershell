@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jan Egil";
         public string LastName => "Ring";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Microsoft MVP - Cloud & Datacenter Management";
         public string StateOrRegion => "Norway";
         public string EmailAddress => "jan.egil.ring@outlook.com";

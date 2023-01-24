@@ -11,6 +11,7 @@ public class StephenOwen : IAmAMicrosoftMVP, IFilterMyBlogPosts
     {
         public string FirstName => "Stephen";
         public string LastName => "Owen";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "FoxDeploy.SubjectMatter = writes about PowerShell";
         public string StateOrRegion => "Atlanta";
         public string EmailAddress => "Stephen@foxdeploy.com";

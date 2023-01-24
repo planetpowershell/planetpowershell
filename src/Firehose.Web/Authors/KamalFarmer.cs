@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kamal";
         public string LastName => "Farmer";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Microsoft and VMware Technical Specialist  /  PowerShell Automation / NV1 Security Cleared";
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "kamal.farmer@gmail.com";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Kiran";
         public string LastName => "Patnayakuni";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Cloud Ops Engineering Specialist @ Accenture";
         public string StateOrRegion => "Karnataka, India";
         public string EmailAddress => "kiran@patnayakuni.com";

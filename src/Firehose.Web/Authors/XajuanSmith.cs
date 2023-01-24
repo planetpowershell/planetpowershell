@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Xajuan";
         public string LastName => "Smith";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "is a PowerShell Evangelist, Senior Enterprise Consultant at Coretek Services.";
         public string StateOrRegion => "Michigan, US";
         public string EmailAddress => "Xajuan@live.com";

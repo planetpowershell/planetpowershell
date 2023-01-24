@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Gabriel";
         public string LastName => "Talavera";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Passionate about #PowerShell, Cloud & Automation, DevOps and CyberSecurity | Microsoft Certified Trainer & MCSE Core Infrastructure";
         public string StateOrRegion => "Asunción, Paraguay";
         public string EmailAddress => string.Empty;

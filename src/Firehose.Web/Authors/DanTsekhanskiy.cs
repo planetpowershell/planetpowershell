@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Dan";
         public string LastName => "Tsekhanskiy";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "SRE from a Windows Guy";
         public string StateOrRegion => "New York, NY";
         public string EmailAddress => "dan@tsknet.com";

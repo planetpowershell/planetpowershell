@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "David";
         public string LastName => "O'Brien";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "is a Microsoft MVP, DevOps Consultant/Engineer, do AWS and a lot of Cloud.";
         public string StateOrRegion => "Melbourne, Australia";
         public string EmailAddress => "me@david-obrien.net";

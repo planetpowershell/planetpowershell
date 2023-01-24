@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Ewerton";
         public string LastName => "Jordão";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Automation lover, Speaker at .NetSP, DevOps Professionals , Azure Talks, SampaDevs. Technical Author, MVP Azure";
         public string StateOrRegion => "São Paulo, Brazil";
         public string EmailAddress => "";

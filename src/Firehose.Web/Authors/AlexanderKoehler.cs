@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Alexander";
         public string LastName => "Koehler";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "father,system engineer, automation guy, powershell enthusiast";
         public string StateOrRegion => "Mengen, Germany";
         public string EmailAddress => "planetpowershell@it-koehler.com";

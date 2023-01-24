@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Matthew";
         public string LastName => "Dowst";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "I am passionate about all things DevOps and automation, utilizing multiple different technologies, but PowerShell is my passion. I have over 15 years of experience in IT management and consulting, working with System Center, Azure, VMware, Hyper-V, Exchange, and Office 365.";
         public string StateOrRegion => "Denton, TX";
         public string EmailAddress => string.Empty;

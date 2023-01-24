@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Josh";
         public string LastName => "King";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Geek, Father, Walking Helpdesk";
         public string StateOrRegion => "Hawke's Bay, NZ";
         public string EmailAddress => "joshua@king.geek.nz";

@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "David";
         public string LastName => "Hall";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Microsoft PowerShell Enthusiast. Founder of SignalWarrant.com";
         public string StateOrRegion => "Georgia, USA";
         public string EmailAddress => "";

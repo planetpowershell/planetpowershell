@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Bas";
         public string LastName => "Wijdenes";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "My name is Bas Wijdenes and I work as a PowerShell DevOps Engineer. In my spare time I write about interesting stuff that I encounter during my work.";
         public string StateOrRegion => "Heerhugowaard, Netherlands";
         public string EmailAddress => String.Empty;

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Shane";
         public string LastName => "O'Neill";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "DBA. Food, Coffee, Whiskey (not necessarily in that order)... ";
         public string StateOrRegion => "Ireland";
         public string EmailAddress => string.Empty;

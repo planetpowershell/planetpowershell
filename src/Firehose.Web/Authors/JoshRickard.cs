@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Josh";
         public string LastName => "Rickard";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "IT & DFIR Professional, Windows Internals, Creator & Automator of things, Blogger, PowerShell expert, Python lover";
         public string StateOrRegion => "Missouri, USA";
         public string EmailAddress => "rickardja@live.com";

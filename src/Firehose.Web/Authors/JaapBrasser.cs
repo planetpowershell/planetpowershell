@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jaap";
         public string LastName => "Brasser";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Blogging about anything shiny and automation related, pretending to know PowerShell";
         public string StateOrRegion => "Amsterdam, Netherlands";
         public string EmailAddress => string.Empty;

@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Saggie";
         public string LastName => "Haim";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Blogging about powershell and automation";
         public string StateOrRegion => "Israel";
         public string EmailAddress => "contact@saggiehaim.net";

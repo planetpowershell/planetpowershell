@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Brandon";
         public string LastName => "Olin";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Cloud Architect and veteran Systems Engineer with a penchant for PowerShell, DevOps processes, and open-source software.";
         public string StateOrRegion => "Portland, Oregon";
         public string EmailAddress => "brandon@devblackops.io";

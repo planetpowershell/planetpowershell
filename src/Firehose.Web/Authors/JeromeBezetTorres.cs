@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jerome";
         public string LastName => "Bezet-Torres";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Geek, Father, Trainer,MCT";
         public string StateOrRegion => "Lyon, FR";
         public string EmailAddress => "bezettorres.jerome@gmail.com";
