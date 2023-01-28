@@ -39,7 +39,7 @@
                 {
                     if (Model is IAmAMicrosoftMVP)
                     {
-                        @if (!string.IsNullOrWhiteSpace(Model.Pronouns))
+                        if (!string.IsNullOrWhiteSpace(Model.Pronouns))
                         {
                             <text>@Model.FirstName @Model.LastName (@Model.Pronouns) is a Microsoft MVP who @Model.ShortBioOrTagLine</text>
                         }
@@ -50,7 +50,7 @@
                     }
                     else
                     {
-                        @if (!string.IsNullOrWhiteSpace(Model.Pronouns))
+                        if (!string.IsNullOrWhiteSpace(Model.Pronouns))
                         {
                             <text>@Model.FirstName @Model.LastName (@Model.Pronouns) @Model.ShortBioOrTagLine</text>
                         }
