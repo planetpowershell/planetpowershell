@@ -26,7 +26,7 @@
 
                 if (Model is IWorkAtMicrosoft)
                 {
-                    @if (!string.IsNullOrWhiteSpace(Model.Pronouns))
+                    if (!string.IsNullOrWhiteSpace(Model.Pronouns))
                     {
                         <text>@Model.FirstName @Model.LastName (@Model.Pronouns) @Model.ShortBioOrTagLine at Microsoft</text>
                     }
