@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Thomas";
         public string LastName => "Lee";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Just this guy, living in the UK. A Grateful Dead and long time PowerShell Fan. MVP 17 times";
         public string StateOrRegion => "Berkshire, UK";
         public string EmailAddress =>  "DoctorDNS@Gmail.Com";

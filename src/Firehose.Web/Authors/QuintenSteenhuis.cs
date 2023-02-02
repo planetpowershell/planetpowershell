@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Quinten";
         public string LastName => "Steenhuis";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "I am a lawyer and technologist in Boston. I write about systems administration and access to justice with a focus on Powershell and legal technology.";
         public string StateOrRegion => "Boston, USA";
         public string EmailAddress => "qsteenhuis@gmail.com";

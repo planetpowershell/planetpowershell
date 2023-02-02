@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Alain";
         public string LastName => "Assaf";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "EUC Engineer/Architect | Citrix CTA | CCE-V Certified | CUGC Leader | PowerShell Fanatic";
         public string StateOrRegion => "North Carolina, USA";
         public string EmailAddress => "alainassaf@outlook.com";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Paul";
         public string LastName => "DeArment";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Systems Engineer, PowerShell enthusiast, dog owner, lover of all thing tech, founder of Milwaukee PowerShell user group, and someone trying to find their way in things.";
         public string StateOrRegion => "Franklin, USA";
         public string EmailAddress => string.Empty;

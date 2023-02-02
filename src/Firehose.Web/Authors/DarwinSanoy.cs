@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Darwin";
         public string LastName => "Sanoy";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Village Cloudsmith - At The Flaming Forge Of The Cloud :)";
         public string StateOrRegion => "Philadelphia, PA";
         public string EmailAddress => string.Empty;

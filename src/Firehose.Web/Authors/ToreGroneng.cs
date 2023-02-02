@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Tore";
         public string LastName => "Groneng";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Focus on Powershell, Azure, Cloud, System Center and Powershell DSC. Automate everything.";
         public string StateOrRegion => "Bergen, Norway";
         public string EmailAddress => "tore.groneng@gmail.com";

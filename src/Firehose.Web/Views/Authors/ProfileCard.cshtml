@@ -8,8 +8,8 @@
     <div class="mugShotBorder">
     </div>
     <div class="profileCardWrapper">
-
         <p class="name">@Model.FirstName @Model.LastName</p>
+
         <p class="twitter">
             <a href="https://twitter.com/@Model.TwitterHandle">@@@Model.TwitterHandle</a>
         </p>
@@ -26,17 +26,38 @@
 
                 if (Model is IWorkAtMicrosoft)
                 {
-                    <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine at Microsoft</text>
+                    @if (!string.IsNullOrWhiteSpace(Model.Pronouns))
+                    {
+                        <text>@Model.FirstName @Model.LastName (@Model.Pronouns) @Model.ShortBioOrTagLine at Microsoft</text>
+                    }
+                    else
+                    {
+                        <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine at Microsoft</text>
+                    }
                 }
                 else
                 {
                     if (Model is IAmAMicrosoftMVP)
                     {
-                        <text>@Model.FirstName @Model.LastName is a Microsoft MVP who @Model.ShortBioOrTagLine</text>
+                        if (!string.IsNullOrWhiteSpace(Model.Pronouns))
+                        {
+                            <text>@Model.FirstName @Model.LastName (@Model.Pronouns) is a Microsoft MVP who @Model.ShortBioOrTagLine</text>
+                        }
+                        else
+                        {
+                            <text>@Model.FirstName @Model.LastName is a Microsoft MVP who @Model.ShortBioOrTagLine</text>
+                        }
                     }
                     else
                     {
-                        <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine</text>
+                        if (!string.IsNullOrWhiteSpace(Model.Pronouns))
+                        {
+                            <text>@Model.FirstName @Model.LastName (@Model.Pronouns) @Model.ShortBioOrTagLine</text>
+                        }
+                        else
+                        {
+                            <text>@Model.FirstName @Model.LastName @Model.ShortBioOrTagLine</text>
+                        }
                     }
                 }
             }

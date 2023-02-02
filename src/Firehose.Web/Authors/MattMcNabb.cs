@@ -11,6 +11,7 @@ public class MattMcNabb : IAmACommunityMember
     {
         public string FirstName => "Matt";
         public string LastName => "McNabb";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Systems Engineer and PowerShell enthusiast; erratic blogger";
         public string StateOrRegion => "Ohio";
         public string EmailAddress => "mmcnabb@outlook.com";

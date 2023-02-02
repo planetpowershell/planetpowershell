@@ -11,6 +11,7 @@ public class FarisMalaeb : IAmACommunityMember
     {
         public string FirstName => "Faris";
         public string LastName => "Malaeb";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "System Automation and integration using PowerShell";
         public string StateOrRegion => "Abu Dhabi";
         public string EmailAddress => "farismalaeb@protonmail.com";

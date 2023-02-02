@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Aaron";
         public string LastName => "Nelson";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Microsoft SQL Server (Data Platform) MVP and leader of the PowerShell Virtual Group of PASS";
         public string StateOrRegion => "Georgia, USA";
         public string EmailAddress => "";

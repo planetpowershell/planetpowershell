@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Doug";
         public string LastName => "Finke";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "is the Author of 'Windows PowerShell for Developers', speaker and PowerShell trainer";
         public string StateOrRegion => "New York City, United States";
         public string EmailAddress => "finked@hotmail.com";

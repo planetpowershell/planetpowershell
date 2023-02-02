@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Craig";
         public string LastName => "Gumbley";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Automation and Orchestration enthusiast";
         public string StateOrRegion => "Warwickshire, United Kingdom";
         public string EmailAddress => "";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Jeff";
         public string LastName => "Hicks";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Cloud and Datacenter MVP,Teacher,Author,Sensei";
         public string StateOrRegion => "New York, United States";
         public string EmailAddress => "jhicks@jdhitsolutions.com";

@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Ryan";
         public string LastName => "Yates";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "is a Microsoft MVP, Consultant at Black Marble, Lead Coordinator for UK PowerShell User Groups.";
         public string StateOrRegion => "England, UK";
         public string EmailAddress => "ryan.yates@kilasuit.org";

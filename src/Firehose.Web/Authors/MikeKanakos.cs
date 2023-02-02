@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Mike";
         public string LastName => "Kanakos";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => " A Microsoft MVP and Automation enthusiast located in the RTP area of North Carolina. His blog concentrates on PowerShell and Azure automation.";
         public string StateOrRegion => "Apex, NC";
         public string EmailAddress => "mkanakos@gmail.com";

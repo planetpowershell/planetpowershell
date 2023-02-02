@@ -11,6 +11,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Guido";
         public string LastName => "Oliveira";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Automation Engineer, Microsoft Azure Architect, Microsoft MVP,.";
         public string StateOrRegion => "Sao Paulo, BR";
         public string EmailAddress => string.Empty;

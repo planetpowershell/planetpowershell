@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Alex";
         public string LastName => "Neihaus";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "AWS Cloud Architect";
         public string StateOrRegion => "Boston, MA, USA";
         public string EmailAddress => "";

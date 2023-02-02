@@ -11,6 +11,7 @@ public class HarmVeenstra : IAmACommunityMember
     {
         public string FirstName => "Harm";
         public string LastName => "Veenstra";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "Cloud Consultant at NEXXT (Https://www.nexxt.one)";
         public string StateOrRegion => "Overijssel";
         public string EmailAddress => "harm.veenstra@gmail.com";

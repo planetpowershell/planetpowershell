@@ -10,6 +10,7 @@ namespace Firehose.Web.Authors
     {
         public string FirstName => "Mike";
         public string LastName => "Robbins";
+        public string Pronouns => "";
         public string ShortBioOrTagLine => "is the leader and co-founder of the Mississippi PowerShell User Group.";
         public string StateOrRegion => "Mississippi, USA";
         public string EmailAddress => "";
