@@ -8,7 +8,7 @@ This site couldn't have been made without the help of Readify and the Planet Xam
 
 ## Now on Mastodon
 
-You can now find Planet PowerShell on <a rel="me" href="https://infosec.exchange/@planetpowershell">Mastodon</a>! 
+You can now find Planet PowerShell on <a rel="me" href="https://infosec.exchange/@planetpowershell">Mastodon</a>!
 
 ## PS > Get-Help 'Adding yourself as an author'
 
@@ -27,7 +27,7 @@ You can now find Planet PowerShell on <a rel="me" href="https://infosec.exchange
 
 Adding yourself as an author is easy! All you need to do is fork this project, and add a file to the `src\Firehose.Web\Authors\` folder.
 
-The author file is a C# class that implements the `IAmACommunityMember` interface. It doesn't matter if you don't know C# though: just follow the many examples already there.
+The author file is a C# class that implements the `IAmACommunityMember` interface. It doesn't matter if you don't know C# though: follow the many examples already there.
 
 You can even do this via the GitHub editor. If you have never done anything like this, there are plenty of people that can help!
 
@@ -38,9 +38,11 @@ The result should look something like this:
     {
         public string FirstName => "Bruce";
         public string LastName => "Wayne";
+        public string Pronouns => "he/him";
         public string ShortBioOrTagLine => "potentially batman";
         public string StateOrRegion => "Gotham";
         public string EmailAddress => "rescueme@planetpowershell.com";
+        public string MastodonHandle => "@batman@thebat.cave";
         public string TwitterHandle => "batman";
         public string GravatarHash => "42abc1337def";
         public string GitHubHandle => "batman";
@@ -53,19 +55,20 @@ The result should look something like this:
 
 A few things:
 
-- Don't worry about touching the `.csproj` file; it'll pick up the author file from the folder automatically
-- Name the class after your first and lastname with CamelCase
-- The `FirstName` and `LastName` property should resemble that same name
-- `ShortBioOrTagLine` property can be whatever you like. If you can't think of anything choose: 'software engineer' or 'software engineer at Microsoft'
+- Don't worry about touching the `.csproj` file; it'll pick up the author file from the folder automatically.
+- Name the class after your first and lastname with CamelCase.
+- The `FirstName` and `LastName` property should resemble that same name.
+- `Pronouns` are optional, but highly encouraged to create a more inclusive community.
+- `ShortBioOrTagLine` property can be whatever you like. If you can't think of anything choose: 'software engineer' or 'software engineer at Microsoft'.
 - `StateOrRegion` will be your geographical location, i.e.: Holland, New York, etc.
-- `EmailAddress`, `TwitterHandle` and `GitHubHandle` should be pretty clear, `TwitterHandle` without the leading @
-- The `Website` property can be your global website or whatever you want people to look at
-- `Position` is your latitude and longitude, this allows you to be placed on the map on the Authors page
-- And finally with `FeedUris` you can supply one or more URIs which resemble your blogs. Your blogs should be provided in RSS (Atom) format and of course be about PowerShell. 
+- `EmailAddress`, `MastodonHandle`, `TwitterHandle` and `GitHubHandle` should be pretty clear. `TwitterHandle` without the leading @. Ensure `MastodonHandle` is formatted as `@handle@server`.
+- The `Website` property can be your global website or whatever you want people to look at.
+- `Position` is your latitude and longitude, this allows you to be placed on the map on the Authors page.
+- And finally with `FeedUris` you can supply one or more URIs which resemble your blogs. Your blogs should be provided in RSS (Atom) format and of course be about PowerShell.
 - If you do not want your e-mailaddress publicly available but you _do_ want to show your Gravatar go to [https://en.gravatar.com/site/check/](https://en.gravatar.com/site/check/) and get your hash! If you don't fill the hash, you will be viewed as a silhouette.
 - When you are a Microsoft MVP check out the `IAmAMicrosoftMVP` interfaces, see below for a small sample.
 
-If you also do some blogging about other stuff, no worries! You're fine! Just have a look at the next section on how to filter out your PowerShell specific posts.
+If you also do some blogging about other stuff, no worries! You're fine! Take have a look at the next section on how to filter out your PowerShell specific posts.
 
 #### Special note for Microsoft MVPs
 
@@ -76,8 +79,10 @@ Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
     {
         public string FirstName => "Awesome";
         public string LastName => "Sauce";
+        public string Pronouns => "they/them";
         public string ShortBioOrTagLine => "unicorn tamer";
         public string StateOrRegion => "127.0.0.1";
+        public string MastodonHandle => string.Empty;
         public string EmailAddress => string.Empty;
         public string TwitterHandle => "theboss";
         public string GravatarHash => "42abc1337def";
@@ -89,7 +94,9 @@ Let us know that you are a Microsoft MVP using the `IAmAMicrosoftMVP` interface.
     }
 ```
 
-### Filtering to just PowerShell
+### Filtering to only PowerShell
+
+By default Planet PowerShell will show posts that have PowerShell or PWSH in the title, category, or keywords.
 
 Planet PowerShell is all about PowerShell content. To ensure that the feed only contains relevant content you can implement the `IFilterMyBlogPosts` interface on your author class.
 
@@ -103,10 +110,10 @@ Planet PowerShell is all about PowerShell content. To ensure that the feed only 
             // Here you filter out the given item by the criteria you want, i.e.
             // this filters out posts that do not have PowerShell in the title
             return item.Title.Text.ToLowerInvariant().Contains("powershell");
-            
+
             // This filters out only the posts that have the "PowerShell" category
             return item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false;
-            
+
             // Of course you can make the checks as complicated as you want and combine some stuff
             return item.Title.Text.ToLowerInvariant().Contains("powershell") && (item.Categories?.Any(c => c.Name.ToLowerInvariant().Equals("powershell")) ?? false);
         }
