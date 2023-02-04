@@ -22,7 +22,7 @@ namespace Firehose.Web.Authors
         public GeoPosition Position => new GeoPosition(48.03849438437253, 9.326946932715074);
 
         public Uri WebSite => new Uri("https://blog.it-koehler.com/en");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://blog.it-koehler.com/rss"); } }
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://blog.it-koehler.com/en/feed"); } }
 		public string FeedLanguageCode => "en";
     }
 }
