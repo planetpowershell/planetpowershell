@@ -16,9 +16,9 @@ namespace Firehose.Web.Authors
         public string EmailAddress => "string.Empty";
         public string TwitterHandle => "ehmiiz";
         public string MastodonHandle => "@ehmiiz@infosec.exchange";
-        public string GravatarHash => "";
+        public string GravatarHash => "0a22f6278e9e9ffdb9f6192ae012ba50";
         public string GitHubHandle => "ehmiiz";
-        public GeoPosition Position => new GeoPosition(60.128161, 18.643501);
+        public GeoPosition Position => new GeoPosition(58.114988, 15.031354);
         public Uri WebSite => new Uri("https://ehmiiz.tech/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://ehmiiz.tech/index.xml"); } }
      	public string FeedLanguageCode => "en";
