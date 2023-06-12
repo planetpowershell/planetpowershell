@@ -23,7 +23,10 @@ namespace Firehose.Web.Authors
         public Uri WebSite => new Uri("https://www.dowst.dev");
         public IEnumerable<Uri> FeedUris
         {
-            get { yield return new Uri("https://www.dowst.dev/feed/"); }
+            get { 
+				yield return new Uri("https://www.dowst.dev/feed/");
+				yield return new Uri("https://psweekly.dowst.dev/feed/");
+			}
         }
         public string FeedLanguageCode => "en";
     }
