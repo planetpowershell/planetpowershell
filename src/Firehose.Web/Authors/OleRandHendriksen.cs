@@ -16,7 +16,7 @@ namespace Firehose.Web.Authors
         public string StateOrRegion => "Norway";
         public string EmailAddress => "ole@randriksen.net";
         public string TwitterHandle => "randriksen";
-        public string MastodonHandle => "";
+        public string MastodonHandle => "@Randriksen@mastodon.social";
         public string GravatarHash => "112a3bb6a2f4af48ab67bd94b5feb1df335627417dd39e5f32202f0b62c3f0d8";
         public string GitHubHandle => "randriksen";
         public GeoPosition Position => new GeoPosition(59.9102752,11.0879039);
