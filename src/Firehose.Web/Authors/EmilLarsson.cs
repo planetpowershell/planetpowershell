@@ -8,7 +8,7 @@ namespace Firehose.Web.Authors
 {
     public class EmilLarsson : IAmACommunityMember
     {
-        public string FirstName => "Emil";enthusiast
+        public string FirstName => "Emil";
         public string LastName => "Larsson";
         public string Pronouns => "";
         public string ShortBioOrTagLine => "Identity, security, automation enthusiast.";
