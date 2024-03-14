@@ -7,7 +7,7 @@ using Firehose.Web.Infrastructure;
 
 namespace Firehose.Web.Authors
 {
-    public class MikeKanakos : IAmACommunityMember
+    public class MikeKanakos : IAmAMicrosoftMVP
     {
         public string FirstName => "Mike";
         public string LastName => "Kanakos";
@@ -20,8 +20,8 @@ namespace Firehose.Web.Authors
         public string GravatarHash => "2bca167386e229ec2c5606f6c1677493";
         public string GitHubHandle => "compwiz32";
         public GeoPosition Position => new GeoPosition(35.7327, 78.8503);
-        public Uri WebSite => new Uri("https://www.commandline.ninja");
-        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.commandline.ninja/rss/"); } }
+        public Uri WebSite => new Uri("https://commandline.ninja");
+        public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://commandline.ninja/index.xml"); } }
 		public string FeedLanguageCode => "en";
     }
 }
