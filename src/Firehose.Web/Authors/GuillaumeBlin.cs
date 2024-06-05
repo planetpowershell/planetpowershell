@@ -22,5 +22,6 @@ public class GuillaumeBlin : IAmACommunityMember
 
         public Uri WebSite => new Uri("https://www.altf4-formation.fr/");
         public IEnumerable<Uri> FeedUris { get { yield return new Uri("https://www.altf4-formation.fr/en/powershell-en.xml"); } }
+		public string FeedLanguageCode => "en";
     }
 }
