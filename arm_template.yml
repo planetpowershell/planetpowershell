@@ -22,7 +22,7 @@ steps:
     subscriptionId: ${{ parameters.subscriptionID }}
     action: 'Create Or Update Resource Group'
     resourceGroupName: ${{ parameters.resourceGroup }}
-    location: 'East US 2'
+    location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: '$(System.DefaultWorkingDirectory)/src/AzureDeploy/azuredeploy.json'
     overrideParameters: ${{ parameters.azureDeployParameters }}
